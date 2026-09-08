@@ -1,0 +1,12 @@
+.reference-filters{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.reference-table{overflow-x:auto;margin:20px 0;border:1px solid var(--border);border-radius:8px}
+.reference-table table{width:100%;border-collapse:collapse;font-size:13px;text-align:left}
+.reference-table th,.reference-table td{padding:12px 16px;border-bottom:1px solid #343b34;vertical-align:top;min-width:100px}
+.reference-table th{color:#e0d3a2;font-weight:600}
+.reference-table td{color:#d5dbd3}
+.reference-section{border-bottom:1px solid #343b34;padding:16px 0}
+.reference-section summary{cursor:pointer;font-size:15px;min-height:44px;display:flex;align-items:center;color:#e0d3a2}
+.reference-section summary::before{content:'+';margin-right:12px}
+.reference-section[open] summary::before{content:'−'}
+.reference-section p{line-height:1.7}
+@media(max-width:600px){.reference-filters{grid-template-columns:1fr;gap:8px}.reference-table th,.reference-table td{padding:10px;font-size:12px}}

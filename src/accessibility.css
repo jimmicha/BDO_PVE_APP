@@ -1,0 +1,5 @@
+.skip-link{position:fixed;top:8px;left:8px;z-index:1000;padding:12px 20px;background:#e0d3a2;color:#131614;border-radius:6px;transform:translateY(-200%)}
+.skip-link:focus{transform:translateY(0)}
+#main-content:focus{outline:none}
+.nav-caption,.app-footer{color:#909b86}
+@media(pointer:coarse){.icon-button,.button.small,.number-link,.milestone-actions button{min-width:44px!important;min-height:44px!important}.tabs button{min-height:44px}}

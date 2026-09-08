@@ -1,0 +1,35 @@
+name: Android debug build
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  android:
+    runs-on: ubuntu-24.04
+    environment: beta
+    env:
+      VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+      VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+      VITE_APP_URL: ${{ vars.VITE_APP_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0' 'build-tools;36.0.0'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm android:sync
+      - run: chmod +x gradlew && ./gradlew assembleDebug
+        working-directory: android
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bdo-companion-debug
+          path: android/app/build/outputs/apk/debug/*.apk
+          retention-days: 7

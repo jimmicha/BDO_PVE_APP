@@ -1,0 +1,292 @@
+# Black Desert Online PvE Gear Stats Database
+# Verified for current guides/patch state on 2026-09-08.
+# Format: pipe-delimited UTF-8 text. First non-comment line is the column header.
+#
+# IMPORTANT FIELD DEFINITIONS
+# ap_min/ap_max      = AP range printed on weapon item.
+# sheet_ap           = single displayed AP value on accessories/reform bonuses.
+# sheet_dp           = displayed DP.
+# monster_ap         = Extra AP Against Monsters; this is NOT sheet AP.
+# monster_dr         = Monster Damage Reduction; this is NOT sheet DP.
+# evasion / damage_reduction = visible component.
+# hidden_evasion / hidden_damage_reduction = value shown in parentheses by current item stat tables.
+# delta_*            = increase from the previous enhancement of the SAME item/variant.
+# blank               = stat not supplied/not applicable, NOT zero.
+#
+# SCOPE
+# This file is the enhancement data for the current PvE progression systems:
+# Sovereign weapons, Slumbering Origin armors, Edana armors,
+# Kharazad/Ekleta/Apeiron accessories, and PvE artifacts.
+# Legacy/transitional full Tuvala and Blackstar +0..PEN ladders are intentionally
+# not mixed into this endgame table because the modern 2026 catch-up path skips
+# most of those enhancement steps. PEN Blackstar is a Sovereign crafting gateway.
+#
+# SET EFFECT NOTE
+# Slumbering Origin / Edana 'Ancient' set effects are account/equipment-set effects,
+# not per-piece AP/DP and therefore are not added to individual rows.
+# Relevant set effects include 2-set Monster DR +10 and 3-set Extra Monster AP +7.
+#
+# SOURCES
+# SOV_BDF_2026       = https://www.blackdesertfoundry.com/sovereign-weapons-guide/
+# PA_PATCH_2025_07_10= https://www.naeu.playblackdesert.com/News/Notice/Detail?groupContentNo=8804
+# FG_BDF_2026        = https://www.blackdesertfoundry.com/fallen-god-armor-guide/
+# LAB_BDF_2026       = https://www.blackdesertfoundry.com/labreska-helmet-guide/
+# DAHN_BDF_2026      = https://www.blackdesertfoundry.com/dahns-gloves/
+# ATOR_BDF_2026      = https://www.blackdesertfoundry.com/ators-shoes-guide/
+# EDANA_BDF_2026     = https://www.blackdesertfoundry.com/edanas-defense-gear-guide/
+# KHAR_BDF_2026      = https://www.blackdesertfoundry.com/kharazad-accessories-guide/
+# EKLETA_GARMOTH_2026= https://garmoth.com/guides/post/ekleta-apeiron-accessories
+# APEIRON_BDF_2026   = https://www.blackdesertfoundry.com/ekleta-apeiron-accessories-guide/
+# ARTIFACT_BDF_2026  = https://www.blackdesertfoundry.com/artifacts-and-lightstones-guide/
+#
+category|slot|item|variant|enhancement|ap_min|ap_max|sheet_ap|sheet_dp|accuracy|monster_ap|monster_dr|evasion|hidden_evasion|damage_reduction|hidden_damage_reduction|max_hp|max_stamina|weight_lt|delta_ap_min|delta_ap_max|delta_sheet_ap|delta_sheet_dp|source_id|notes
+weapon|main_hand|Sovereign Main Weapon|standard|+0|133|140|||212|48|||||||||||||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|PRI (I)|134|141|||213|49|||||||||1|1|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|DUO (II)|135|142|||214|50|||||||||1|1|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|TRI (III)|136|143|||215|51|||||||||1|1|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|TET (IV)|138|145|||217|52|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|PEN (V)|140|147|||218|53|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|HEX (VI)|142|149|||219|54|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|SEP (VII)|144|151|||220|55|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|OCT (VIII)|146|154|||222|56|||||||||2|3|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|NOV (IX)|148|156|||223|57|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|main_hand|Sovereign Main Weapon|standard|DEC (X)|150|158|||224|58|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|+0|133|140|||12|25|||||||||||||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|PRI (I)|134|141|||13|26|||||||||1|1|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|DUO (II)|135|142|||14|27|||||||||1|1|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|TRI (III)|136|143|||15|28|||||||||1|1|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|TET (IV)|138|145|||17|29|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|PEN (V)|140|147|||18|30|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|HEX (VI)|142|149|||19|31|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|SEP (VII)|144|151|||20|32|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|OCT (VIII)|146|154|||22|33|||||||||2|3|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|NOV (IX)|148|156|||23|34|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|awakening|Sovereign Awakening Weapon|standard|DEC (X)|150|158|||24|35|||||||||2|2|||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|+0|47|49||25|25|67||14|42|11|3|60|||||||SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|PRI (I)|48|50||25|30|68||14|43|11|4|90|||1|1||0|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|DUO (II)|49|51||25|35|69||14|44|11|5|120|||1|1||0|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|TRI (III)|50|52||25|40|70||14|45|11|6|150|||1|1||0|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|TET (IV)|51|53||25|45|71||14|46|11|7|180|||1|1||0|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|PEN (V)|52|54||25|50|72||14|47|11|8|210|||1|1||0|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|HEX (VI)|53|55||25|55|73||14|48|11|9|240|||1|1||0|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|SEP (VII)|54|56||26|60|74||14|49|12|10|270|||1|1||1|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|OCT (VIII)|55|57||27|66|75||14|50|13|11|300|||1|1||1|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|NOV (IX)|56|58||28|72|76||14|51|14|12|330|||1|1||1|SOV_BDF_2026|
+weapon|sub_weapon|Sovereign Sub-Weapon|standard|DEC (X)|57|59||29|78|77||14|52|15|13|360|||1|1||1|SOV_BDF_2026|
+weapon_reform|main_hand|Sovereign Main Weapon|Garmoth Heart Reform|REFORM|||3||50||||||||||||||PA_PATCH_2025_07_10|Additional displayed AP +3 from Garmoth reform. Main-hand Sovereign also gains All Accuracy +50 per Edania-era update.
+weapon_reform|awakening|Sovereign Awakening Weapon|Garmoth Heart Reform|REFORM|||3||||||||||||||||PA_PATCH_2025_07_10|Additional displayed AP +3 from Garmoth reform.
+armor|chest|Fallen God's Armor|standard|+0||||99||||45||54|||||||||FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
+armor|chest|Fallen God's Armor|standard|PRI (I)||||102||||47||55||||||||3|FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
+armor|chest|Fallen God's Armor|standard|DUO (II)||||105||||48||57||||||||3|FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
+armor|chest|Fallen God's Armor|standard|TRI (III)||||108||||50||58||||||||3|FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
+armor|chest|Fallen God's Armor|standard|TET (IV)||||111||||52||59||||||||3|FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
+armor|chest|Fallen God's Armor|standard|PEN (V)||||114||||54||60||||||||3|FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
+armor|helmet|Labreska's Helmet|standard|+0||||90||||33|66|57|27||||||||LAB_BDF_2026|Item effect includes Max HP +210 and Monster DR +10.
+armor|helmet|Labreska's Helmet|standard|PRI (I)||||93||||35|67|58|29|||||||3|LAB_BDF_2026|Item effect includes Max HP +210 and Monster DR +10.
+armor|helmet|Labreska's Helmet|standard|DUO (II)||||96||||36|68|60|30|||||||3|LAB_BDF_2026|Item effect includes Max HP +210 and Monster DR +10.
+armor|helmet|Labreska's Helmet|standard|TRI (III)||||99||||38|70|61|32|||||||3|LAB_BDF_2026|Item effect includes Max HP +210 and Monster DR +10.
+armor|helmet|Labreska's Helmet|standard|TET (IV)||||102||||40|72|62|34|||||||3|LAB_BDF_2026|Item effect includes Max HP +210 and Monster DR +10.
+armor|helmet|Labreska's Helmet|standard|PEN (V)||||105||||42|74|63|36|||||||3|LAB_BDF_2026|Item effect includes Max HP +210 and Monster DR +10.
+armor|gloves|Dahn's Gloves|DR|+0||||70|50|||31|84|41|24||||||||DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|DR|PRI (I)||||73|50|||33|85|42|26|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|DR|DUO (II)||||76|50|||34|86|44|27|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|DR|TRI (III)||||79|50|||36|88|45|29|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|DR|TET (IV)||||82|50|||38|90|46|31|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|DR|PEN (V)||||85|50|||40|92|47|33|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|Evasion|+0||||72|50|||38|109|34|22||||||||DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|Evasion|PRI (I)||||75|50|||40|110|35|24|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|Evasion|DUO (II)||||78|50|||41|111|37|25|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|Evasion|TRI (III)||||81|50|||43|113|38|27|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|Evasion|TET (IV)||||84|50|||45|115|39|29|||||||3|DAHN_BDF_2026|
+armor|gloves|Dahn's Gloves|Evasion|PEN (V)||||87|50|||47|117|40|31|||||||3|DAHN_BDF_2026|
+armor|shoes|Ator's Shoes|Evasion|+0||||87||||50|96|39|19||||||||ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|Evasion|PRI (I)||||90||||52|97|40|21|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|Evasion|DUO (II)||||93||||53|98|42|22|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|Evasion|TRI (III)||||96||||55|100|43|24|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|Evasion|TET (IV)||||99||||57|102|44|26|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|Evasion|PEN (V)||||102||||59|104|45|28|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|DR|+0||||89||||48|51|41|46||||||||ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|DR|PRI (I)||||92||||50|52|42|48|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|DR|DUO (II)||||95||||51|53|44|49|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|DR|TRI (III)||||98||||53|55|45|51|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|DR|TET (IV)||||101||||55|57|46|53|||||||3|ATOR_BDF_2026|
+armor|shoes|Ator's Shoes|DR|PEN (V)||||104||||57|59|47|55|||||||3|ATOR_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|+0||||102|||10|40|72|62|45|300|||||||EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|PRI (I)||||103|||11|41|72|62|46|330||||||1|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|DUO (II)||||104|||12|41|73|63|46|360||||||1|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|TRI (III)||||105|||13|42|73|63|47|390||||||1|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|TET (IV)||||106|||14|42|74|64|47|420||||||1|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|PEN (V)||||107|||15|43|74|64|48|470||||||1|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|HEX (VI)||||108|||16|43|75|65|48|520||||||1|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|SEP (VII)||||109|||17|43|76|65|49|570||||||1|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|OCT (VIII)||||111|||18|45|77|66|49|630||||||2|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|NOV (IX)||||113|||19|46|78|67|49|690||||||2|EDANA_BDF_2026|
+armor|helmet|Edana - Heavensmite|standard|DEC (X)||||115|||20|47|78|68|50|750||||||2|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|+0||||111|||13|52|132|59|47|400|||||||EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|PRI (I)||||112|||14|53|132|59|48|430||||||1|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|DUO (II)||||113|||15|53|133|60|48|460||||||1|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|TRI (III)||||114|||16|54|133|60|49|490||||||1|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|TET (IV)||||115|||17|54|134|61|49|520||||||1|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|PEN (V)||||116|||18|55|134|61|50|570||||||1|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|HEX (VI)||||117|||19|55|135|62|50|620||||||1|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|SEP (VII)||||118|||20|56|136|62|51|670||||||1|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|OCT (VIII)||||120|||21|57|137|63|51|730||||||2|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|NOV (IX)||||122|||22|58|138|64|51|790||||||2|EDANA_BDF_2026|
+armor|chest|Edana - Abyssveil|standard|DEC (X)||||124|||23|59|138|65|52|850||||||2|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|+0||||84|||10|42|118|42|35|200|||||||EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|PRI (I)||||85|||11|43|118|42|36|230||||||1|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|DUO (II)||||86|||12|43|119|43|36|260||||||1|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|TRI (III)||||87|||13|44|119|43|37|290||||||1|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|TET (IV)||||88|||14|44|120|44|37|320||||||1|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|PEN (V)||||89|||15|45|120|44|38|370||||||1|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|HEX (VI)||||90|||16|45|121|45|38|420||||||1|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|SEP (VII)||||91|||17|46|122|45|39|470||||||1|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|OCT (VIII)||||93|||18|47|123|46|39|530||||||2|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|NOV (IX)||||95|||19|48|124|47|39|590||||||2|EDANA_BDF_2026|
+armor|gloves|Edana - Oathgrip|standard|DEC (X)||||97|||20|49|124|48|40|650||||||2|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|+0||||101|||10|56|103|45|54|200|||||||EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|PRI (I)||||102|||11|57|103|45|55|230||||||1|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|DUO (II)||||103|||12|57|104|46|55|260||||||1|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|TRI (III)||||104|||13|58|104|46|56|290||||||1|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|TET (IV)||||105|||14|58|105|47|56|320||||||1|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|PEN (V)||||106|||15|59|105|47|57|370||||||1|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|HEX (VI)||||107|||16|59|106|48|57|420||||||1|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|SEP (VII)||||108|||17|60|107|48|58|470||||||1|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|OCT (VIII)||||110|||18|61|108|49|58|530||||||2|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|NOV (IX)||||112|||19|62|109|50|58|590||||||2|EDANA_BDF_2026|
+armor|shoes|Edana - Furystride|standard|DEC (X)||||114|||20|63|109|51|59|650||||||2|EDANA_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|+0|||24||10||||||||||||||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|PRI (I)|||26||12||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|DUO (II)|||28||14||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|TRI (III)|||30||16||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|TET (IV)|||32||18||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|PEN (V)|||34||20||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|HEX (VI)|||36||22||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|SEP (VII)|||38||24||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|OCT (VIII)|||40||26||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|NOV (IX)|||42||28||||||||||||2||KHAR_BDF_2026|
+accessory|necklace|Kharazad Necklace|standard|DEC (X)|||44||30||||||||||||2||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|+0|||16||5||||||||||||||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|PRI (I)|||17||6||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|DUO (II)|||18||7||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|TRI (III)|||19||8||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|TET (IV)|||20||9||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|PEN (V)|||21||10||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|HEX (VI)|||22||11||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|SEP (VII)|||23||12||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|OCT (VIII)|||24||13||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|NOV (IX)|||25||14||||||||||||1||KHAR_BDF_2026|
+accessory|belt|Kharazad Belt|standard|DEC (X)|||26||15||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|+0|||16||5||||||||||||||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|PRI (I)|||17||6||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|DUO (II)|||18||7||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|TRI (III)|||19||8||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|TET (IV)|||20||9||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|PEN (V)|||21||10||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|HEX (VI)|||22||11||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|SEP (VII)|||23||12||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|OCT (VIII)|||24||13||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|NOV (IX)|||25||14||||||||||||1||KHAR_BDF_2026|
+accessory|ring|Kharazad Ring|standard|DEC (X)|||26||15||||||||||||1||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|+0|||14||4||||||||||||||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|PRI (I)|||15||4||||||||||||1||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|DUO (II)|||15||7||||||||||||0||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|TRI (III)|||16||7||||||||||||1||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|TET (IV)|||16||10||||||||||||0||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|PEN (V)|||17||10||||||||||||1||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|HEX (VI)|||18||13||||||||||||1||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|SEP (VII)|||19||13||||||||||||1||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|OCT (VIII)|||20||13||||||||||||1||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|NOV (IX)|||21||14||||||||||||1||KHAR_BDF_2026|
+accessory|earring|Kharazad Earring|standard|DEC (X)|||22||15||||||||||||1||KHAR_BDF_2026|
+accessory|necklace|Ekleta Necklace|standard|+0|||43|1|29|||1|0|0|1||||||||EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|PRI (I)|||44|1|30|||1|0|0|2||||||1|0|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|DUO (II)|||44|2|31|||1|1|1|2||||||0|1|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|TRI (III)|||45|2|32|||1|2|1|3||||||1|0|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|TET (IV)|||45|3|33|||2|2|1|4||||||0|1|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|PEN (V)|||46|3|34|||2|2|1|5||||||1|0|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|HEX (VI)|||46|4|35|||2|3|2|5||||||0|1|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|SEP (VII)|||47|4|36|||2|4|2|6||||||1|0|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|OCT (VIII)|||48|4|37|||2|5|2|7||||||1|0|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|NOV (IX)|||49|5|39|||3|5|2|8||||||1|1|EKLETA_GARMOTH_2026|
+accessory|necklace|Ekleta Necklace|standard|DEC (X)|||50|6|41|||3|6|3|8||||||1|1|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|+0|||25|1|15|||1|0|0|1||||||||EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|PRI (I)|||26|1|16|||1|0|0|2||||||1|0|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|DUO (II)|||26|2|17|||1|1|1|2||||||0|1|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|TRI (III)|||27|2|18|||1|2|1|3||||||1|0|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|TET (IV)|||27|3|19|||2|2|1|4||||||0|1|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|PEN (V)|||28|3|20|||2|2|1|5||||||1|0|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|HEX (VI)|||28|4|21|||2|3|2|5||||||0|1|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|SEP (VII)|||29|4|22|||2|4|2|6||||||1|0|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|OCT (VIII)|||30|4|23|||2|5|2|7||||||1|0|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|NOV (IX)|||31|5|24|||3|5|2|8||||||1|1|EKLETA_GARMOTH_2026|
+accessory|ring|Ekleta Ring|standard|DEC (X)|||32|6|26|||3|6|3|8||||||1|1|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|+0|||21|1|15|||1|0|0|1||||||||EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|PRI (I)|||22|1|16|||1|0|0|2||||||1|0|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|DUO (II)|||22|2|17|||1|1|1|2||||||0|1|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|TRI (III)|||23|2|18|||1|2|1|3||||||1|0|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|TET (IV)|||23|3|19|||2|2|1|4||||||0|1|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|PEN (V)|||24|3|20|||2|2|1|5||||||1|0|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|HEX (VI)|||24|4|21|||2|3|2|5||||||0|1|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|SEP (VII)|||25|4|22|||2|4|2|6||||||1|0|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|OCT (VIII)|||26|4|23|||2|5|2|7||||||1|0|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|NOV (IX)|||27|5|24|||3|5|2|8||||||1|1|EKLETA_GARMOTH_2026|
+accessory|earring|Ekleta Earring|standard|DEC (X)|||28|6|26|||3|6|3|8||||||1|1|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|+0|||25|1|15|||1|0|0|1|||100|||||EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|PRI (I)|||26|1|16|||1|0|0|2|||100|||1|0|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|DUO (II)|||26|2|17|||1|1|1|2|||100|||0|1|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|TRI (III)|||27|2|18|||1|2|1|3|||100|||1|0|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|TET (IV)|||27|3|19|||2|2|1|4|||100|||0|1|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|PEN (V)|||28|3|20|||2|2|1|5|||100|||1|0|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|HEX (VI)|||28|4|21|||2|3|2|5|||100|||0|1|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|SEP (VII)|||29|4|22|||2|4|2|6|||100|||1|0|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|OCT (VIII)|||30|4|23|||2|5|2|7|||100|||1|0|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|NOV (IX)|||31|5|24|||3|5|2|8|||100|||1|1|EKLETA_GARMOTH_2026|
+accessory|belt|Ekleta Belt|standard|DEC (X)|||32|6|26|||3|6|3|8|||100|||1|1|EKLETA_GARMOTH_2026|
+accessory|necklace|Apeiron Necklace|standard|+0|||24|0|10|||0|0|0|0||||||||APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|PRI (I)|||34|0|20|||0|0|0|0||||||10|0|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|DUO (II)|||38|0|24|||0|0|0|0||||||4|0|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|TRI (III)|||40|0|26|||0|0|0|0||||||2|0|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|TET (IV)|||42|0|28|||0|0|0|0||||||2|0|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|PEN (V)|||45|2|31|||1|2|1|1||||||3|2|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|HEX (VI)|||46|3|33|||1|4|2|2||||||1|1|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|SEP (VII)|||47|4|35|||2|5|2|3||||||1|1|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|OCT (VIII)|||48|4|37|||2|7|2|5||||||1|0|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|NOV (IX)|||49|5|39|||2|8|3|5||||||1|1|APEIRON_BDF_2026|
+accessory|necklace|Apeiron Necklace|standard|DEC (X)|||50|6|41|||3|8|3|6||||||1|1|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|+0|||14|0|4|||0|0|0|0||||||||APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|PRI (I)|||17|0|10|||0|0|0|0||||||3|0|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|DUO (II)|||19|0|13|||0|0|0|0||||||2|0|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|TRI (III)|||20|0|13|||0|0|0|0||||||1|0|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|TET (IV)|||22|0|14|||0|0|0|0||||||2|0|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|PEN (V)|||22|2|17|||1|2|1|1||||||0|2|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|HEX (VI)|||23|3|19|||1|4|2|2||||||1|1|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|SEP (VII)|||24|4|21|||2|5|2|3||||||1|1|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|OCT (VIII)|||26|4|23|||2|7|2|5||||||2|0|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|NOV (IX)|||27|5|24|||2|8|3|5||||||1|1|APEIRON_BDF_2026|
+accessory|earring|Apeiron Earring|standard|DEC (X)|||28|6|26|||3|8|3|6||||||1|1|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|+0|||16|0|5|||0|0|0|0||||||||APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|PRI (I)|||21|0|10|||0|0|0|0||||||5|0|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|DUO (II)|||23|0|12|||0|0|0|0||||||2|0|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|TRI (III)|||24|0|13|||0|0|0|0||||||1|0|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|TET (IV)|||25|0|14|||0|0|0|0||||||1|0|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|PEN (V)|||26|2|17|||1|2|1|1||||||1|2|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|HEX (VI)|||27|3|19|||1|4|2|2||||||1|1|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|SEP (VII)|||28|4|21|||2|5|2|3||||||1|1|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|OCT (VIII)|||30|4|23|||2|7|2|5||||||2|0|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|NOV (IX)|||31|5|24|||2|8|3|5||||||1|1|APEIRON_BDF_2026|
+accessory|ring|Apeiron Ring|standard|DEC (X)|||32|6|26|||3|8|3|6||||||1|1|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|+0|||16|0|5|||0|0|0|0|||100|||||APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|PRI (I)|||21|0|10|||0|0|0|0|||100|||5|0|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|DUO (II)|||23|0|12|||0|0|0|0|||100|||2|0|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|TRI (III)|||24|0|13|||0|0|0|0|||100|||1|0|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|TET (IV)|||25|0|14|||0|0|0|0|||100|||1|0|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|PEN (V)|||26|2|17|||1|2|1|1|||100|||1|2|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|HEX (VI)|||27|3|19|||1|4|2|2|||100|||1|1|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|SEP (VII)|||28|4|21|||2|5|2|3|||100|||1|1|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|OCT (VIII)|||30|4|23|||2|7|2|5|||100|||2|0|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|NOV (IX)|||31|5|24|||2|8|3|5|||100|||1|1|APEIRON_BDF_2026|
+accessory|belt|Apeiron Belt|standard|DEC (X)|||32|6|26|||3|8|3|6|||100|||1|1|APEIRON_BDF_2026|
+artifact|artifact|Marsh's Artifact - Extra AP Against Monsters|standard|BASE||||||6|||||||||||||ARTIFACT_BDF_2026|Budget PvE artifact.
+artifact|artifact|Kabua's Artifact|standard|BASE||||||7|20|||||100|75||||||ARTIFACT_BDF_2026|Base PvE BIS artifact.
+artifact|artifact|Kabua's Heralding Artifact|standard|REFORMED||||||10|25|||||350|75||||||ARTIFACT_BDF_2026|Kabua + Heralding reform: +3 Monster AP, +5 Monster DR, +250 HP.

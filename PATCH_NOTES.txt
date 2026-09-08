@@ -1,0 +1,33 @@
+BDO Companion beta - implementation patch
+Date: 2026-09-08
+
+DONE
+- React/TypeScript web app: accounts, onboarding, characters, gear, resources,
+  roadmaps, reservations, transaction previews, journal, settings and export.
+- Supabase migrations with ownership checks, RLS, exact quantities, revision
+  conflicts, idempotent transactions, six family claims and account deletion.
+- Reviewed HYPERBOOST accessory catalog with admin review/publish/rollback.
+- Imported 250 gear-stat rows and 12 guide sections; comparisons preserve
+  unknown values and show 13 review flags. Imported mechanics remain unreviewed.
+- Offline read-only behavior, cache clearing, keyboard skip link, contrast fixes
+  and larger touch targets. 14 core tests and 8 browser tests pass.
+- Web deployed at https://www.blackdesertcompanion.app.
+- Android project, assets, return links, build script and CI workflows added.
+  Java 21 and Android tools installed locally; debug APK build not yet verified.
+- Encrypted backup/restore scripts, deletion replay and gated daily CI workflow.
+- New backend taxhvwhachtrhtcdbnsz selected; public config prepared, canonical
+  URL and eight web/Android callbacks saved. OAuth reconnection succeeded.
+
+LEFT TO DO
+- Reload Codex's connector to use the refreshed Supabase authorization; install
+  migrations/catalog/deletion function on the new backend and run hosted tests.
+- Switch and redeploy the live app only after new-backend verification. Current
+  live build still targets the previous backend. No player data was migrated.
+- Configure Google OAuth, SMTP and signup hook; test real email/Google flows.
+- Finish Android compilation and real-device journeys, signing and Play testing.
+- Configure separate staging, backup secrets/schedule/alerts and perform an
+  actual hosted restore rehearsal. CI workflow files alone are not active jobs.
+- Finalize privacy/operator details and complete manual accessibility review.
+
+No credentials, downloaded toolchains, private test accounts or build outputs
+are included in this commit. No paid service or store purchase was made.
