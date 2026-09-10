@@ -69,3 +69,44 @@ CONTINUATION CHECKPOINT 2026-09-10 (guided equipment conversions)
 - Not deployed: this is local-migration and frontend work only. Hosted
   cutover (item 1), catalog game-data review (item 4), real auth (item 5)
   and release/ops (item 6) remain, per NEXT_STEPS.md.
+
+CONTINUATION CHECKPOINT 2026-09-10 (hosted backend cutover, item 1)
+- Supabase connector authorized. Confirmed only the core migration was
+  installed on taxhvwhachtrhtcdbnsz; applied the remaining nine migrations
+  in order (catalog, API hardening/deletion, both foreign-key index
+  batches, PT409 error codes, equipment upgrade costs and its capability,
+  and all three guided-conversion migrations from this session).
+- Installed the reviewed v1 catalog seed (Alustin's Kharazad journey,
+  published) and an admin beta_members allowlist entry.
+- Deployed the delete-account Edge Function with its import map and JWT
+  verification enabled.
+- Ran security and performance advisors: only informational findings on
+  intentionally policy-less app_private tables (no direct client access;
+  everything routes through SECURITY DEFINER RPCs) and brand-new unused
+  indexes. Nothing actionable.
+- Read-only preflight against the live REST API confirms: email enabled,
+  Google disabled, email confirmation required, companion_snapshot RPC
+  installed and reachable, anonymous access denied.
+- Not done: Google OAuth, SMTP, Before User Created hook and the
+  hosted two-account acceptance suite (item 2) are still outstanding.
+  .env.local and the live deployment still point at the previous backend;
+  no traffic has been switched and no player data was touched.
+
+CONTINUATION CHECKPOINT 2026-09-10 (Discord sign-in and auth providers, item 5)
+- Added Discord sign-in and in-app identity linking alongside the existing
+  Google flow (src/pages/Auth.tsx, src/pages/More.tsx); all three of
+  Google, Discord and email/password now appear on the sign-in screen and
+  can all be linked to one account from Settings.
+- Owner configured Google OAuth, Discord OAuth and Resend SMTP on
+  taxhvwhachtrhtcdbnsz. Verified each independently against the live
+  project: /auth/v1/settings reports google:true and discord:true; a real
+  signup against a temporarily allowlisted disposable address returned 200
+  with a genuine confirmation_sent_at (proving Resend actually sent an
+  email, not just that the SMTP fields were saved); the Before User
+  Created hook correctly rejected an unlisted email first. All test
+  artifacts (auth.users row, identity, beta_members entry) were deleted
+  immediately after each check — nothing left behind.
+- Not verified: an actual click-through of the Google/Discord consent
+  screens, real-inbox delivery, and Android system-browser return links —
+  none of which are possible from a remote session without a browser or
+  device. These remain for a manual pass before inviting testers.

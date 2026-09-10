@@ -24,6 +24,13 @@ export function Auth(){
     if(err)setError(humanError(err));else if(data.url&&Capacitor.isNativePlatform())await Browser.open({url:data.url});
     setBusy(false);
   }
+  async function discord(){
+    if(isLocal){setMessage('Discord sign-in will work after a Supabase project and Discord OAuth client are connected. The local environment supports email test accounts.');return;}
+    setBusy(true);setError('');
+    const {data,error:err}=await supabase.auth.signInWithOAuth({provider:'discord',options:{redirectTo:callbackUrl(),skipBrowserRedirect:Capacitor.isNativePlatform()}});
+    if(err)setError(humanError(err));else if(data.url&&Capacitor.isNativePlatform())await Browser.open({url:data.url});
+    setBusy(false);
+  }
   return <main className="auth-layout">
     <section className="auth-story"><Link to="/" className="brand"><img src="/icon.svg" alt=""/><span>BDO <b>COMPANION</b></span></Link>
       <div className="story-copy"><p className="eyebrow">FOR YOUR NEXT CHAPTER</p><h1>Your journey.<br/><em>Remembered.</em></h1><p>From your first season to your next great upgrade. Keep your characters, materials, and ambitions in one place.</p>
@@ -32,7 +39,7 @@ export function Auth(){
     </section>
     <section className="auth-form"><div className="auth-card"><Tagline/><h2>{mode==='signin'?'Welcome, adventurer.':mode==='signup'?'Begin your journey.':'Find your way back.'}</h2><p className="muted">{mode==='signin'?'Sign in to continue your story.':mode==='signup'?'Create your private companion account.':'We’ll send a link to reset your password.'}</p>
       {!configured?<div className="notice">The beta is being configured. Sign-in becomes available once the account service is connected.</div>:<>
-      {mode!=='recover'&&<><Button className="secondary full" onClick={google} loading={busy}><span className="google-letter">G</span>Continue with Google</Button><div className="divider"><span>or continue with email</span></div></>}
+      {mode!=='recover'&&<><Button className="secondary full" onClick={google} loading={busy}><span className="google-letter">G</span>Continue with Google</Button><Button className="secondary full" onClick={discord} loading={busy}><span className="discord-letter">D</span>Continue with Discord</Button><div className="divider"><span>or continue with email</span></div></>}
       <SubmitForm onSubmit={submit}><Field label="Email address"><input name="email" type="email" autoComplete="email" placeholder={isLocal?'explorer@local.test':'you@example.com'} required maxLength={254}/></Field>
         {mode!=='recover'&&<Field label="Password"><input name="password" type="password" autoComplete={mode==='signup'?'new-password':'current-password'} minLength={mode==='signup'?10:1} placeholder="Your password" required maxLength={128}/></Field>}
         {mode==='signup'&&<label className="check-row"><input type="checkbox" required/><span>I have read the <Link to="/privacy">privacy information</Link>.</span></label>}
