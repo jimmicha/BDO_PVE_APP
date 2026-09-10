@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import type {Snapshot,Step,Goal} from './types';
+import type {Snapshot,Step,Goal,Equipment} from './types';
 export const quantitySchema=z.string().regex(/^[0-9]{1,19}$/,'Enter a whole nonnegative number.').refine(x=>BigInt(x)<=9223372036854775807n,'This quantity is too large.');
 export const fmt=(x:string|number|bigint)=>BigInt(x).toLocaleString('en-US');
 export function reserved(s:Snapshot,id:string,exceptGoal?:string){return s.allocations.filter(x=>x.resource_id===id&&x.goal_id!==exceptGoal).reduce((n,x)=>n+BigInt(x.quantity),0n);}
@@ -8,12 +8,18 @@ export function orderedSteps(steps:Step[]):Step[] {
   function visit(s:Step){if(visiting.has(s.id))throw Error('Dependency cycle');if(done.has(s.id))return;visiting.add(s.id);for(const id of s.dependencies){const dep=map.get(id);if(!dep)throw Error('Missing prerequisite');visit(dep);}visiting.delete(s.id);done.add(s.id);result.push(s);}
   [...steps].sort((a,b)=>a.position-b.position||a.id.localeCompare(b.id)).forEach(visit);return result;
 }
+export function conversionSourceOptions(s:Snapshot,step:Step):Equipment[]{
+  const src=step.reward?.source; if(!src) return [];
+  const goal=s.goals.find(g=>g.id===step.goal_id);
+  return s.equipment.filter(e=>e.game_profile_id===goal?.game_profile_id&&e.item_key===src.item_key&&e.enhancement>=(src.min_enhancement??0)&&e.enhancement<=(src.max_enhancement??25));
+}
 export function stepReadiness(s:Snapshot,step:Step){
   const missingPrerequisites=step.dependencies.filter(id=>s.steps.find(x=>x.id===id)?.status!=='completed');
   const materials=step.requirements.map(r=>{const resource=s.resources.find(x=>x.id===r.resource_id),available=BigInt(resource?.quantity??'0')-reserved(s,r.resource_id,step.goal_id),required=BigInt(r.quantity);return {...r,name:resource?.name??'Unknown material',owned:resource?.quantity??'0',available,missing:required>available?required-available:0n};});
   const goal=s.goals.find(x=>x.id===step.goal_id);
   const claimed=!!step.claim_key&&s.claims.some(x=>x.game_profile_id===goal?.game_profile_id&&x.claim_key===step.claim_key);
-  return {missingPrerequisites,materials,claimed,ready:step.status==='pending'&&goal?.status==='active'&&!missingPrerequisites.length&&materials.every(x=>x.missing===0n)&&!claimed};
+  const conversionOptions=conversionSourceOptions(s,step);
+  return {missingPrerequisites,materials,claimed,conversionOptions,ready:step.status==='pending'&&goal?.status==='active'&&!missingPrerequisites.length&&materials.every(x=>x.missing===0n)&&!claimed&&(!step.reward?.source||conversionOptions.length>0)};
 }
 export function goalMissing(s:Snapshot,goal:Goal){
   const totals=new Map<string,bigint>();

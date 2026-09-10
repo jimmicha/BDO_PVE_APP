@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import type {Goal,Step} from '../domain/types';
+import {enhancementLabel,slots,type Goal,type Step} from '../domain/types';
 import {useApp} from '../lib/AppContext';
 import {Button,Field,Modal,SubmitForm,str,Tag} from '../components/ui';
 import {fmt,stepReadiness} from '../domain/roadmap';
@@ -22,15 +22,23 @@ export function StepEditor({goal,step,onClose}:{goal:Goal;step?:Step;onClose:()=
     <Button type="submit" loading={a.pending} disabled={a.offline}>Save step</Button></SubmitForm></Modal>;
 }
 export function CompletionDialog({step,onClose}:{step:Step;onClose:()=>void}){
-  const a=useApp(),s=a.snapshot!,ready=stepReadiness(s,step),[mode,setMode]=useState(ready.claimed||!step.requirements.length?'record':'spend');
+  const a=useApp(),s=a.snapshot!,ready=stepReadiness(s,step),hasSource=!!step.reward?.source;
+  const [mode,setMode]=useState(ready.claimed||(!step.requirements.length&&!hasSource)?'record':'spend');
+  const [sourceId,setSourceId]=useState(ready.conversionOptions[0]?.id??'');
   const goal=s.goals.find(g=>g.id===step.goal_id)!,catalog=s.catalogs.find(c=>c.id===goal.catalog_version_id);
   const stale=!!catalog&&(catalog.status!=='published'||!catalog.valid_until||catalog.valid_until<new Date().toISOString().slice(0,10));
   return <Modal title="Review this completion" onClose={onClose}><h3>{step.title}</h3><p className="muted">Record progress after completing the action in Black Desert. The companion does not perform game actions.</p>
-    {!!step.requirements.length&&<div className="choice-list"><label className="check-row"><input type="radio" name="completion" checked={mode==='spend'} onChange={()=>setMode('spend')} disabled={ready.claimed||stale}/><span><strong>Apply materials{step.reward?' and add the reward':''}</strong><small>Use the transaction below to update your recorded inventory.</small></span></label><label className="check-row"><input type="radio" name="completion" checked={mode==='record'} onChange={()=>setMode('record')}/><span><strong>Already done · record progress only</strong><small>Inventory stays as recorded. Add missing equipment separately.</small></span></label></div>}
+    {(!!step.requirements.length||hasSource)&&<div className="choice-list"><label className="check-row"><input type="radio" name="completion" checked={mode==='spend'} onChange={()=>setMode('spend')} disabled={ready.claimed||stale}/><span><strong>Apply materials{step.reward?' and add the reward':''}</strong><small>Use the transaction below to update your recorded inventory.</small></span></label><label className="check-row"><input type="radio" name="completion" checked={mode==='record'} onChange={()=>setMode('record')}/><span><strong>Already done · record progress only</strong><small>Inventory stays as recorded. Add missing equipment separately.</small></span></label></div>}
     {ready.claimed&&<p className="notice">This family has already recorded this reward. It cannot be awarded a second time.</p>}
     {stale&&<p className="notice">This catalog version needs review or migration before an inventory transaction.</p>}
-    {mode==='spend'&&<div className="transaction-preview">{ready.materials.map(r=><div key={r.resource_id}><span>{r.name}<small>{fmt(r.available)} available to this roadmap</small></span><strong>− {fmt(r.quantity)}</strong><Tag tone={r.missing?'gold':'green'}>{r.missing?fmt(r.missing)+' missing':fmt(BigInt(r.owned)-BigInt(r.quantity))+' remaining'}</Tag></div>)}{step.reward&&<p className="reward-line">+ 1 PEN (V) {catalog?.content.items.find(i=>i.key===step.reward?.item_key)?.name} → family equipment inventory</p>}</div>}
+    {mode==='spend'&&hasSource&&<fieldset><legend>Choose the item to convert</legend>
+      {ready.conversionOptions.length?ready.conversionOptions.map(e=><label className="check-row" key={e.id}>
+        <input type="radio" name="source" checked={sourceId===e.id} onChange={()=>setSourceId(e.id)}/>
+        <span>{e.name} · {enhancementLabel(e.enhancement)}{e.slot?` · ${slots[e.slot as keyof typeof slots]}`:''}</span>
+      </label>):<p className="inline-error">No compatible item found in this family's equipment.</p>}
+    </fieldset>}
+    {mode==='spend'&&<div className="transaction-preview">{ready.materials.map(r=><div key={r.resource_id}><span>{r.name}<small>{fmt(r.available)} available to this roadmap</small></span><strong>− {fmt(r.quantity)}</strong><Tag tone={r.missing?'gold':'green'}>{r.missing?fmt(r.missing)+' missing':fmt(BigInt(r.owned)-BigInt(r.quantity))+' remaining'}</Tag></div>)}{step.reward&&<p className="reward-line">{hasSource?`Convert ${ready.conversionOptions.find(e=>e.id===sourceId)?.name??'the selected item'} into `:'+ 1 '}{enhancementLabel(step.reward.enhancement)+' '+(catalog?.content.items.find(i=>i.key===step.reward?.item_key)?.name)}{hasSource?'':' → family equipment inventory'}</p>}</div>}
     {!!ready.missingPrerequisites.length&&<p className="inline-error">Complete the prerequisite steps first.</p>}
-    <Button className="full" loading={a.pending} disabled={a.offline||!!ready.missingPrerequisites.length||(mode==='spend'&&(!ready.ready||stale))} onClick={async()=>{if(await a.save('step_complete',{id:step.id,mode}))onClose();}}>{mode==='spend'?'Confirm inventory transaction':'Confirm prior completion'}</Button>
+    <Button className="full" loading={a.pending} disabled={a.offline||!!ready.missingPrerequisites.length||(mode==='spend'&&(!ready.ready||stale||(hasSource&&!sourceId)))} onClick={async()=>{if(await a.save('step_complete',{id:step.id,mode,...(hasSource?{source_equipment_id:sourceId}:{})}))onClose();}}>{mode==='spend'?'Confirm inventory transaction':'Confirm prior completion'}</Button>
   </Modal>;
 }

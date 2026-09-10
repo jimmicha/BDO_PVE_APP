@@ -7,12 +7,14 @@ export interface Equipment { id:Id; game_profile_id:Id; character_id:Id|null; sl
 export interface Resource { id:Id; game_profile_id:Id; name:string; quantity:Quantity; item_key:string|null; unit:'items'|'silver' }
 export interface Goal { id:Id; game_profile_id:Id; character_id:Id|null; title:string; description:string; priority:number; status:'active'|'paused'|'completed'|'archived'; catalog_version_id:Id|null; created_at:string }
 export interface Requirement { resource_id:Id; quantity:Quantity }
-export interface Step { id:Id; goal_id:Id; title:string; description:string; position:number; status:'pending'|'completed'; dependencies:Id[]; requirements:Requirement[]; template_key:string|null; claim_key:string|null; reward:{item_key:string;enhancement:number}|null }
+export interface ConversionSource { item_key:string; min_enhancement?:number; max_enhancement?:number; keep_assignment?:boolean }
+export interface Reward { item_key:string; enhancement:number; source?:ConversionSource }
+export interface Step { id:Id; goal_id:Id; title:string; description:string; position:number; status:'pending'|'completed'; dependencies:Id[]; requirements:Requirement[]; template_key:string|null; claim_key:string|null; reward:Reward|null }
 export interface Allocation { id:Id; goal_id:Id; resource_id:Id; quantity:Quantity }
 export interface Claim { game_profile_id:Id; claim_key:string }
 export interface ProgressEvent { id:Id; game_profile_id:Id|null; kind:string; description:string; before_state:Record<string,unknown>|null; after_state:Record<string,unknown>|null; created_at:string; request_id:Id }
 export interface CatalogItem { key:string; name:string; slots:string[]; enhancements:number[] }
-export interface TemplateStep {key:string;title:string;description:string;dependencies:string[];requirements:{resource_key:string;quantity:Quantity}[];claim_key?:string;reward?:{item_key:string;enhancement:number}}
+export interface TemplateStep {key:string;title:string;description:string;dependencies:string[];requirements:{resource_key:string;quantity:Quantity}[];claim_key?:string;reward?:Reward}
 export interface Catalog { id:Id; version:number; title:string; status:'draft'|'review'|'published'|'retired'; checked_at:string|null; valid_until:string|null; effective_patch:string; sources:{name:string;url:string;checked_at:string;scope?:string}[];content:{platforms:string[];regions:string[];items:CatalogItem[];resources:{key:string;name:string}[];steps:TemplateStep[]} }
 export interface Snapshot {capabilities?:string[];profile:Profile;is_admin:boolean;game_profiles:Family[];characters:Character[];equipment:Equipment[];resources:Resource[];goals:Goal[];steps:Step[];allocations:Allocation[];claims:Claim[];events:ProgressEvent[];catalogs:Catalog[]}
 export interface Command {kind:string;data:Record<string,unknown>;expected_revision:number;request_id:string}

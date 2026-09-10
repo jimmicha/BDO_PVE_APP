@@ -49,3 +49,23 @@ CONTINUATION CHECKPOINT 2026-09-10
 - Fixed local startup to apply later migrations without resetting saved data; added checksum, rollback and legacy schema recognition checks.
 - Validation: 18 core tests and production build passed; all 12 desktop/mobile browser journeys passed, and both upgrade journeys passed again after the final capability guard. See NEXT_STEPS.md for the remaining release plan.
 - Not deployed: hosted connector unavailable, new backend installation incomplete. Guided conversions, catalog review, real auth, Android release and operating backups remain.
+
+CONTINUATION CHECKPOINT 2026-09-10 (guided equipment conversions)
+- Implemented NEXT_STEPS.md item 3: catalog steps can now declare an optional
+  reward.source (item_key, enhancement range, keep_assignment) to consume and
+  transform an existing owned equipment item in place, instead of only ever
+  minting a new one. Plain acquire rewards are unchanged.
+- Added app_private.convert_equipment, spliced into companion_command's
+  step_complete branch alongside the existing resource-cost transaction, and
+  a chained guided_conversions_v1 capability advertisement.
+- Extended validate_catalog to check conversion source semantics; extended
+  Roadmap's completion dialog with a source-item picker and preview, and
+  fixed a pre-existing bug where a reward-only step with no resource cost
+  could never reach spend mode.
+- New tests/equipment-conversions.test.ts covers ownership, compatibility,
+  reuse rejection, atomicity, reservation-caused rollback, retry, reopen,
+  two-slot precision and catalog migration. 19 core tests, typecheck,
+  production build and all 12 desktop/mobile browser journeys pass.
+- Not deployed: this is local-migration and frontend work only. Hosted
+  cutover (item 1), catalog game-data review (item 4), real auth (item 5)
+  and release/ops (item 6) remain, per NEXT_STEPS.md.
