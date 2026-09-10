@@ -1,5 +1,7 @@
 # Requested backend switch — 2026-09-08
 
+Update 2026-09-10: the core migration has now been applied to taxhvwhachtrhtcdbnsz. Remaining migrations, seed and function installation are unconfirmed. The connector is currently unavailable. There are now seven local migrations, including equipment costs and its capability advertisement; inspect actual remote history before resuming. The following original preflight notes are historical. See NEXT_STEPS.md for the current sequence.
+
 The owner selected project taxhvwhachtrhtcdbnsz (bdo-companion-database, Black Desert Developers) to replace vcxptrbumythgwzpgybr. The new project is healthy and currently reports no migrations. Its public browser configuration is prepared in ignored .env.next-backend. The live frontend has not been switched yet: doing so before schema installation would break access.
 
 Required sequence:

@@ -2,6 +2,8 @@
 
 The app is a working core implementation, but the invited beta is not complete.
 
+Latest continuation: see NEXT_STEPS.md. Manual equipment upgrade transactions and local migration tracking are implemented; guided catalog conversions and the hosted cutover remain outstanding.
+
 ## New planning changes
 
 The supplied ZIP contains one JSON draft, catalog-v2-ladder.json: 70 milestones and 23 item types. The original is retained unchanged in data/reference. Run node scripts/import-ladder.mjs to rebuild the normalized draft. Administrators can copy the current catalog to a draft, open Edit draft, load the supplied ladder, inspect review notes and save it without inventing verification dates.

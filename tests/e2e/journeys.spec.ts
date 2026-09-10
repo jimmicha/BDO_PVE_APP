@@ -2,6 +2,18 @@ import {test,expect,type Page} from '@playwright/test';
 import {randomUUID} from 'node:crypto';
 import AxeBuilder from '@axe-core/playwright';
 const password='JourneyTest123!';
+test('equipment upgrade previews deductions and preserves the owned item',async({page})=>{
+  await signup(page,'upgrade-'+randomUUID()+'@local.test');await onboard(page);
+  await navigate(page,'Resources');await page.getByRole('button',{name:'Update balance'}).click();await page.getByLabel('Owned quantity',{exact:false}).fill('100');await page.getByRole('button',{name:'Save balance',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);
+  await navigate(page,'Gear');await page.getByRole('button',{name:/Helmet.*Empty slot/}).click();await page.getByLabel('Item name',{exact:false}).fill('Test helmet');await page.getByRole('button',{name:'Save equipment',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);
+  await page.getByRole('button',{name:/Helmet.*Test helmet/}).click();await page.getByRole('combobox',{name:'Enhancement',exact:true}).selectOption('21');await page.getByText('Record upgrade costs',{exact:true}).click();await page.getByLabel('Spend Silver',{exact:true}).fill('10');await page.getByRole('button',{name:'Save equipment',exact:true}).click();
+  await expect(page.getByRole('dialog')).toContainText('100 owned − 10 spent = 90 remaining');
+  await page.getByRole('button',{name:'Confirm upgrade and deduct resources'}).click();await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect(page.getByRole('button',{name:/Helmet.*Test helmet/})).toContainText('HEX');
+  await navigate(page,'Resources');await expect(page.locator('.silver-panel')).toContainText('90');
+  await navigate(page,'More');await expect(page.locator('.journal-list')).toContainText('Recorded equipment upgrade');
+  await page.reload();await expect(page.locator('.journal-list')).toContainText('Recorded equipment upgrade');
+});
 test('imported reference preserves unknowns, compares enhancements and opens the full guide offline',async({page},info)=>{
   await signup(page,'reference-'+randomUUID()+'@local.test');await onboard(page);await navigate(page,'Gear');
   await page.getByRole('link',{name:/Browse gear stats/}).click();

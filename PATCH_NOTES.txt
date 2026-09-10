@@ -42,3 +42,10 @@ LEFT TO DO
 No credentials, downloaded toolchains, private test accounts or build outputs
 are included in this commit. No paid service or store purchase was made.
 - Administrator draft import/save verified in desktop and mobile browsers (2 passed).
+
+CONTINUATION CHECKPOINT 2026-09-10
+- Added manual equipment upgrade costs with preview, pinned revision, exact deductions and a single atomic journal transaction. Existing equipment IDs are retained.
+- Added backend capability gating so older servers do not offer unsupported deductions.
+- Fixed local startup to apply later migrations without resetting saved data; added checksum, rollback and legacy schema recognition checks.
+- Validation: 18 core tests and production build passed; all 12 desktop/mobile browser journeys passed, and both upgrade journeys passed again after the final capability guard. See NEXT_STEPS.md for the remaining release plan.
+- Not deployed: hosted connector unavailable, new backend installation incomplete. Guided conversions, catalog review, real auth, Android release and operating backups remain.

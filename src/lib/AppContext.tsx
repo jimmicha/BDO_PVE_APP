@@ -11,7 +11,7 @@ function cache(data:Snapshot){try{localStorage.setItem(CACHE_PREFIX+data.profile
 type AppState={
   session:Session|null;authReady:boolean;snapshot:Snapshot|undefined;loading:boolean;error:string;notice:string;pending:boolean;offline:boolean;
   familyId:string;characterId:string;setFamilyId:(id:string)=>void;setCharacterId:(id:string)=>void;
-  save:(kind:string,data:Record<string,unknown>)=>Promise<boolean>;refresh:()=>Promise<unknown>;signOut:()=>Promise<void>;
+  save:(kind:string,data:Record<string,unknown>,expectedRevision?:number)=>Promise<boolean>;refresh:()=>Promise<unknown>;signOut:()=>Promise<void>;
   retry:()=>Promise<boolean>;clearNotice:()=>void;hasRetry:boolean;
 };
 const Context=createContext<AppState|null>(null);
@@ -60,10 +60,10 @@ export function AppProvider({children}:{children:ReactNode}){
       return false;
     }finally{busy.current=false;setPending(false);}
   }
-  async function save(kind:string,data:Record<string,unknown>){
+  async function save(kind:string,data:Record<string,unknown>,expectedRevision?:number){
     if(!snapshot)return false;
     if(uncertain.current){setError('Resolve the previous change with Retry or Reload before saving another. Your form is still available.');return false;}
-    return execute({kind,data,expected_revision:snapshot.profile.revision,request_id:crypto.randomUUID()});
+    return execute({kind,data,expected_revision:expectedRevision??snapshot.profile.revision,request_id:crypto.randomUUID()});
   }
   async function refresh(){uncertain.current=null;setError('');return query.refetch();}
   async function signOut(){
