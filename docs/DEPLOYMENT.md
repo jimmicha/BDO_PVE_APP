@@ -12,7 +12,7 @@ The current production deployment is https://www.blackdesertcompanion.app (also 
 
 1. Set Site URL to the stable deployed app origin. Allow its /auth/callback and /auth/reset URLs, the equivalent localhost development URLs, and com.jimmicha.bdocompanion://auth/callback and com.jimmicha.bdocompanion://auth/reset.
 2. Keep email confirmation enabled. Configure the Before User Created hook to public.before_user_created using the installed database hook. Verify the exact function name against supabase/config.toml before selecting it.
-3. Configure Google OAuth with a client created in the owner's Google Cloud project. Add the Supabase callback URI shown by the provider settings. Enable secure manual identity linking and test matching verified identities on both platforms.
+3. Configure Google OAuth with a client created in the owner's Google Cloud project, and Discord OAuth with an application created in the owner's Discord Developer Portal. Add the Supabase callback URI shown by each provider's settings. Enable secure manual identity linking and test matching verified identities on both platforms. The frontend already offers Google, Discord and email/password sign-in, plus in-app linking of any of them to the current account.
 4. Configure Resend SMTP with a verified sender domain. Keep SMTP and OAuth secrets in service settings. Test signup, verification, recovery, expired links and Android browser return links with real mailboxes.
 5. Add invited emails to app_private.beta_members using a privileged operator connection. jimmicha3@gmail.com is already the designated administrator. This does not create a password or an Auth account.
 
