@@ -20,7 +20,7 @@ export function Auth(){
   async function google(){
     if(isLocal){setMessage('Google sign-in will work after a Supabase project and Google OAuth client are connected. The local environment supports email test accounts.');return;}
     setBusy(true);setError('');
-    const {data,error:err}=await supabase.auth.signInWithOAuth({provider:'google',options:{redirectTo:callbackUrl(),skipBrowserRedirect:Capacitor.isNativePlatform()}});
+    const {data,error:err}=await supabase.auth.signInWithOAuth({provider:'google',options:{redirectTo:callbackUrl(),queryParams:{prompt:'select_account'},skipBrowserRedirect:Capacitor.isNativePlatform()}});
     if(err)setError(humanError(err));else if(data.url&&Capacitor.isNativePlatform())await Browser.open({url:data.url});
     setBusy(false);
   }
@@ -57,8 +57,11 @@ export function AuthCallback(){
   const navigate=useNavigate();const [error,setError]=useState('');
   useEffect(()=>{let active=true;(async()=>{
     const url=new URL(window.location.href),code=url.searchParams.get('code'),token=url.searchParams.get('token_hash');
+    const fragment=new URLSearchParams(url.hash.slice(1));
+    const providerError=url.searchParams.get('error_description')||fragment.get('error_description')||url.searchParams.get('error')||fragment.get('error');
+    if(providerError){history.replaceState(null,'',url.pathname);setError(providerError);return;}
     const result=token?await supabase.auth.verifyOtp({token_hash:token,type:'email'}):code?await supabase.auth.exchangeCodeForSession(code):await supabase.auth.getSession();
-    if(!active)return;if(result.error)setError(humanError(result.error));else navigate('/',{replace:true});
+    if(!active)return;if(result.error)setError(humanError(result.error));else if(!result.data.session)setError('Sign-in did not complete. Return home and try again with your invited email address.');else navigate('/',{replace:true});
   })();return()=>{active=false;};},[navigate]);
   return <main className="standalone"><h1>Completing sign-in</h1>{error?<p role="alert">{error}</p>:<p>Returning to your journey…</p>}<Link to="/">Return home</Link></main>;
 }
