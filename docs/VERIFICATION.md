@@ -11,11 +11,11 @@ Hosted fixture accounts use deliberately confirmed test identities. Those tests 
 
 ## Outstanding acceptance gates
 
-The owner selected a replacement backend, taxhvwhachtrhtcdbnsz. Earlier hosted test results apply to the previous backend only. See BACKEND-CUTOVER.md. The new project has the canonical URL and all eight callback URLs saved, but still needs schema and Edge Function installation through a reconnected connector.
+The owner selected a replacement backend, taxhvwhachtrhtcdbnsz. All ten migrations, the reviewed v1 seed and the delete-account function are installed; Google, Discord and email/password sign-in plus Resend SMTP are configured and confirmed live. A ten-check hosted smoke suite (two disposable Auth accounts, extended to cover equipment-cost transactions and capability advertisement) passed against this project on 2026-09-10, with verified zero residue afterward. See BACKEND-CUTOVER.md and NEXT_STEPS.md for the full record. The new project has the canonical URL and all eight callback URLs saved.
 
 Automated WCAG AA checks now pass on desktop and phone for sign-in, privacy, deletion and the authenticated gear reference. Footer/sidebar contrast was corrected; the shell has a keyboard skip link and main landmark, and compact touch controls have a 44-pixel minimum. Automated checks do not replace a full assistive-technology audit.
 
-- Real mailbox verification/recovery and Google sign-in/linking on web and Android; hosted redirect URLs, SMTP and Auth signup hook configuration.
+- Google, Discord and Resend SMTP are configured and server-verified (provider flags live, a real signup produced a genuine confirmation_sent_at). Still needed: an actual click-through of the Google/Discord consent screens, real-inbox delivery, and Google/Discord sign-in/linking and hosted redirect URLs verified on Android specifically.
 - Separate staging environment and real hosted encrypted backup/restore rehearsal; daily backup schedule and failure alerts enabled.
 - Android SDK build, installation, keyboard/back/deep-link behavior and signed Play internal-track distribution.
 - Live deployed browser journey after final service configuration, accessibility audit and final operator/privacy details.
