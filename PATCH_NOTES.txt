@@ -1,6 +1,16 @@
 BDO Companion beta - implementation patch
 Date: 2026-09-08
 
+UPDATE 2026-09-10
+- Imported the new 70-step / 23-item ladder as an admin-editable draft.
+  Preserved existing milestone and family claim identities; review dates stay
+  unset. New conversion, set-reward and cost semantics need further review.
+- 15 core tests pass. Android debug APK generated and signature verified;
+  real-device and Play release testing remain outstanding.
+- First migration installed on the replacement backend. Remaining setup and
+  live cutover are pending. See docs/COMPLETION_REVIEW.md for current status;
+  the original DONE/LEFT sections below describe the earlier checkpoint.
+
 DONE
 - React/TypeScript web app: accounts, onboarding, characters, gear, resources,
   roadmaps, reservations, transaction previews, journal, settings and export.
@@ -31,3 +41,4 @@ LEFT TO DO
 
 No credentials, downloaded toolchains, private test accounts or build outputs
 are included in this commit. No paid service or store purchase was made.
+- Administrator draft import/save verified in desktop and mobile browsers (2 passed).

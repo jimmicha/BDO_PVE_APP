@@ -1,0 +1,1299 @@
+{
+  "version": 2,
+  "title": "PC NA/EU PvE gear ladder — season to Inner Edania",
+  "status": "draft",
+  "checked_at": null,
+  "valid_until": null,
+  "effective_patch": "NA/EU, owner-supplied September 2026 PvE progression guide and gear stat tables",
+  "sources": [
+    {
+      "name": "Owner-supplied — BDO PvE Gear Progression 2026 (docx)",
+      "url": "https://github.com/jimmicha/BDO_PVE_APP/blob/main/data/reference/progression-paragraphs.json",
+      "checked_at": "2026-09-08",
+      "scope": "Six-stage ladder, per-stage priorities, crystal/artifact/lightstone guidance"
+    },
+    {
+      "name": "Owner-supplied — BDO PvE Gear Stats 2026 (txt)",
+      "url": "https://github.com/jimmicha/BDO_PVE_APP/blob/main/data/reference/BDO_PvE_Gear_Stats_2026.txt",
+      "checked_at": "2026-09-08",
+      "scope": "Per-rung stat values, reform, artifact and set-effect figures"
+    },
+    {
+      "name": "Pearl Abyss — NA/EU Kharazad support FAQ",
+      "url": "https://support.pearlabyss.com/blackdesert_naeu/en-US/Faq/Home/Detail?_faqNo=655",
+      "checked_at": "2026-09-07",
+      "scope": "Materials, six rewards, once-per-family limits (inherited from catalog version 1)"
+    },
+    {
+      "name": "Garmoth — HYPERBOOST Update",
+      "url": "https://garmoth.com/guides/post/hyperboost-update",
+      "checked_at": "2026-09-07",
+      "scope": "Olvia prerequisite and accessory rewards (inherited from catalog version 1)"
+    }
+  ],
+  "content": {
+    "platforms": [
+      "PC"
+    ],
+    "regions": [
+      "NA",
+      "EU"
+    ],
+    "resources": [
+      {
+        "key": "essence_of_dawn",
+        "name": "Essence of Dawn"
+      },
+      {
+        "key": "sharp_black_crystal_shard",
+        "name": "Sharp Black Crystal Shard"
+      }
+    ],
+    "items": [
+      {
+        "key": "tuvala_set",
+        "name": "Tuvala gear (season set)",
+        "slots": [
+          "main_hand",
+          "awakening",
+          "off_hand",
+          "helmet",
+          "armor",
+          "gloves",
+          "shoes",
+          "necklace",
+          "belt",
+          "ring_1",
+          "ring_2",
+          "earring_1",
+          "earring_2"
+        ],
+        "enhancements": [
+          20
+        ]
+      },
+      {
+        "key": "blackstar_main",
+        "name": "Blackstar Main Weapon",
+        "slots": [
+          "main_hand"
+        ],
+        "enhancements": [
+          20
+        ]
+      },
+      {
+        "key": "blackstar_awakening",
+        "name": "Blackstar Awakening Weapon",
+        "slots": [
+          "awakening"
+        ],
+        "enhancements": [
+          20
+        ]
+      },
+      {
+        "key": "blackstar_sub",
+        "name": "Blackstar Sub-weapon",
+        "slots": [
+          "off_hand"
+        ],
+        "enhancements": [
+          20
+        ]
+      },
+      {
+        "key": "sovereign_main",
+        "name": "Sovereign Main Weapon",
+        "slots": [
+          "main_hand"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "sovereign_awakening",
+        "name": "Sovereign Awakening Weapon",
+        "slots": [
+          "awakening"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "sovereign_sub",
+        "name": "Sovereign Sub-weapon",
+        "slots": [
+          "off_hand"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "labreska_helmet",
+        "name": "Labreska's Helmet",
+        "slots": [
+          "helmet"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "key": "fallen_god_armor",
+        "name": "Fallen God's Armor",
+        "slots": [
+          "armor"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "key": "dahn_gloves",
+        "name": "Dahn's Gloves",
+        "slots": [
+          "gloves"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "key": "ator_shoes",
+        "name": "Ator's Shoes",
+        "slots": [
+          "shoes"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "key": "edana_heavensmite",
+        "name": "Edana Heavensmite (helmet)",
+        "slots": [
+          "helmet"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "edana_abyssveil",
+        "name": "Edana Abyssveil (armor)",
+        "slots": [
+          "armor"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "edana_oathgrip",
+        "name": "Edana Oathgrip (gloves)",
+        "slots": [
+          "gloves"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "edana_furystride",
+        "name": "Edana Furystride (shoes)",
+        "slots": [
+          "shoes"
+        ],
+        "enhancements": [
+          0,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "kharazad_necklace",
+        "name": "Kharazad Necklace",
+        "slots": [
+          "necklace"
+        ],
+        "enhancements": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "kharazad_belt",
+        "name": "Kharazad Belt",
+        "slots": [
+          "belt"
+        ],
+        "enhancements": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "kharazad_ring",
+        "name": "Kharazad Ring",
+        "slots": [
+          "ring_1",
+          "ring_2"
+        ],
+        "enhancements": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "kharazad_earring",
+        "name": "Kharazad Earring",
+        "slots": [
+          "earring_1",
+          "earring_2"
+        ],
+        "enhancements": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "ekleta_necklace",
+        "name": "Ekleta Necklace",
+        "slots": [
+          "necklace"
+        ],
+        "enhancements": [
+          0,
+          18,
+          20,
+          22,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "ekleta_belt",
+        "name": "Ekleta Belt",
+        "slots": [
+          "belt"
+        ],
+        "enhancements": [
+          0,
+          18,
+          20,
+          22,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "ekleta_ring",
+        "name": "Ekleta Ring",
+        "slots": [
+          "ring_1",
+          "ring_2"
+        ],
+        "enhancements": [
+          0,
+          18,
+          20,
+          22,
+          24,
+          25
+        ]
+      },
+      {
+        "key": "ekleta_earring",
+        "name": "Ekleta Earring",
+        "slots": [
+          "earring_1",
+          "earring_2"
+        ],
+        "enhancements": [
+          0,
+          18,
+          20,
+          22,
+          24,
+          25
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "key": "s1_season_graduation",
+        "title": "Finish the season and graduate a PEN Tuvala set",
+        "description": "Complete the season character's graduation with the full PEN (V) Tuvala set: main, awakening, sub-weapon, armor and accessories. Current PEN Tuvala combat stats make this a genuine starting point rather than a placeholder. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [],
+        "requirements": [],
+        "reward": {
+          "item_key": "tuvala_set",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_olvia_enrollment",
+        "title": "Take your first steps at Olvia Academy",
+        "description": "Confirm completion of [Olvia Academy] Your First Steps In, the prerequisite for the HYPERBOOST support rewards. Enrollment windows are not certified by this catalog; check in game.",
+        "dependencies": [
+          "s1_season_graduation"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s2_khar_necklace",
+        "title": "Claim PEN (V) Kharazad Necklace",
+        "description": "Visit Alustin in Velia with the materials in your regular inventory. Enable all quest types if the support quest is hidden. Record only after completing the exchange in-game. This reward is available once per family.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [
+          {
+            "resource_key": "essence_of_dawn",
+            "quantity": "10"
+          },
+          {
+            "resource_key": "sharp_black_crystal_shard",
+            "quantity": "50"
+          }
+        ],
+        "claim_key": "alustin_support_necklace",
+        "reward": {
+          "item_key": "kharazad_necklace",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_khar_belt",
+        "title": "Claim PEN (V) Kharazad Belt",
+        "description": "Visit Alustin in Velia with the materials in your regular inventory. Enable all quest types if the support quest is hidden. Record only after completing the exchange in-game. This reward is available once per family.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [
+          {
+            "resource_key": "essence_of_dawn",
+            "quantity": "10"
+          },
+          {
+            "resource_key": "sharp_black_crystal_shard",
+            "quantity": "50"
+          }
+        ],
+        "claim_key": "alustin_support_belt",
+        "reward": {
+          "item_key": "kharazad_belt",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_khar_ring_1",
+        "title": "Claim PEN (V) Kharazad Ring I",
+        "description": "Visit Alustin in Velia with the materials in your regular inventory. Enable all quest types if the support quest is hidden. Record only after completing the exchange in-game. This reward is available once per family.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [
+          {
+            "resource_key": "essence_of_dawn",
+            "quantity": "10"
+          },
+          {
+            "resource_key": "sharp_black_crystal_shard",
+            "quantity": "50"
+          }
+        ],
+        "claim_key": "alustin_support_ring_1",
+        "reward": {
+          "item_key": "kharazad_ring",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_khar_ring_2",
+        "title": "Claim PEN (V) Kharazad Ring II",
+        "description": "Visit Alustin in Velia with the materials in your regular inventory. Enable all quest types if the support quest is hidden. Record only after completing the exchange in-game. This reward is available once per family.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [
+          {
+            "resource_key": "essence_of_dawn",
+            "quantity": "10"
+          },
+          {
+            "resource_key": "sharp_black_crystal_shard",
+            "quantity": "50"
+          }
+        ],
+        "claim_key": "alustin_support_ring_2",
+        "reward": {
+          "item_key": "kharazad_ring",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_khar_earring_1",
+        "title": "Claim PEN (V) Kharazad Earring I",
+        "description": "Visit Alustin in Velia with the materials in your regular inventory. Enable all quest types if the support quest is hidden. Record only after completing the exchange in-game. This reward is available once per family.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [
+          {
+            "resource_key": "essence_of_dawn",
+            "quantity": "10"
+          },
+          {
+            "resource_key": "sharp_black_crystal_shard",
+            "quantity": "50"
+          }
+        ],
+        "claim_key": "alustin_support_earring_1",
+        "reward": {
+          "item_key": "kharazad_earring",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_khar_earring_2",
+        "title": "Claim PEN (V) Kharazad Earring II",
+        "description": "Visit Alustin in Velia with the materials in your regular inventory. Enable all quest types if the support quest is hidden. Record only after completing the exchange in-game. This reward is available once per family.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [
+          {
+            "resource_key": "essence_of_dawn",
+            "quantity": "10"
+          },
+          {
+            "resource_key": "sharp_black_crystal_shard",
+            "quantity": "50"
+          }
+        ],
+        "claim_key": "alustin_support_earring_2",
+        "reward": {
+          "item_key": "kharazad_earring",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_blackstar_main",
+        "title": "Reach PEN (V) Blackstar main weapon",
+        "description": "PEN Blackstar is the crafting gateway to Sovereign. Hyperboost support shortens this considerably. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "blackstar_main",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_blackstar_awakening",
+        "title": "Reach PEN (V) Blackstar awakening weapon",
+        "description": "Second Sovereign prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "blackstar_awakening",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_blackstar_sub",
+        "title": "Reach PEN (V) Blackstar sub-weapon",
+        "description": "Third weapon slot prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "blackstar_sub",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s2_slumbering_base",
+        "title": "Obtain base Slumbering Origin armor",
+        "description": "Labreska's Helmet, Fallen God's Armor, Dahn's Gloves and Ator's Shoes, obtainable through Black Shrine support objectives. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_olvia_enrollment"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s3_sovereign_main_base",
+        "title": "Craft Sovereign main weapon",
+        "description": "Crafted from PEN Blackstar plus Primordial materials. Succession specs prioritise this slot. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_blackstar_main"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_main",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s3_sovereign_awakening_base",
+        "title": "Craft Sovereign awakening weapon",
+        "description": "Awakening specs prioritise this slot over the main hand. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_blackstar_awakening"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_awakening",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s3_sovereign_sub_base",
+        "title": "Craft Sovereign sub-weapon",
+        "description": "Sovereign sub-weapon sheet AP interacts strongly with post-310 AP monster damage scaling, so the third slot is not optional at endgame. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_blackstar_sub"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_sub",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s3_garmoth_main",
+        "title": "Apply Inverted Heart of Garmoth reform to the main hand",
+        "description": "Reform effect includes +3 displayed AP and All Accuracy +50 per the supplied stat tables. Reform values are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_sovereign_main_base"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s3_garmoth_awakening",
+        "title": "Apply Inverted Heart of Garmoth reform to the awakening weapon",
+        "description": "Adds +3 displayed AP and additional crystal slots, which is the main reason this reform is valued. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_sovereign_awakening_base"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s3_marsh_artifact",
+        "title": "Equip Marsh's Artifact",
+        "description": "Cheap monster-AP starter artifact: +6 AP against monsters per the supplied tables. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "s3_kabua_artifacts",
+        "title": "Equip two Kabua's Artifacts",
+        "description": "Standard PvE artifact foundation: +7 monster AP, +20 monster damage reduction, +100 HP and +75 stamina each, per the supplied tables. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_marsh_artifact"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s3_crystal_presets",
+        "title": "Build grind-spot crystal presets",
+        "description": "Build presets per grind spot rather than one universal setup. Endgame families include Girin, Ultimate Macalod, Rebellious Spirit, Corrupted/Gluttony, Ah'krad, Brutal Decimation and Void Destruction. Modern zones expose the dominant CC type in Monster Zone Info; build that resistance group. Crystal mechanics are unreviewed.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "s3_ancient_set",
+        "title": "Reach a three-piece Ancient set effect",
+        "description": "Two pieces give monster damage reduction +10; three pieces give monster AP +7, per the supplied tables. Set effects are separate from per-piece stats. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_slumbering_base"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s3_labreska_helmet_tri",
+        "title": "Enhance Labreska's Helmet to TRI (III)",
+        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_slumbering_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "labreska_helmet",
+          "enhancement": 18
+        }
+      },
+      {
+        "key": "s3_fallen_god_armor_tri",
+        "title": "Enhance Fallen God's Armor to TRI (III)",
+        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_slumbering_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "fallen_god_armor",
+          "enhancement": 18
+        }
+      },
+      {
+        "key": "s3_dahn_gloves_tri",
+        "title": "Enhance Dahn's Gloves to TRI (III)",
+        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_slumbering_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "dahn_gloves",
+          "enhancement": 18
+        }
+      },
+      {
+        "key": "s3_ator_shoes_tri",
+        "title": "Enhance Ator's Shoes to TRI (III)",
+        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_slumbering_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ator_shoes",
+          "enhancement": 18
+        }
+      },
+      {
+        "key": "s3_sovereign_main_tet",
+        "title": "Enhance Sovereign main weapon to TET (IV)",
+        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_sovereign_main_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_main",
+          "enhancement": 19
+        }
+      },
+      {
+        "key": "s3_sovereign_awakening_tet",
+        "title": "Enhance Sovereign awakening weapon to TET (IV)",
+        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_sovereign_awakening_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_awakening",
+          "enhancement": 19
+        }
+      },
+      {
+        "key": "s3_sovereign_sub_tet",
+        "title": "Enhance Sovereign sub-weapon to TET (IV)",
+        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_sovereign_sub_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_sub",
+          "enhancement": 19
+        }
+      },
+      {
+        "key": "s3_kharazad_necklace_sep",
+        "title": "Enhance Kharazad Necklace to SEP (VII)",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_khar_necklace"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "kharazad_necklace",
+          "enhancement": 22
+        }
+      },
+      {
+        "key": "s3_kharazad_belt_sep",
+        "title": "Enhance Kharazad Belt to SEP (VII)",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_khar_belt"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "kharazad_belt",
+          "enhancement": 22
+        }
+      },
+      {
+        "key": "s3_kharazad_ring_sep",
+        "title": "Enhance Kharazad Ring to SEP (VII)",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_khar_ring_1"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "kharazad_ring",
+          "enhancement": 22
+        }
+      },
+      {
+        "key": "s3_kharazad_earring_sep",
+        "title": "Enhance Kharazad Earring to SEP (VII)",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s2_khar_earring_1"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "kharazad_earring",
+          "enhancement": 22
+        }
+      },
+      {
+        "key": "s4_sovereign_primary_pen",
+        "title": "Enhance your primary Sovereign weapon to PEN (V)",
+        "description": "Push the slot tied to your spec first: main hand for succession, awakening for awakening. The other slot still contributes PvE stats and should not be abandoned. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_sovereign_main_tet",
+          "s3_sovereign_awakening_tet"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_main",
+          "enhancement": 20
+        }
+      },
+      {
+        "key": "s4_labreska_helmet_tet",
+        "title": "Enhance Labreska's Helmet to TET (IV)",
+        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_labreska_helmet_tri"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "labreska_helmet",
+          "enhancement": 19
+        }
+      },
+      {
+        "key": "s4_fallen_god_armor_tet",
+        "title": "Enhance Fallen God's Armor to TET (IV)",
+        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_fallen_god_armor_tri"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "fallen_god_armor",
+          "enhancement": 19
+        }
+      },
+      {
+        "key": "s4_dahn_gloves_tet",
+        "title": "Enhance Dahn's Gloves to TET (IV)",
+        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_dahn_gloves_tri"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "dahn_gloves",
+          "enhancement": 19
+        }
+      },
+      {
+        "key": "s4_ator_shoes_tet",
+        "title": "Enhance Ator's Shoes to TET (IV)",
+        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_ator_shoes_tri"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ator_shoes",
+          "enhancement": 19
+        }
+      },
+      {
+        "key": "s4_edana_heavensmite_base",
+        "title": "Convert or build Edana Heavensmite",
+        "description": "Progression is tied to Pieces of Edana and Edania weekly content; higher castle tiers award more material. Build the four-piece foundation before raising any single piece. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_labreska_helmet_tet"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_heavensmite",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s4_edana_abyssveil_base",
+        "title": "Convert or build Edana Abyssveil",
+        "description": "Progression is tied to Pieces of Edana and Edania weekly content; higher castle tiers award more material. Build the four-piece foundation before raising any single piece. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_fallen_god_armor_tet"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_abyssveil",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s4_edana_oathgrip_base",
+        "title": "Convert or build Edana Oathgrip",
+        "description": "Progression is tied to Pieces of Edana and Edania weekly content; higher castle tiers award more material. Build the four-piece foundation before raising any single piece. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_dahn_gloves_tet"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_oathgrip",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s4_edana_furystride_base",
+        "title": "Convert or build Edana Furystride",
+        "description": "Progression is tied to Pieces of Edana and Edania weekly content; higher castle tiers award more material. Build the four-piece foundation before raising any single piece. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_ator_shoes_tet"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_furystride",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s4_dawn_all_ap",
+        "title": "Fit HAN Dawn Crystal - All AP across six accessories",
+        "description": "+7 All AP each, +42 All AP across all six slots, per the supplied tables. Swap to accuracy only where extra hit rate outweighs the AP loss; PvE accuracy is a threshold, not a collection. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_kharazad_necklace_sep"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s4_accessory_cups",
+        "title": "Finish the accessory cups",
+        "description": "Complete the upgraded cups on your Kharazad accessories before treating the set as finished. For pure PvE damage prioritise cup effects that add AP. Before moving to newer accessories, check whether cup state transfers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_kharazad_necklace_sep",
+          "s3_kharazad_belt_sep"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s4_kabua_heralding",
+        "title": "Reform to two Kabua's Heralding Artifacts",
+        "description": "Reformed Kabua gives +10 monster AP, +25 monster damage reduction, +350 HP and +75 stamina each, per the supplied tables. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_kabua_artifacts"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s4_kharazad_necklace_nov",
+        "title": "Enhance Kharazad Necklace to NOV (IX)",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_kharazad_necklace_sep"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "kharazad_necklace",
+          "enhancement": 24
+        }
+      },
+      {
+        "key": "s4_kharazad_belt_nov",
+        "title": "Enhance Kharazad Belt to NOV (IX)",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_kharazad_belt_sep"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "kharazad_belt",
+          "enhancement": 24
+        }
+      },
+      {
+        "key": "s4_kharazad_ring_nov",
+        "title": "Enhance Kharazad Ring to NOV (IX)",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_kharazad_ring_sep"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "kharazad_ring",
+          "enhancement": 24
+        }
+      },
+      {
+        "key": "s4_kharazad_earring_nov",
+        "title": "Enhance Kharazad Earring to NOV (IX)",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s3_kharazad_earring_sep"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "kharazad_earring",
+          "enhancement": 24
+        }
+      },
+      {
+        "key": "s5_amplified_lightstones",
+        "title": "Build Amplified Lightstone sets",
+        "description": "Amplified versions keep existing combination logic with stronger individual stats. Build after the base combination and artifact foundation. Keep a generic set, your primary species set, an Edania (Twisted) set and any class-specific special-attack set. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_kabua_heralding"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s5_edana_heavensmite_tri",
+        "title": "Enhance Edana Heavensmite to TRI (III)",
+        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_edana_heavensmite_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_heavensmite",
+          "enhancement": 18
+        }
+      },
+      {
+        "key": "s5_edana_abyssveil_tri",
+        "title": "Enhance Edana Abyssveil to TRI (III)",
+        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_edana_abyssveil_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_abyssveil",
+          "enhancement": 18
+        }
+      },
+      {
+        "key": "s5_edana_oathgrip_tri",
+        "title": "Enhance Edana Oathgrip to TRI (III)",
+        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_edana_oathgrip_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_oathgrip",
+          "enhancement": 18
+        }
+      },
+      {
+        "key": "s5_edana_furystride_tri",
+        "title": "Enhance Edana Furystride to TRI (III)",
+        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_edana_furystride_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_furystride",
+          "enhancement": 18
+        }
+      },
+      {
+        "key": "s5_sovereign_hex",
+        "title": "Enhance Sovereign weapons to HEX (VI) and above",
+        "description": "Raise the primary weapon first, then bring the others up behind it. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_sovereign_primary_pen"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_main",
+          "enhancement": 21
+        }
+      },
+      {
+        "key": "s5_ekleta_necklace_base",
+        "title": "Move to Ekleta Necklace",
+        "description": "Ekleta has high base stats, is not market tradable and enhances with slot-specific Causality Shardstones. Apeiron has lower base stats with larger enhancement gains, is tradeable and enhances with base Apeiron of the same slot. Both converge at DEC. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_kharazad_necklace_nov"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ekleta_necklace",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s5_ekleta_belt_base",
+        "title": "Move to Ekleta Belt",
+        "description": "Ekleta has high base stats, is not market tradable and enhances with slot-specific Causality Shardstones. Apeiron has lower base stats with larger enhancement gains, is tradeable and enhances with base Apeiron of the same slot. Both converge at DEC. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_kharazad_belt_nov"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ekleta_belt",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s5_ekleta_ring_base",
+        "title": "Move to Ekleta Ring",
+        "description": "Ekleta has high base stats, is not market tradable and enhances with slot-specific Causality Shardstones. Apeiron has lower base stats with larger enhancement gains, is tradeable and enhances with base Apeiron of the same slot. Both converge at DEC. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_kharazad_ring_nov"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ekleta_ring",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s5_ekleta_earring_base",
+        "title": "Move to Ekleta Earring",
+        "description": "Ekleta has high base stats, is not market tradable and enhances with slot-specific Causality Shardstones. Apeiron has lower base stats with larger enhancement gains, is tradeable and enhances with base Apeiron of the same slot. Both converge at DEC. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_kharazad_earring_nov"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ekleta_earring",
+          "enhancement": 0
+        }
+      },
+      {
+        "key": "s6_han_reforge",
+        "title": "Optimise HAN Sovereign reforge stones",
+        "description": "Tune All AP, accuracy, crit rate, back-attack and special-attack modifiers. Supplied HAN example: All AP +5, Accuracy +9, Crit Rate +6%, Back Attack +2.5%, Crit Damage +1.5%. Do not blindly stack accuracy; convert excess into damage. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s5_sovereign_hex"
+        ],
+        "requirements": []
+      },
+      {
+        "key": "s6_sovereign_dec",
+        "title": "Enhance Sovereign weapons toward DEC (X)",
+        "description": "All three Sovereign slots enhance to DEC. Treat this as a horizon, not a shopping list; no current PvE zone requires it. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s6_han_reforge"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "sovereign_main",
+          "enhancement": 25
+        }
+      },
+      {
+        "key": "s6_edana_dec",
+        "title": "Enhance Edana armor toward NOV/DEC",
+        "description": "Long-tail defensive ceiling. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s5_edana_abyssveil_tri"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "edana_abyssveil",
+          "enhancement": 24
+        }
+      },
+      {
+        "key": "s6_ekleta_dec",
+        "title": "Enhance Ekleta or Apeiron toward DEC (X)",
+        "description": "Ekleta and Apeiron converge at DEC. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s5_ekleta_necklace_base"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ekleta_necklace",
+          "enhancement": 25
+        }
+      },
+      {
+        "key": "ap_vells_heart",
+        "title": "Combine Vell's Heart with a high-tier Destruction stone",
+        "description": "Keeps Vell's displayed AP while gaining the Destruction effects. Growth uses visible success rates with Ancient Anvil protection; failure no longer destroys the stone, though EXP is lost. Unreviewed. Not reviewed as an automated mechanic.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "ap_journals",
+        "title": "Complete the AP, DP, accuracy and HP adventure journals",
+        "description": "Family-wide permanent stats, often more efficient than an expensive gear enhancement. Not reviewed as an automated mechanic.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "ap_spirit_essence",
+        "title": "Obtain Ornette's and Odore's Spirit Essence",
+        "description": "Ornette's for HP; Odore's where your class benefits from the resource potion. Not reviewed as an automated mechanic.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "ap_fairy",
+        "title": "Raise a Radiant or T4 fairy with Miraculous Cheer V",
+        "description": "Feathery Steps and Continuous Care are the major quality-of-life skills. Not reviewed as an automated mechanic.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "ap_pets",
+        "title": "Keep five T4 pets with one T5 Alpha",
+        "description": "Loot speed is a real damage-per-hour stat: pets must keep up with your clear speed. Not reviewed as an automated mechanic.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "ap_crystal_slots",
+        "title": "Unlock all practical crystal slots",
+        "description": "The awakening Garmoth reform contributes crystal-slot utility here too. Not reviewed as an automated mechanic.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "ap_weight",
+        "title": "Raise weight and inventory for your target zone",
+        "description": "Storage and maids can reduce the requirement. Not reviewed as an automated mechanic.",
+        "dependencies": [],
+        "requirements": []
+      },
+      {
+        "key": "ap_loadout",
+        "title": "Settle a grind loadout: food, draught, perfume, church and villa buffs",
+        "description": "Simple Cron Meal or the current food setup for the spot; a frenzy-style draught or elixir rotation. Maintain AP and defensive church buffs for serious sessions. Skill add-ons: monster/All AP, attack and casting speed, crit rate, enemy DP and evasion reduction, plus the special-attack modifiers your rotation actually uses. Not reviewed as an automated mechanic.",
+        "dependencies": [],
+        "requirements": []
+      }
+    ]
+  }
+}
