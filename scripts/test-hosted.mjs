@@ -45,6 +45,13 @@ try{
   assert.equal(state[0].equipment.filter(x=>x.item_key==='kharazad_necklace').length,1);assert.equal(state[0].resources.find(x=>x.item_key==='essence_of_dawn').quantity,'10');
   await send(0,'step_reopen',{id:necklace.id});const claimed=await clients[0].rpc('companion_command',{command:{...command,request_id:randomUUID(),expected_revision:state[0].profile.revision}});assert(claimed.error?.message.includes('ALREADY_CLAIMED'));
   check('Guided reward spends 10/50 once; replay and reopening cannot duplicate family rewards');
+  assert(state[0].capabilities.includes('equipment_costs_v1'));assert(state[0].capabilities.includes('guided_conversions_v1'));
+  check('Backend advertises equipment_costs_v1 and guided_conversions_v1');
+  const helmet=state[0].equipment.find(x=>x.name==='Persistence test'),dawn=state[0].resources.find(x=>x.item_key==='essence_of_dawn'),dawnBefore=BigInt(dawn.quantity);
+  await send(0,'gear_save',{id:helmet.id,game_profile_id:state[0].game_profiles[0].id,character_id:helmet.character_id,slot:helmet.slot,name:'Upgraded helmet',enhancement:helmet.enhancement+1,costs:[{resource_id:dawn.id,quantity:'5'}]});
+  assert.equal(state[0].equipment.find(x=>x.id===helmet.id).enhancement,helmet.enhancement+1);
+  assert.equal(state[0].resources.find(x=>x.item_key==='essence_of_dawn').quantity,String(dawnBefore-5n));
+  check('Equipment upgrade transaction deducts resources and updates the item atomically');
   const exp=await rpc(clients[0],'companion_export');assert.equal(exp.equipment_instances.length,2);assert.equal(exp.family_claims.length,1);assert.equal(exp.characters.length,1);
   check('Full export includes owned inventory, characters, claims, and history');
   const del=await api(clients[0],'/functions/v1/delete-account',{confirmation:'DELETE'});if(del.error)throw del.error;assert.equal(del.data.status,'deleted');

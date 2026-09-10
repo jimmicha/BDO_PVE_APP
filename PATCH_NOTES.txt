@@ -110,3 +110,29 @@ CONTINUATION CHECKPOINT 2026-09-10 (Discord sign-in and auth providers, item 5)
   screens, real-inbox delivery, and Android system-browser return links —
   none of which are possible from a remote session without a browser or
   device. These remain for a manual pass before inviting testers.
+
+CONTINUATION CHECKPOINT 2026-09-10 (hosted acceptance suite, item 2)
+- Extended scripts/test-hosted.mjs with two new checks: both
+  equipment_costs_v1 and guided_conversions_v1 are advertised, and a real
+  equipment-upgrade-cost transaction deducts resources and updates the
+  item atomically against the live backend.
+- Ran the full ten-check suite against taxhvwhachtrhtcdbnsz with two
+  disposable Auth fixtures (prepare-hosted-test.mjs): cross-account
+  isolation, direct-table/anonymous denial, persistence across sessions,
+  concurrent-write HTTP 409 with exact large integers, guided-reward
+  spend/replay/reopen without duplication, both capability flags, the
+  equipment-cost transaction, full export, and real Auth account
+  deletion. All ten passed.
+- Cleanup: delete-account removed both auth accounts and all player data
+  (verified zero rows in game_profiles/equipment_instances); it
+  deliberately does not touch the beta_members allowlist, so those two
+  rows were removed manually afterward. Verified the admin allowlist
+  entry was untouched and no fixture residue remains anywhere.
+- Scoped out: a hosted guided-conversion transaction specifically, since
+  exercising it would require temporarily un-publishing the live v1
+  catalog to author a throwaway conversion step. Judged not worth that
+  risk given the local suite already covers conversions exhaustively (16
+  scenarios) and the installed migration was independently confirmed
+  present on this project.
+- Still not done: switching .env.local/live deployment (step 5), Android
+  rebuild, and the manual real-browser/real-device auth pass noted above.
