@@ -1,0 +1,770 @@
+{
+  "review_date": "2026-09-11",
+  "publication_approved": false,
+  "scope": "Partial source verification; all 70 rows structurally triaged.",
+  "rows": [
+    {
+      "key": "s1_season_graduation",
+      "title": "Finish the season and graduate a PEN Tuvala set",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s2_olvia_enrollment",
+      "title": "Take your first steps at Olvia Academy",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s2_khar_necklace",
+      "title": "Claim PEN (V) Kharazad Necklace",
+      "status": "inherited_fixed_recipe_reviewed",
+      "checks": [],
+      "evidence": [
+        "https://support.pearlabyss.com/blackdesert_naeu/en-US/Faq/Home/Detail?_faqNo=655"
+      ]
+    },
+    {
+      "key": "s2_khar_belt",
+      "title": "Claim PEN (V) Kharazad Belt",
+      "status": "inherited_fixed_recipe_reviewed",
+      "checks": [],
+      "evidence": [
+        "https://support.pearlabyss.com/blackdesert_naeu/en-US/Faq/Home/Detail?_faqNo=655"
+      ]
+    },
+    {
+      "key": "s2_khar_ring_1",
+      "title": "Claim PEN (V) Kharazad Ring I",
+      "status": "inherited_fixed_recipe_reviewed",
+      "checks": [],
+      "evidence": [
+        "https://support.pearlabyss.com/blackdesert_naeu/en-US/Faq/Home/Detail?_faqNo=655"
+      ]
+    },
+    {
+      "key": "s2_khar_ring_2",
+      "title": "Claim PEN (V) Kharazad Ring II",
+      "status": "inherited_fixed_recipe_reviewed",
+      "checks": [],
+      "evidence": [
+        "https://support.pearlabyss.com/blackdesert_naeu/en-US/Faq/Home/Detail?_faqNo=655"
+      ]
+    },
+    {
+      "key": "s2_khar_earring_1",
+      "title": "Claim PEN (V) Kharazad Earring I",
+      "status": "inherited_fixed_recipe_reviewed",
+      "checks": [],
+      "evidence": [
+        "https://support.pearlabyss.com/blackdesert_naeu/en-US/Faq/Home/Detail?_faqNo=655"
+      ]
+    },
+    {
+      "key": "s2_khar_earring_2",
+      "title": "Claim PEN (V) Kharazad Earring II",
+      "status": "inherited_fixed_recipe_reviewed",
+      "checks": [],
+      "evidence": [
+        "https://support.pearlabyss.com/blackdesert_naeu/en-US/Faq/Home/Detail?_faqNo=655"
+      ]
+    },
+    {
+      "key": "s2_blackstar_main",
+      "title": "Reach PEN (V) Blackstar main weapon",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s2_blackstar_awakening",
+      "title": "Reach PEN (V) Blackstar awakening weapon",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "class_applicability"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s2_blackstar_sub",
+      "title": "Reach PEN (V) Blackstar sub-weapon",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s2_slumbering_base",
+      "title": "Obtain base Slumbering Origin armor",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "both_accessory_slots"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_sovereign_main_base",
+      "title": "Craft Sovereign main weapon",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_sovereign_awakening_base",
+      "title": "Craft Sovereign awakening weapon",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "class_applicability"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_sovereign_sub_base",
+      "title": "Craft Sovereign sub-weapon",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_garmoth_main",
+      "title": "Apply Inverted Heart of Garmoth reform to the main hand",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": [
+        "https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=453"
+      ]
+    },
+    {
+      "key": "s3_garmoth_awakening",
+      "title": "Apply Inverted Heart of Garmoth reform to the awakening weapon",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "class_applicability"
+      ],
+      "evidence": [
+        "https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=453"
+      ]
+    },
+    {
+      "key": "s3_marsh_artifact",
+      "title": "Equip Marsh's Artifact",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_kabua_artifacts",
+      "title": "Equip two Kabua's Artifacts",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_crystal_presets",
+      "title": "Build grind-spot crystal presets",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_ancient_set",
+      "title": "Reach a three-piece Ancient set effect",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_labreska_helmet_tri",
+      "title": "Enhance Labreska's Helmet to TRI (III)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_fallen_god_armor_tri",
+      "title": "Enhance Fallen God's Armor to TRI (III)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_dahn_gloves_tri",
+      "title": "Enhance Dahn's Gloves to TRI (III)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_ator_shoes_tri",
+      "title": "Enhance Ator's Shoes to TRI (III)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_sovereign_main_tet",
+      "title": "Enhance Sovereign main weapon to TET (IV)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_sovereign_awakening_tet",
+      "title": "Enhance Sovereign awakening weapon to TET (IV)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "class_applicability"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_sovereign_sub_tet",
+      "title": "Enhance Sovereign sub-weapon to TET (IV)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_kharazad_necklace_sep",
+      "title": "Enhance Kharazad Necklace to SEP (VII)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_kharazad_belt_sep",
+      "title": "Enhance Kharazad Belt to SEP (VII)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_kharazad_ring_sep",
+      "title": "Enhance Kharazad Ring to SEP (VII)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "both_accessory_slots"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s3_kharazad_earring_sep",
+      "title": "Enhance Kharazad Earring to SEP (VII)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "both_accessory_slots"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_sovereign_primary_pen",
+      "title": "Enhance your primary Sovereign weapon to PEN (V)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "class_applicability"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_labreska_helmet_tet",
+      "title": "Enhance Labreska's Helmet to TET (IV)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_fallen_god_armor_tet",
+      "title": "Enhance Fallen God's Armor to TET (IV)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_dahn_gloves_tet",
+      "title": "Enhance Dahn's Gloves to TET (IV)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_ator_shoes_tet",
+      "title": "Enhance Ator's Shoes to TET (IV)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_edana_heavensmite_base",
+      "title": "Convert or build Edana Heavensmite",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_edana_abyssveil_base",
+      "title": "Convert or build Edana Abyssveil",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_edana_oathgrip_base",
+      "title": "Convert or build Edana Oathgrip",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_edana_furystride_base",
+      "title": "Convert or build Edana Furystride",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_dawn_all_ap",
+      "title": "Fit HAN Dawn Crystal - All AP across six accessories",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_accessory_cups",
+      "title": "Finish the accessory cups",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_kabua_heralding",
+      "title": "Reform to two Kabua's Heralding Artifacts",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_kharazad_necklace_nov",
+      "title": "Enhance Kharazad Necklace to NOV (IX)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_kharazad_belt_nov",
+      "title": "Enhance Kharazad Belt to NOV (IX)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_kharazad_ring_nov",
+      "title": "Enhance Kharazad Ring to NOV (IX)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "both_accessory_slots"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s4_kharazad_earring_nov",
+      "title": "Enhance Kharazad Earring to NOV (IX)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "both_accessory_slots"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s5_amplified_lightstones",
+      "title": "Build Amplified Lightstone sets",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s5_edana_heavensmite_tri",
+      "title": "Enhance Edana Heavensmite to TRI (III)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s5_edana_abyssveil_tri",
+      "title": "Enhance Edana Abyssveil to TRI (III)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s5_edana_oathgrip_tri",
+      "title": "Enhance Edana Oathgrip to TRI (III)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s5_edana_furystride_tri",
+      "title": "Enhance Edana Furystride to TRI (III)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s5_sovereign_hex",
+      "title": "Enhance Sovereign weapons to HEX (VI) and above",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s5_ekleta_necklace_base",
+      "title": "Move to Ekleta Necklace",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": [
+        "https://www.naeu.playblackdesert.com/en-US/Adventure/History?_groupMasterNo=10557&year=2026"
+      ]
+    },
+    {
+      "key": "s5_ekleta_belt_base",
+      "title": "Move to Ekleta Belt",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": [
+        "https://www.naeu.playblackdesert.com/en-US/Adventure/History?_groupMasterNo=10557&year=2026"
+      ]
+    },
+    {
+      "key": "s5_ekleta_ring_base",
+      "title": "Move to Ekleta Ring",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "both_accessory_slots"
+      ],
+      "evidence": [
+        "https://www.naeu.playblackdesert.com/en-US/Adventure/History?_groupMasterNo=10557&year=2026"
+      ]
+    },
+    {
+      "key": "s5_ekleta_earring_base",
+      "title": "Move to Ekleta Earring",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics",
+        "both_accessory_slots"
+      ],
+      "evidence": [
+        "https://www.naeu.playblackdesert.com/en-US/Adventure/History?_groupMasterNo=10557&year=2026"
+      ]
+    },
+    {
+      "key": "s6_han_reforge",
+      "title": "Optimise HAN Sovereign reforge stones",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s6_sovereign_dec",
+      "title": "Enhance Sovereign weapons toward DEC (X)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s6_edana_dec",
+      "title": "Enhance Edana armor toward NOV/DEC",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "s6_ekleta_dec",
+      "title": "Enhance Ekleta or Apeiron toward DEC (X)",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review",
+        "reward_semantics"
+      ],
+      "evidence": [
+        "https://www.naeu.playblackdesert.com/en-US/Adventure/History?_groupMasterNo=10557&year=2026"
+      ]
+    },
+    {
+      "key": "ap_vells_heart",
+      "title": "Combine Vell's Heart with a high-tier Destruction stone",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "ap_journals",
+      "title": "Complete the AP, DP, accuracy and HP adventure journals",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "ap_spirit_essence",
+      "title": "Obtain Ornette's and Odore's Spirit Essence",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "ap_fairy",
+      "title": "Raise a Radiant or T4 fairy with Miraculous Cheer V",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "ap_pets",
+      "title": "Keep five T4 pets with one T5 Alpha",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "ap_crystal_slots",
+      "title": "Unlock all practical crystal slots",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "ap_weight",
+      "title": "Raise weight and inventory for your target zone",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    },
+    {
+      "key": "ap_loadout",
+      "title": "Settle a grind loadout: food, draught, perfume, church and villa buffs",
+      "status": "requires_review",
+      "checks": [
+        "current_PC_NAEU_primary_and_second_source",
+        "cost_and_stat_review"
+      ],
+      "evidence": []
+    }
+  ]
+}

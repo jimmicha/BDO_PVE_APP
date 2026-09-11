@@ -20,6 +20,8 @@ Keep the independent deletion ledger available beyond the oldest retained backup
 
 ## Monitoring and rollback
 
+The `Production availability` GitHub workflow runs every six hours and can be dispatched manually. It uses only the repository's public Vite variables and checks the web response, expected OAuth providers, email confirmation and the exact anonymous snapshot denial. Missing RPCs, invalid keys and server errors fail the check. GitHub Actions notification settings determine who receives failures; inbox notification delivery and backup freshness are separate acceptance checks. The workflow does not certify signed-in journeys or database restore safety.
+
 Check the web origin, Auth health, Edge Function errors, database errors, backup freshness and catalog review expiry. Avoid logging tokens, passwords or player snapshots. Run Supabase advisors after schema changes. Use Vercel's previous deployment for frontend rollback; use catalog rollback for guide changes. Do not reverse database migrations blindly after player writes. Back up and review a forward correction.
 
 Before public testing, identify the operator and support contact in the privacy page, finalize data retention notices and verify the deletion page from a signed-out browser.

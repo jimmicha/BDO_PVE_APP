@@ -1,5 +1,7 @@
 # Continuation plan — 2026-09-10
 
+> Updated release evidence: see [RELEASE-STATUS.md](RELEASE-STATUS.md). Production cutover and browser OAuth/inbox verification are now complete; staging backend acceptance also passed. The historical checkpoint below is retained for implementation context.
+
 The core beta is not release-complete. This checkpoint contains local implementation and test results, not a production cutover.
 
 ## Completed in this checkpoint

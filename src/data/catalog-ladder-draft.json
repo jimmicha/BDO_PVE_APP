@@ -29,6 +29,12 @@
       "url": "https://garmoth.com/guides/post/hyperboost-update",
       "checked_at": "2026-09-07",
       "scope": "Olvia prerequisite and accessory rewards (inherited from catalog version 1)"
+    },
+    {
+      "name": "Pearl Abyss — Garmoth Heart guide",
+      "url": "https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=453",
+      "checked_at": "2026-09-10",
+      "scope": "Main and awakening reform description corrections only; not a full ladder review"
     }
   ],
   "content": {
@@ -674,7 +680,7 @@
       {
         "key": "s3_garmoth_main",
         "title": "Apply Inverted Heart of Garmoth reform to the main hand",
-        "description": "Reform effect includes +3 displayed AP and All Accuracy +50 per the supplied stat tables. Reform values are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "The official Garmoth Heart guide lists +3 displayed AP for a Sovereign main weapon reform. The supplied +50 accuracy attribution is not verified as a reform effect. Materials and costs remain unreviewed.",
         "dependencies": [
           "s3_sovereign_main_base"
         ],
@@ -683,7 +689,7 @@
       {
         "key": "s3_garmoth_awakening",
         "title": "Apply Inverted Heart of Garmoth reform to the awakening weapon",
-        "description": "Adds +3 displayed AP and additional crystal slots, which is the main reason this reform is valued. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "The official Garmoth Heart guide lists two additional crystal slots and Critical Hit Damage +3% for an eligible awakening weapon. This reform does not grant the previously claimed +3 displayed AP in that source. Materials and costs remain unreviewed.",
         "dependencies": [
           "s3_sovereign_awakening_base"
         ],
