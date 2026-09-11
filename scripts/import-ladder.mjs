@@ -15,7 +15,9 @@ draft.review_notes=[
   'Gear upgrades currently create equipment rewards rather than replacing or consuming an existing item; review every upgrade/conversion before publication.',
   'A Tuvala set reward creates one inventory entry, not thirteen independently equippable items.',
   'Review both ring and earring slots throughout later stages, class-specific weapon priorities, and stage-wide dependencies.',
-  'Verify all new systems against current official PC NA/EU evidence and a second reference before setting review dates.'
+  'Verify all new systems against current official PC NA/EU evidence and a second reference before setting review dates.',
+  'Ring/earring conversions (SEP/NOV/Ekleta) share one item_key across both physical slots; the player explicitly selects which physical item to convert at step completion, so this is not ambiguous in practice.',
+  'Several gear lines intentionally stop short of DEC in this guide (Sovereign awakening/sub-weapon at TET; Ekleta belt/ring/earring and three of four Edana pieces at their first tier) — this reflects the scope of the owner-supplied source material, not a missing step.'
 ];
 const keys=new Set();for(const step of draft.content.steps){if(keys.has(step.key)||step.dependencies.some(dep=>!keys.has(dep)))throw Error('Invalid dependency order at '+step.key);keys.add(step.key);}
 for(const step of catalog.content.steps)if(!keys.has(step.key))throw Error('Missing inherited template '+step.key);

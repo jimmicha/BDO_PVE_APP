@@ -8,7 +8,7 @@ const CONTENT={
   resources:[{key:'black_stone',name:'Black Stone'}],
   items:[
     {key:'kharazad_ring',name:'Kharazad Ring',slots:['ring_1','ring_2'],enhancements:[19,20]},
-    {key:'sovereign_ring',name:'Sovereign Ring',slots:['ring_1','ring_2'],enhancements:[21]},
+    {key:'sovereign_ring',name:'Sovereign Ring',slots:['ring_1','ring_2'],enhancements:[21,22]},
     {key:'kharazad_main',name:'Kharazad Main',slots:['main_hand'],enhancements:[20]},
     {key:'sovereign_main',name:'Sovereign Main',slots:['main_hand'],enhancements:[21]}
   ],
@@ -26,7 +26,11 @@ const CONTENT={
       requirements:[{resource_key:'black_stone',quantity:'3'}],
       reward:{item_key:'sovereign_ring',enhancement:21,source:{item_key:'kharazad_ring',min_enhancement:20,max_enhancement:20}}},
     {key:'acquire_plain',title:'Acquire plain reward',description:'Regression: plain acquire is unaffected.',dependencies:[],requirements:[],
-      reward:{item_key:'kharazad_ring',enhancement:20}}
+      reward:{item_key:'kharazad_ring',enhancement:20}},
+    {key:'upgrade_ring_same_item',title:'Upgrade ring in place',description:'Test-only same-item conversion.',dependencies:[],requirements:[],
+      reward:{item_key:'sovereign_ring',enhancement:22,source:{item_key:'sovereign_ring',min_enhancement:21,max_enhancement:21}}},
+    {key:'convert_reform_reset',title:'Convert reform reset check',description:'Test-only cross-item conversion.',dependencies:[],requirements:[],
+      reward:{item_key:'sovereign_ring',enhancement:21,source:{item_key:'kharazad_ring',min_enhancement:20,max_enhancement:20}}}
   ]
 };
 
@@ -79,6 +83,20 @@ it('converts equipment in place with ownership, compatibility, atomicity, retry,
     let converted=s.equipment.find((e:any)=>e.id===spareRing);
     expect(converted.item_key).toBe('sovereign_ring');expect(converted.enhancement).toBe(21);expect(converted.name).toBe('Sovereign Ring');
     expect(s.equipment.filter((e:any)=>e.item_key==='sovereign_ring')).toHaveLength(1);
+
+    // 4b. A same-item conversion enhances in place and preserves reform/caphras investment.
+    await db.query('update app_private.equipment_instances set reform=3,caphras=7 where id=$1',[spareRing]);
+    await send('step_complete',{id:step('upgrade_ring_same_item').id,mode:'spend',source_equipment_id:spareRing});
+    const sameItemResult=s.equipment.find((e:any)=>e.id===spareRing);
+    expect(sameItemResult.item_key).toBe('sovereign_ring');expect(sameItemResult.enhancement).toBe(22);
+    expect(sameItemResult.reform).toBe(3);expect(sameItemResult.caphras).toBe(7);
+
+    // 4c. A genuine cross-item conversion still resets reform/caphras to zero.
+    const reformedRing=await addedEquipmentId('gear_save',{game_profile_id:family,name:'Reformed ring',catalog_version_id:catalogId,item_key:'kharazad_ring',enhancement:20});
+    await db.query('update app_private.equipment_instances set reform=2,caphras=4 where id=$1',[reformedRing]);
+    await send('step_complete',{id:step('convert_reform_reset').id,mode:'spend',source_equipment_id:reformedRing});
+    const crossItemResult=s.equipment.find((e:any)=>e.id===reformedRing);
+    expect(crossItemResult.item_key).toBe('sovereign_ring');expect(crossItemResult.reform).toBe(0);expect(crossItemResult.caphras).toBe(0);
 
     const mainWeapon=await addedEquipmentId('gear_save',{game_profile_id:family,character_id:character,slot:'main_hand',name:'Old main',catalog_version_id:catalogId,item_key:'kharazad_main',enhancement:20});
     const mainRequestId=randomUUID();
@@ -176,8 +194,13 @@ it('converts equipment in place with ownership, compatibility, atomicity, retry,
     const saveV3=(content:unknown)=>send('catalog_save',{id:v3.id,title:v3.title,content,sources:draft.sources,checked_at:v3.checked_at,valid_until:v3.valid_until,effective_patch:v3.effective_patch});
     const badItemKey=structuredClone(CONTENT);badItemKey.steps[0].reward.source.item_key='does_not_exist';
     await expect(saveV3(badItemKey)).rejects.toThrow('VALIDATION');
-    const sameSourceAndResult=structuredClone(CONTENT);sameSourceAndResult.steps[0].reward.source.item_key=sameSourceAndResult.steps[0].reward.item_key;
-    await expect(saveV3(sameSourceAndResult)).rejects.toThrow('VALIDATION');
+    const sameItemNoIncrease=structuredClone(CONTENT);
+    sameItemNoIncrease.steps[0].reward.source.item_key=sameItemNoIncrease.steps[0].reward.item_key;
+    sameItemNoIncrease.steps[0].reward.source.max_enhancement=21;
+    await expect(saveV3(sameItemNoIncrease)).rejects.toThrow('VALIDATION');
+    const sameItemGenuineIncrease=structuredClone(CONTENT);
+    sameItemGenuineIncrease.steps[0].reward.source.item_key=sameItemGenuineIncrease.steps[0].reward.item_key;
+    await saveV3(sameItemGenuineIncrease);
     const badRange=structuredClone(CONTENT);badRange.steps[0].reward.source.min_enhancement=25;badRange.steps[0].reward.source.max_enhancement=1;
     await expect(saveV3(badRange)).rejects.toThrow('VALIDATION');
   }finally{await db.close();}

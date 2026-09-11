@@ -1,0 +1,58 @@
+# Black Desert Online — PvE Zone AP/DP Requirements
+# Verified/reconciled: 2026-09-10
+# Pipe-delimited UTF-8.
+#
+# Blank = not safely verified from a current enough source. NEVER treat blank as zero.
+# effective_ap_cap_total is the total-AP effective limit useful for target-zone scoring.
+#
+# SOURCES
+# BDF_EDANIA_OUTER_2026 = https://www.blackdesertfoundry.com/edania-monster-zones-guide/
+# BDF_EDANIA_INNER_2026 = https://www.blackdesertfoundry.com/edania-inner-monster-zones-guide/
+# BDF_STAREND_2026      = https://www.blackdesertfoundry.com/global-lab-updates-16th-january-2026/
+# BDF_SYCRAIA_2026      = https://www.blackdesertfoundry.com/global-lab-updates-20th-february-2026/
+# BDF_DEHKIA_2026       = https://www.blackdesertfoundry.com/global-lab-updates-9th-january-2026/
+# BDF_AP_REBALANCE_2025 = https://www.blackdesertfoundry.com/global-lab-updates-18th-july-2025/
+# BDF_ATOR_GUIDE        = https://www.blackdesertfoundry.com/ators-shoes-guide/
+# BDF_DEHKIA_GUIDE      = https://www.blackdesertfoundry.com/dehkias-lantern-guide/
+#
+region|zone|party_size|recommended_sheet_ap|recommended_sheet_dp|recommended_total_ap|recommended_total_dp|effective_ap_cap_total|data_status|source_id|notes
+Sycraia|Sycraia Ruins Upper Level|1|300|400|1100|440|1130|CURRENT_2026_EXACT|BDF_SYCRAIA_2026|2026 rework
+Sycraia|Sycraia Ruins Lower Level|1|395|460|1905|800|1935|CURRENT_2026_EXACT|BDF_SYCRAIA_2026|2026 top-tier rework
+Calpheon|Star's End|1|395|460|1920|800|1950|CURRENT_2026_EXACT|BDF_STAREND_2026|2026 rework
+Kamasylvia|Mirumok Ruins [Dehkia's Lantern]|3|350|427|1565|615|1595|CURRENT_2026_EXACT|BDF_DEHKIA_2026|Party of 3
+Kamasylvia|Gyfin Rhasia Temple Upper [Dehkia's Lantern]|3|370|440|1650|715|1680|CURRENT_2026_EXACT|BDF_DEHKIA_2026|Party of 3
+Edania Outer|Aetherion Castle|1|350|427|1565|615|1595|CURRENT_2026_EXACT|BDF_EDANIA_OUTER_2026|Edanian species
+Edania Outer|Nymphamare Castle|1|370|440|1660|720|1690|CURRENT_2026_EXACT|BDF_EDANIA_OUTER_2026|Edanian species
+Edania Outer|Orbita Castle|1|380|450|1770|760|1800|CURRENT_2026_EXACT|BDF_EDANIA_OUTER_2026|Edanian species
+Edania Outer|Dark Energy Floodlands|3|385|450|1850|760|1880|CURRENT_2026_EXACT|BDF_EDANIA_OUTER_2026|Party of 3; Edanian species
+Edania Outer|Tenebraum Castle|1|390|450|1890|760|1920|CURRENT_2026_EXACT|BDF_EDANIA_OUTER_2026|Edanian species
+Edania Outer|Zephyros Castle|1|395|460|1980|800|2010|CURRENT_2026_EXACT|BDF_EDANIA_OUTER_2026|Edanian species
+Edania Inner|Agris's Domain - Aphrodon Temple|1|400|470|2090|810|2120|CURRENT_2026_EXACT|BDF_EDANIA_INNER_2026|Edanian species
+Edania Inner|Markthanan's Domain - Hermesia Inner Castle|1|405|485|2220|830|2250|CURRENT_2026_EXACT|BDF_EDANIA_INNER_2026|Edanian species
+Edania Inner|Elion's Domain - Magaia Temple|1|410|490|2340|840|2370|CURRENT_2026_EXACT|BDF_EDANIA_INNER_2026|Solo
+Edania Inner|Aal's Domain - Aresion Temple|1|415|495|2455|850|2485|CURRENT_2026_EXACT|BDF_EDANIA_INNER_2026|Solo
+Edania Inner|Elion's Domain - Scales of Judgment|3|415|500|2455|860|2485|CURRENT_2026_EXACT|BDF_EDANIA_INNER_2026|Party of 3
+Edania Inner|Hadum's Domain - Event Horizon|1|420|505|2570|870|2600|CURRENT_2026_EXACT|BDF_EDANIA_INNER_2026|Highest current Inner Edania zone
+Ulukita|Yzrahid Highlands|1|310|420|1100||1180|CURRENT_AP_CAP_DP_VERIFIED|BDF_AP_REBALANCE_2025+BDF_ATOR_GUIDE|Animal type
+Ulukita|City of the Dead|1|320|380|1100||1295|CURRENT_AP_CAP_DP_FROM_ZONE_GUIDE|BDF_AP_REBALANCE_2025+BDF_ATOR_GUIDE|AP reflects 2025 rebalance; DP from dedicated guide
+Ulukita|Tungrad Ruins|1|330|410|1000||1395|CURRENT_AP_CAP_DP_FROM_ZONE_GUIDE|BDF_AP_REBALANCE_2025+BDF_ATOR_GUIDE|AP reflects 2025 rebalance
+Ulukita|Dark Seeker's Retreat|1|340|430|1150||1490|CURRENT_AP_CAP_DP_FROM_ZONE_GUIDE|BDF_AP_REBALANCE_2025+BDF_ATOR_GUIDE|AP reflects 2025 rebalance
+Dehkia|Aakman Temple [Dehkia's Lantern]|1|300|400|1000||1130|CURRENT_AP_CAP_DP_VERIFIED|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|
+Dehkia|Hystria Ruins [Dehkia's Lantern]|1|300|400|1000||1130|CURRENT_AP_CAP_DP_VERIFIED|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|
+Dehkia|Pila Ku Jail [Dehkia's Lantern]|1|300|400|1000||1130|CURRENT_AP_CAP_DP_VERIFIED|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|
+Dehkia|Roud Sulfur Mine [Dehkia's Lantern]|1|300|400|1000||1130|CURRENT_AP_CAP_DP_VERIFIED|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|
+Dehkia|Thornwood Forest [Dehkia's Lantern]|1|310|400|1000||1180|CURRENT_AP_CAP_DP_VERIFIED|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|
+Dehkia|Tunkuta [Dehkia's Lantern]|2|310|400|950||1180|CURRENT_AP_CAP_DP_VERIFIED|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|Party of 2
+Dehkia|Crescent Shrine [Dehkia's Lantern]|1|325|400|1000||1350|CURRENT_AP_CAP_DP_FROM_ZONE_GUIDE|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|AP reflects 2025 rebalance
+Dehkia|Cadry Ruins [Dehkia's Lantern]|1|330|400|1100||1395|CURRENT_AP_CAP_DP_FROM_ZONE_GUIDE|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|AP reflects 2025 rebalance
+Dehkia|Olun's Valley [Dehkia's Lantern II]|3|340|430|1250||1490|CURRENT_AP_CAP_DP_FROM_ZONE_GUIDE|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|Party of 3
+Dehkia|Ash Forest [Dehkia's Lantern II]|1|345|430|1300||1540|CURRENT_AP_CAP_DP_FROM_ZONE_GUIDE|BDF_AP_REBALANCE_2025+BDF_DEHKIA_GUIDE|
+Kamasylvia|Gyfin Rhasia Temple Underground|1|290||830||1030|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|DP intentionally blank
+O'dyllita|Ash Forest|1|300||830||1130|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|DP intentionally blank
+O'dyllita|Crypt of Resting Thoughts|1|300||830||1130|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|DP intentionally blank
+Calpheon Elvia|Hexe Sanctuary [Elvia]|1|300||898||1130|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|DP intentionally blank
+Calpheon Elvia|Quint Hill [Elvia]|1|320||920||1295|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|DP intentionally blank
+Land of Morning Light|Dokkebi Forest|1|335||1300||1445|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|DP intentionally blank
+Land of Morning Light|Fortunate Golden Pig Cave|1|340||1350||1490|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|DP intentionally blank
+Land of Morning Light|Golden Pig Cave|1|345||1350||1540|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|DP intentionally blank
+Atoraxxion|Orzekea [Elvia]|5|350||1350||1595|AP_CAP_VERIFIED_DP_LEFT_BLANK|BDF_AP_REBALANCE_2025|Group content; DP intentionally blank
