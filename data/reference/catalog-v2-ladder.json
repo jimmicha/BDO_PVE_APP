@@ -4,7 +4,7 @@
   "status": "draft",
   "checked_at": null,
   "valid_until": null,
-  "effective_patch": "NA/EU, owner-supplied September 2026 PvE progression guide and gear stat tables",
+  "effective_patch": "NA/EU, September 10 2026 patch notes plus confirmed Ekleta/Apeiron and Edana release history",
   "sources": [
     {
       "name": "Owner-supplied — BDO PvE Gear Progression 2026 (docx)",
@@ -35,6 +35,24 @@
       "url": "https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=453",
       "checked_at": "2026-09-10",
       "scope": "Main and awakening reform description corrections only; not a full ladder review"
+    },
+    {
+      "name": "Pearl Abyss NA/EU — Ekleta/Apeiron release history",
+      "url": "https://www.naeu.playblackdesert.com/en-US/Adventure/History?_groupMasterNo=10557&year=2026",
+      "checked_at": "2026-09-11",
+      "scope": "Confirms NOV Kharazad -> base Ekleta and DEC -> TET Ekleta conversion"
+    },
+    {
+      "name": "Pearl Abyss NA/EU — September 10, 2026 patch notes",
+      "url": "https://www.naeu.playblackdesert.com/en-US/News/Detail?groupContentNo=10577",
+      "checked_at": "2026-09-11",
+      "scope": "Current Inner Edania and Apeiron reward content"
+    },
+    {
+      "name": "Pearl Abyss NA/EU — Edana Defense Gear release history",
+      "url": "https://www.naeu.playblackdesert.com/en-US/Adventure/History?_groupMasterNo=9097&year=2025",
+      "checked_at": "2026-09-11",
+      "scope": "PC Edana release; detailed stat tables not yet fully reconciled"
     }
   ],
   "content": {
@@ -53,6 +71,10 @@
       {
         "key": "sharp_black_crystal_shard",
         "name": "Sharp Black Crystal Shard"
+      },
+      {
+        "key": "silver",
+        "name": "Silver"
       }
     ],
     "items": [
@@ -439,11 +461,7 @@
         "title": "Finish the season and graduate a PEN Tuvala set",
         "description": "Complete the season character's graduation with the full PEN (V) Tuvala set: main, awakening, sub-weapon, armor and accessories. Current PEN Tuvala combat stats make this a genuine starting point rather than a placeholder. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
         "dependencies": [],
-        "requirements": [],
-        "reward": {
-          "item_key": "tuvala_set",
-          "enhancement": 20
-        }
+        "requirements": []
       },
       {
         "key": "s2_olvia_enrollment",
@@ -650,7 +668,13 @@
         "requirements": [],
         "reward": {
           "item_key": "sovereign_main",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "blackstar_main",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -663,7 +687,13 @@
         "requirements": [],
         "reward": {
           "item_key": "sovereign_awakening",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "blackstar_awakening",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -676,7 +706,13 @@
         "requirements": [],
         "reward": {
           "item_key": "sovereign_sub",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "blackstar_sub",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -732,11 +768,16 @@
       {
         "key": "s3_labreska_helmet_tri",
         "title": "Enhance Labreska's Helmet to TRI (III)",
-        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s2_slumbering_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "42839727868"
+          }
+        ],
         "reward": {
           "item_key": "labreska_helmet",
           "enhancement": 18
@@ -745,11 +786,16 @@
       {
         "key": "s3_fallen_god_armor_tri",
         "title": "Enhance Fallen God's Armor to TRI (III)",
-        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s2_slumbering_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "42839727868"
+          }
+        ],
         "reward": {
           "item_key": "fallen_god_armor",
           "enhancement": 18
@@ -758,11 +804,16 @@
       {
         "key": "s3_dahn_gloves_tri",
         "title": "Enhance Dahn's Gloves to TRI (III)",
-        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s2_slumbering_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "42839727868"
+          }
+        ],
         "reward": {
           "item_key": "dahn_gloves",
           "enhancement": 18
@@ -771,11 +822,16 @@
       {
         "key": "s3_ator_shoes_tri",
         "title": "Enhance Ator's Shoes to TRI (III)",
-        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "DUO/TRI Slumbering Origin is a strong general survivability foundation before any Edana conversion. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s2_slumbering_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "42839727868"
+          }
+        ],
         "reward": {
           "item_key": "ator_shoes",
           "enhancement": 18
@@ -784,158 +840,328 @@
       {
         "key": "s3_sovereign_main_tet",
         "title": "Enhance Sovereign main weapon to TET (IV)",
-        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_sovereign_main_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "21877267634"
+          }
+        ],
         "reward": {
           "item_key": "sovereign_main",
-          "enhancement": 19
+          "enhancement": 19,
+          "source": {
+            "item_key": "sovereign_main",
+            "min_enhancement": 0,
+            "max_enhancement": 0,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s3_sovereign_awakening_tet",
         "title": "Enhance Sovereign awakening weapon to TET (IV)",
-        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_sovereign_awakening_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "21877267634"
+          }
+        ],
         "reward": {
           "item_key": "sovereign_awakening",
-          "enhancement": 19
+          "enhancement": 19,
+          "source": {
+            "item_key": "sovereign_awakening",
+            "min_enhancement": 0,
+            "max_enhancement": 0,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s3_sovereign_sub_tet",
         "title": "Enhance Sovereign sub-weapon to TET (IV)",
-        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Practical order is TET across all three weapons before pushing PEN on any single one. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_sovereign_sub_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "21877267634"
+          }
+        ],
         "reward": {
           "item_key": "sovereign_sub",
-          "enhancement": 19
+          "enhancement": 19,
+          "source": {
+            "item_key": "sovereign_sub",
+            "min_enhancement": 0,
+            "max_enhancement": 0,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s3_kharazad_necklace_sep",
         "title": "Enhance Kharazad Necklace to SEP (VII)",
-        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s2_khar_necklace"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "49853183976"
+          }
+        ],
         "reward": {
           "item_key": "kharazad_necklace",
-          "enhancement": 22
+          "enhancement": 22,
+          "source": {
+            "item_key": "kharazad_necklace",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s3_kharazad_belt_sep",
         "title": "Enhance Kharazad Belt to SEP (VII)",
-        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s2_khar_belt"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "49853183976"
+          }
+        ],
         "reward": {
           "item_key": "kharazad_belt",
-          "enhancement": 22
+          "enhancement": 22,
+          "source": {
+            "item_key": "kharazad_belt",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s3_kharazad_ring_sep",
         "title": "Enhance Kharazad Ring to SEP (VII)",
-        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s2_khar_ring_1"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "49853183976"
+          }
+        ],
         "reward": {
           "item_key": "kharazad_ring",
-          "enhancement": 22
+          "enhancement": 22,
+          "source": {
+            "item_key": "kharazad_ring",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
+        }
+      },
+      {
+        "key": "s3_kharazad_ring_2_sep",
+        "title": "Enhance Kharazad Ring II to SEP (VII)",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
+        "dependencies": [
+          "s2_khar_ring_2"
+        ],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "49853183976"
+          }
+        ],
+        "reward": {
+          "item_key": "kharazad_ring",
+          "enhancement": 22,
+          "source": {
+            "item_key": "kharazad_ring",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s3_kharazad_earring_sep",
         "title": "Enhance Kharazad Earring to SEP (VII)",
-        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s2_khar_earring_1"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "49853183976"
+          }
+        ],
         "reward": {
           "item_key": "kharazad_earring",
-          "enhancement": 22
+          "enhancement": 22,
+          "source": {
+            "item_key": "kharazad_earring",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
+        }
+      },
+      {
+        "key": "s3_kharazad_earring_2_sep",
+        "title": "Enhance Kharazad Earring II to SEP (VII)",
+        "description": "Kharazad uses Essence of Dawn enhancement rather than the old accessory-destruction loop. Necklace and belt usually give the strongest AP per upgrade; earrings are often weakest at intermediate tiers. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
+        "dependencies": [
+          "s2_khar_earring_2"
+        ],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "49853183976"
+          }
+        ],
+        "reward": {
+          "item_key": "kharazad_earring",
+          "enhancement": 22,
+          "source": {
+            "item_key": "kharazad_earring",
+            "min_enhancement": 20,
+            "max_enhancement": 20,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s4_sovereign_primary_pen",
         "title": "Enhance your primary Sovereign weapon to PEN (V)",
-        "description": "Push the slot tied to your spec first: main hand for succession, awakening for awakening. The other slot still contributes PvE stats and should not be abandoned. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Push the slot tied to your spec first: main hand for succession, awakening for awakening. The other slot still contributes PvE stats and should not be abandoned. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_sovereign_main_tet",
           "s3_sovereign_awakening_tet"
         ],
-        "requirements": [],
-        "reward": {
-          "item_key": "sovereign_main",
-          "enhancement": 20
-        }
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "33602984986"
+          }
+        ]
       },
       {
         "key": "s4_labreska_helmet_tet",
         "title": "Enhance Labreska's Helmet to TET (IV)",
-        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_labreska_helmet_tri"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "103666968534"
+          }
+        ],
         "reward": {
           "item_key": "labreska_helmet",
-          "enhancement": 19
+          "enhancement": 19,
+          "source": {
+            "item_key": "labreska_helmet",
+            "min_enhancement": 18,
+            "max_enhancement": 18,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s4_fallen_god_armor_tet",
         "title": "Enhance Fallen God's Armor to TET (IV)",
-        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_fallen_god_armor_tri"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "103666968534"
+          }
+        ],
         "reward": {
           "item_key": "fallen_god_armor",
-          "enhancement": 19
+          "enhancement": 19,
+          "source": {
+            "item_key": "fallen_god_armor",
+            "min_enhancement": 18,
+            "max_enhancement": 18,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s4_dahn_gloves_tet",
         "title": "Enhance Dahn's Gloves to TET (IV)",
-        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_dahn_gloves_tri"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "103666968534"
+          }
+        ],
         "reward": {
           "item_key": "dahn_gloves",
-          "enhancement": 19
+          "enhancement": 19,
+          "source": {
+            "item_key": "dahn_gloves",
+            "min_enhancement": 18,
+            "max_enhancement": 18,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s4_ator_shoes_tet",
         "title": "Enhance Ator's Shoes to TET (IV)",
-        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "TET (Wailing) Slumbering Origin exchanges into base Edana Defense Gear. PEN (Obliterating) exchanges into NOV Edana instead, which is the high-value path if you can reach it. Conversion mechanics are unreviewed. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_ator_shoes_tri"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "103666968534"
+          }
+        ],
         "reward": {
           "item_key": "ator_shoes",
-          "enhancement": 19
+          "enhancement": 19,
+          "source": {
+            "item_key": "ator_shoes",
+            "min_enhancement": 18,
+            "max_enhancement": 18,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -948,7 +1174,13 @@
         "requirements": [],
         "reward": {
           "item_key": "edana_heavensmite",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "labreska_helmet",
+            "min_enhancement": 19,
+            "max_enhancement": 19,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -961,7 +1193,13 @@
         "requirements": [],
         "reward": {
           "item_key": "edana_abyssveil",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "fallen_god_armor",
+            "min_enhancement": 19,
+            "max_enhancement": 19,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -974,7 +1212,13 @@
         "requirements": [],
         "reward": {
           "item_key": "edana_oathgrip",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "dahn_gloves",
+            "min_enhancement": 19,
+            "max_enhancement": 19,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -987,7 +1231,13 @@
         "requirements": [],
         "reward": {
           "item_key": "edana_furystride",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "ator_shoes",
+            "min_enhancement": 19,
+            "max_enhancement": 19,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -1021,53 +1271,145 @@
       {
         "key": "s4_kharazad_necklace_nov",
         "title": "Enhance Kharazad Necklace to NOV (IX)",
-        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_kharazad_necklace_sep"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "156692897781"
+          }
+        ],
         "reward": {
           "item_key": "kharazad_necklace",
-          "enhancement": 24
+          "enhancement": 24,
+          "source": {
+            "item_key": "kharazad_necklace",
+            "min_enhancement": 22,
+            "max_enhancement": 22,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s4_kharazad_belt_nov",
         "title": "Enhance Kharazad Belt to NOV (IX)",
-        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_kharazad_belt_sep"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "156692897781"
+          }
+        ],
         "reward": {
           "item_key": "kharazad_belt",
-          "enhancement": 24
+          "enhancement": 24,
+          "source": {
+            "item_key": "kharazad_belt",
+            "min_enhancement": 22,
+            "max_enhancement": 22,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s4_kharazad_ring_nov",
         "title": "Enhance Kharazad Ring to NOV (IX)",
-        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_kharazad_ring_sep"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "156692897781"
+          }
+        ],
         "reward": {
           "item_key": "kharazad_ring",
-          "enhancement": 24
+          "enhancement": 24,
+          "source": {
+            "item_key": "kharazad_ring",
+            "min_enhancement": 22,
+            "max_enhancement": 22,
+            "keep_assignment": true
+          }
+        }
+      },
+      {
+        "key": "s4_kharazad_ring_2_nov",
+        "title": "Enhance Kharazad Ring II to NOV (IX)",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
+        "dependencies": [
+          "s3_kharazad_ring_2_sep"
+        ],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "156692897781"
+          }
+        ],
+        "reward": {
+          "item_key": "kharazad_ring",
+          "enhancement": 24,
+          "source": {
+            "item_key": "kharazad_ring",
+            "min_enhancement": 22,
+            "max_enhancement": 22,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s4_kharazad_earring_nov",
         "title": "Enhance Kharazad Earring to NOV (IX)",
-        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s3_kharazad_earring_sep"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "156692897781"
+          }
+        ],
         "reward": {
           "item_key": "kharazad_earring",
-          "enhancement": 24
+          "enhancement": 24,
+          "source": {
+            "item_key": "kharazad_earring",
+            "min_enhancement": 22,
+            "max_enhancement": 22,
+            "keep_assignment": true
+          }
+        }
+      },
+      {
+        "key": "s4_kharazad_earring_2_nov",
+        "title": "Enhance Kharazad Earring II to NOV (IX)",
+        "description": "NOV Kharazad converts to base Ekleta; DEC converts to TET Ekleta. Do not leave a working Kharazad setup early just because a newer item exists. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
+        "dependencies": [
+          "s3_kharazad_earring_2_sep"
+        ],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "156692897781"
+          }
+        ],
+        "reward": {
+          "item_key": "kharazad_earring",
+          "enhancement": 24,
+          "source": {
+            "item_key": "kharazad_earring",
+            "min_enhancement": 22,
+            "max_enhancement": 22,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -1082,66 +1424,121 @@
       {
         "key": "s5_edana_heavensmite_tri",
         "title": "Enhance Edana Heavensmite to TRI (III)",
-        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s4_edana_heavensmite_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "78753095432"
+          }
+        ],
         "reward": {
           "item_key": "edana_heavensmite",
-          "enhancement": 18
+          "enhancement": 18,
+          "source": {
+            "item_key": "edana_heavensmite",
+            "min_enhancement": 0,
+            "max_enhancement": 0,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s5_edana_abyssveil_tri",
         "title": "Enhance Edana Abyssveil to TRI (III)",
-        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s4_edana_abyssveil_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "78753095432"
+          }
+        ],
         "reward": {
           "item_key": "edana_abyssveil",
-          "enhancement": 18
+          "enhancement": 18,
+          "source": {
+            "item_key": "edana_abyssveil",
+            "min_enhancement": 0,
+            "max_enhancement": 0,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s5_edana_oathgrip_tri",
         "title": "Enhance Edana Oathgrip to TRI (III)",
-        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s4_edana_oathgrip_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "78753095432"
+          }
+        ],
         "reward": {
           "item_key": "edana_oathgrip",
-          "enhancement": 18
+          "enhancement": 18,
+          "source": {
+            "item_key": "edana_oathgrip",
+            "min_enhancement": 0,
+            "max_enhancement": 0,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s5_edana_furystride_tri",
         "title": "Enhance Edana Furystride to TRI (III)",
-        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "TRI/TET Edana is the strong practical target for serious Edania grinding. PEN and above is long-tail progression, not a prerequisite. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s4_edana_furystride_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "78753095432"
+          }
+        ],
         "reward": {
           "item_key": "edana_furystride",
-          "enhancement": 18
+          "enhancement": 18,
+          "source": {
+            "item_key": "edana_furystride",
+            "min_enhancement": 0,
+            "max_enhancement": 0,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s5_sovereign_hex",
         "title": "Enhance Sovereign weapons to HEX (VI) and above",
-        "description": "Raise the primary weapon first, then bring the others up behind it. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Raise the primary weapon first, then bring the others up behind it. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s4_sovereign_primary_pen"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "63076533248"
+          }
+        ],
         "reward": {
           "item_key": "sovereign_main",
-          "enhancement": 21
+          "enhancement": 21,
+          "source": {
+            "item_key": "sovereign_main",
+            "min_enhancement": 19,
+            "max_enhancement": 19,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -1154,7 +1551,13 @@
         "requirements": [],
         "reward": {
           "item_key": "ekleta_necklace",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "kharazad_necklace",
+            "min_enhancement": 24,
+            "max_enhancement": 24,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -1167,7 +1570,13 @@
         "requirements": [],
         "reward": {
           "item_key": "ekleta_belt",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "kharazad_belt",
+            "min_enhancement": 24,
+            "max_enhancement": 24,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -1180,7 +1589,32 @@
         "requirements": [],
         "reward": {
           "item_key": "ekleta_ring",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "kharazad_ring",
+            "min_enhancement": 24,
+            "max_enhancement": 24,
+            "keep_assignment": true
+          }
+        }
+      },
+      {
+        "key": "s5_ekleta_ring_2_base",
+        "title": "Move to Ekleta Ring II",
+        "description": "Ekleta has high base stats, is not market tradable and enhances with slot-specific Causality Shardstones. Apeiron has lower base stats with larger enhancement gains, is tradeable and enhances with base Apeiron of the same slot. Both converge at DEC. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_kharazad_ring_2_nov"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ekleta_ring",
+          "enhancement": 0,
+          "source": {
+            "item_key": "kharazad_ring",
+            "min_enhancement": 24,
+            "max_enhancement": 24,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -1193,7 +1627,32 @@
         "requirements": [],
         "reward": {
           "item_key": "ekleta_earring",
-          "enhancement": 0
+          "enhancement": 0,
+          "source": {
+            "item_key": "kharazad_earring",
+            "min_enhancement": 24,
+            "max_enhancement": 24,
+            "keep_assignment": true
+          }
+        }
+      },
+      {
+        "key": "s5_ekleta_earring_2_base",
+        "title": "Move to Ekleta Earring II",
+        "description": "Ekleta has high base stats, is not market tradable and enhances with slot-specific Causality Shardstones. Apeiron has lower base stats with larger enhancement gains, is tradeable and enhances with base Apeiron of the same slot. Both converge at DEC. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "dependencies": [
+          "s4_kharazad_earring_2_nov"
+        ],
+        "requirements": [],
+        "reward": {
+          "item_key": "ekleta_earring",
+          "enhancement": 0,
+          "source": {
+            "item_key": "kharazad_earring",
+            "min_enhancement": 24,
+            "max_enhancement": 24,
+            "keep_assignment": true
+          }
         }
       },
       {
@@ -1208,40 +1667,73 @@
       {
         "key": "s6_sovereign_dec",
         "title": "Enhance Sovereign weapons toward DEC (X)",
-        "description": "All three Sovereign slots enhance to DEC. Treat this as a horizon, not a shopping list; no current PvE zone requires it. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "All three Sovereign slots enhance to DEC. Treat this as a horizon, not a shopping list; no current PvE zone requires it. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s6_han_reforge"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "1942722093189"
+          }
+        ],
         "reward": {
           "item_key": "sovereign_main",
-          "enhancement": 25
+          "enhancement": 25,
+          "source": {
+            "item_key": "sovereign_main",
+            "min_enhancement": 21,
+            "max_enhancement": 21,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s6_edana_dec",
         "title": "Enhance Edana armor toward NOV/DEC",
-        "description": "Long-tail defensive ceiling. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Long-tail defensive ceiling. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s5_edana_abyssveil_tri"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "2327809818237"
+          }
+        ],
         "reward": {
           "item_key": "edana_abyssveil",
-          "enhancement": 24
+          "enhancement": 24,
+          "source": {
+            "item_key": "edana_abyssveil",
+            "min_enhancement": 18,
+            "max_enhancement": 18,
+            "keep_assignment": true
+          }
         }
       },
       {
         "key": "s6_ekleta_dec",
         "title": "Enhance Ekleta or Apeiron toward DEC (X)",
-        "description": "Ekleta and Apeiron converge at DEC. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
+        "description": "Ekleta and Apeiron converge at DEC. Silver cost is a BDO Workshop mathematical expected-value model (snapshot 2026-09-10), not a guaranteed fixed price — enhancement is probabilistic, so your real spend will vary with luck. Use record-only completion if you would rather track your actual spend manually.",
         "dependencies": [
           "s5_ekleta_necklace_base"
         ],
-        "requirements": [],
+        "requirements": [
+          {
+            "resource_key": "silver",
+            "quantity": "613108645855"
+          }
+        ],
         "reward": {
           "item_key": "ekleta_necklace",
-          "enhancement": 25
+          "enhancement": 25,
+          "source": {
+            "item_key": "ekleta_necklace",
+            "min_enhancement": 0,
+            "max_enhancement": 0,
+            "keep_assignment": true
+          }
         }
       },
       {
