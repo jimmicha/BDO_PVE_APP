@@ -20,6 +20,16 @@
 # Legacy/transitional full Tuvala and Blackstar +0..PEN ladders are intentionally
 # not mixed into this endgame table because the modern 2026 catch-up path skips
 # most of those enhancement steps. PEN Blackstar is a Sovereign crafting gateway.
+# Blackstar's own Inverted Heart of Garmoth reform (awakening and sub-weapon only;
+# Blackstar main-hand has no such reform) is still recorded as standalone
+# weapon_reform rows below, since it is an endgame value independent of the ladder.
+#
+# REFORM ROWS
+# weapon_reform rows use enhancement=REFORM and record only the reform's own
+# stat delta, not a full item. accessory_reform rows use the same convention for
+# the Kharazad/Ekleta/Apeiron "reformed cup" system: an exclusive cup upgrade
+# (Cup of Destined Dawn/Callous Sun/Burgeoning Dusk/Reticent Moonbeams) that can
+# reform the base cup already slotted into any of the three accessory tiers.
 #
 # SET EFFECT NOTE
 # Slumbering Origin / Edana 'Ancient' set effects are account/equipment-set effects,
@@ -38,6 +48,8 @@
 # EKLETA_GARMOTH_2026= https://garmoth.com/guides/post/ekleta-apeiron-accessories
 # APEIRON_BDF_2026   = https://www.blackdesertfoundry.com/ekleta-apeiron-accessories-guide/
 # ARTIFACT_BDF_2026  = https://www.blackdesertfoundry.com/artifacts-and-lightstones-guide/
+# GARMOTH_HEART_WIKI_2026 = https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=453
+# CUP_GUIDE_BDF_2026 = https://www.blackdesertfoundry.com/cup-accessory-upgrades-guide/
 #
 category|slot|item|variant|enhancement|ap_min|ap_max|sheet_ap|sheet_dp|accuracy|monster_ap|monster_dr|evasion|hidden_evasion|damage_reduction|hidden_damage_reduction|max_hp|max_stamina|weight_lt|delta_ap_min|delta_ap_max|delta_sheet_ap|delta_sheet_dp|source_id|notes
 weapon|main_hand|Sovereign Main Weapon|standard|+0|133|140|||212|48|||||||||||||SOV_BDF_2026|AP shown as item AP range. Garmoth Heart reform is stored separately below.
@@ -75,6 +87,9 @@ weapon|sub_weapon|Sovereign Sub-Weapon|standard|NOV (IX)|56|58||28|72|76||14|51|
 weapon|sub_weapon|Sovereign Sub-Weapon|standard|DEC (X)|57|59||29|78|77||14|52|15|13|360|||1|1||1|SOV_BDF_2026|
 weapon_reform|main_hand|Sovereign Main Weapon|Garmoth Heart Reform|REFORM|||3||50||||||||||||||PA_PATCH_2025_07_10|Additional displayed AP +3 from Garmoth reform. Main-hand Sovereign also gains All Accuracy +50 per Edania-era update.
 weapon_reform|awakening|Sovereign Awakening Weapon|Garmoth Heart Reform|REFORM|||3||||||||||||||||PA_PATCH_2025_07_10|Additional displayed AP +3 from Garmoth reform.
+weapon_reform|sub_weapon|Sovereign Sub-Weapon|Garmoth Heart Reform|REFORM||||||||||||900|100||||||GARMOTH_HEART_WIKI_2026|Max HP +900 and Max Stamina +100 from Inverted Heart of Garmoth reform, per the official NA/EU wiki. The same off-hand reform effect applies to Kutum, Nouver, Blackstar and Sovereign sub-weapons; see the Blackstar Sub-Weapon row below.
+weapon_reform|awakening|Blackstar Awakening Weapon|Garmoth Heart Reform|REFORM|||||||||||||||||||GARMOTH_HEART_WIKI_2026|Crystal Slot +2 and Critical Hit Damage +3% from Inverted Heart of Garmoth reform, per the official NA/EU wiki (no separate columns for crystal slots). This is the same awakening reform item used for Sovereign; Blackstar and Dragon Slayer/Dandelion/Artina Sol awakening weapons are equally eligible.
+weapon_reform|sub_weapon|Blackstar Sub-Weapon|Garmoth Heart Reform|REFORM||||||||||||900|100||||||GARMOTH_HEART_WIKI_2026|Max HP +900 and Max Stamina +100 from Inverted Heart of Garmoth reform, per the official NA/EU wiki. Blackstar main-hand has no Garmoth Heart reform; only Sovereign main-hand is eligible.
 armor|chest|Fallen God's Armor|standard|+0||||99||||45||54|||||||||FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
 armor|chest|Fallen God's Armor|standard|PRI (I)||||102||||47||55||||||||3|FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
 armor|chest|Fallen God's Armor|standard|DUO (II)||||105||||48||57||||||||3|FG_BDF_2026|Item effect includes Max HP +310 and Monster DR +13 at base item level; DP table values are displayed DP.
@@ -287,6 +302,10 @@ accessory|belt|Apeiron Belt|standard|SEP (VII)|||28|4|21|||2|5|2|3|||100|||1|1|A
 accessory|belt|Apeiron Belt|standard|OCT (VIII)|||30|4|23|||2|7|2|5|||100|||2|0|APEIRON_BDF_2026|
 accessory|belt|Apeiron Belt|standard|NOV (IX)|||31|5|24|||2|8|3|5|||100|||1|1|APEIRON_BDF_2026|
 accessory|belt|Apeiron Belt|standard|DEC (X)|||32|6|26|||3|8|3|6|||100|||1|1|APEIRON_BDF_2026|
+accessory_reform|necklace|Kharazad / Ekleta / Apeiron Necklace|Cup of Destined Dawn|REFORM||||||||||||300|||||||CUP_GUIDE_BDF_2026|Exclusive reformed cup for Kharazad, Ekleta and Apeiron necklaces: Max HP +300. Reformed from Cup of Arid Moonlight plus Essence of Dawn x20 via Processing (L) - Heating.
+accessory_reform|ring|Kharazad / Ekleta / Apeiron Ring|Cup of Callous Sun|REFORM||||||||||||125|||||||CUP_GUIDE_BDF_2026|Exclusive reformed cup for Kharazad, Ekleta and Apeiron rings: Max HP +125, Critical Hit Damage +3% (no dedicated column for crit damage). Reformed from either base ring cup plus Essence of Dawn x20.
+accessory_reform|belt|Kharazad / Ekleta / Apeiron Belt|Cup of Burgeoning Dusk|REFORM|||3||||||||||||||||CUP_GUIDE_BDF_2026|Exclusive reformed cup for Kharazad, Ekleta and Apeiron belts: All AP +3, All Damage Reduction +6 (no dedicated column for the account-wide DR stat). Reformed from either base belt cup plus Essence of Dawn x20.
+accessory_reform|earring|Kharazad / Ekleta / Apeiron Earring|Cup of Reticent Moonbeams|REFORM|||3||||||||||100||||||CUP_GUIDE_BDF_2026|Exclusive reformed cup for Kharazad, Ekleta and Apeiron earrings: All AP +3, Max Stamina +100. Reformed from Cup of Earth's Sorrows plus Essence of Dawn x20.
 artifact|artifact|Marsh's Artifact - Extra AP Against Monsters|standard|BASE||||||6|||||||||||||ARTIFACT_BDF_2026|Budget PvE artifact.
 artifact|artifact|Kabua's Artifact|standard|BASE||||||7|20|||||100|75||||||ARTIFACT_BDF_2026|Base PvE BIS artifact.
 artifact|artifact|Kabua's Heralding Artifact|standard|REFORMED||||||10|25|||||350|75||||||ARTIFACT_BDF_2026|Kabua + Heralding reform: +3 Monster AP, +5 Monster DR, +250 HP.

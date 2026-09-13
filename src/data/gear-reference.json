@@ -3,7 +3,7 @@
   "region": "PC NA/EU",
   "imported_at": "2026-09-08",
   "review_status": "unreviewed",
-  "source_sha256": "824c419eb3c627d8d8876b74fa8864eeb1430587f72daec1888bdec513aa56c1",
+  "source_sha256": "f51fc10eeec800ea6db70060d30a21434e3dcf94e4f1cc21ee72b63e8a0dbbba",
   "sources": {
     "SOV_BDF_2026": "https://www.blackdesertfoundry.com/sovereign-weapons-guide/",
     "PA_PATCH_2025_07_10": "https://www.naeu.playblackdesert.com/News/Notice/Detail?groupContentNo=8804",
@@ -15,7 +15,9 @@
     "KHAR_BDF_2026": "https://www.blackdesertfoundry.com/kharazad-accessories-guide/",
     "EKLETA_GARMOTH_2026": "https://garmoth.com/guides/post/ekleta-apeiron-accessories",
     "APEIRON_BDF_2026": "https://www.blackdesertfoundry.com/ekleta-apeiron-accessories-guide/",
-    "ARTIFACT_BDF_2026": "https://www.blackdesertfoundry.com/artifacts-and-lightstones-guide/"
+    "ARTIFACT_BDF_2026": "https://www.blackdesertfoundry.com/artifacts-and-lightstones-guide/",
+    "GARMOTH_HEART_WIKI_2026": "https://www.naeu.playblackdesert.com/en-US/Wiki?wikiNo=453",
+    "CUP_GUIDE_BDF_2026": "https://www.blackdesertfoundry.com/cup-accessory-upgrades-guide/"
   },
   "columns": [
     "category",
@@ -47,74 +49,74 @@
   "issues": [
     {
       "id": "armor:gloves:Dahn's Gloves:DR:+0",
-      "line": 90,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:gloves:Dahn's Gloves:DR:PRI (I)",
-      "line": 91,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:gloves:Dahn's Gloves:DR:DUO (II)",
-      "line": 92,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:gloves:Dahn's Gloves:DR:TRI (III)",
-      "line": 93,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:gloves:Dahn's Gloves:DR:TET (IV)",
-      "line": 94,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:gloves:Dahn's Gloves:DR:PEN (V)",
-      "line": 95,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:shoes:Ator's Shoes:Evasion:+0",
-      "line": 102,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:shoes:Ator's Shoes:Evasion:PRI (I)",
-      "line": 103,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:shoes:Ator's Shoes:Evasion:DUO (II)",
-      "line": 104,
-      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
-    },
-    {
-      "id": "armor:shoes:Ator's Shoes:Evasion:TRI (III)",
       "line": 105,
       "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
     },
     {
-      "id": "armor:shoes:Ator's Shoes:Evasion:TET (IV)",
+      "id": "armor:gloves:Dahn's Gloves:DR:PRI (I)",
       "line": 106,
       "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
     },
     {
-      "id": "armor:shoes:Ator's Shoes:Evasion:PEN (V)",
+      "id": "armor:gloves:Dahn's Gloves:DR:DUO (II)",
       "line": 107,
       "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
     },
     {
-      "id": "armor:helmet:Edana - Heavensmite:standard:SEP (VII)",
+      "id": "armor:gloves:Dahn's Gloves:DR:TRI (III)",
+      "line": 108,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:gloves:Dahn's Gloves:DR:TET (IV)",
+      "line": 109,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:gloves:Dahn's Gloves:DR:PEN (V)",
+      "line": 110,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:shoes:Ator's Shoes:Evasion:+0",
+      "line": 117,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:shoes:Ator's Shoes:Evasion:PRI (I)",
+      "line": 118,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:shoes:Ator's Shoes:Evasion:DUO (II)",
+      "line": 119,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:shoes:Ator's Shoes:Evasion:TRI (III)",
+      "line": 120,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:shoes:Ator's Shoes:Evasion:TET (IV)",
       "line": 121,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:shoes:Ator's Shoes:Evasion:PEN (V)",
+      "line": 122,
+      "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
+    },
+    {
+      "id": "armor:helmet:Edana - Heavensmite:standard:SEP (VII)",
+      "line": 136,
       "reason": "Displayed DP differs from the supplied visible evasion + damage reduction. Confirm source values before calculations."
     }
   ],
   "rows": [
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:+0",
-      "source_line": 43,
+      "source_line": 55,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -143,7 +145,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:PRI (I)",
-      "source_line": 44,
+      "source_line": 56,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -172,7 +174,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:DUO (II)",
-      "source_line": 45,
+      "source_line": 57,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -201,7 +203,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:TRI (III)",
-      "source_line": 46,
+      "source_line": 58,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -230,7 +232,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:TET (IV)",
-      "source_line": 47,
+      "source_line": 59,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -259,7 +261,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:PEN (V)",
-      "source_line": 48,
+      "source_line": 60,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -288,7 +290,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:HEX (VI)",
-      "source_line": 49,
+      "source_line": 61,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -317,7 +319,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:SEP (VII)",
-      "source_line": 50,
+      "source_line": 62,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -346,7 +348,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:OCT (VIII)",
-      "source_line": 51,
+      "source_line": 63,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -375,7 +377,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:NOV (IX)",
-      "source_line": 52,
+      "source_line": 64,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -404,7 +406,7 @@
     },
     {
       "id": "weapon:main_hand:Sovereign Main Weapon:standard:DEC (X)",
-      "source_line": 53,
+      "source_line": 65,
       "category": "weapon",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -433,7 +435,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:+0",
-      "source_line": 54,
+      "source_line": 66,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -462,7 +464,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:PRI (I)",
-      "source_line": 55,
+      "source_line": 67,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -491,7 +493,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:DUO (II)",
-      "source_line": 56,
+      "source_line": 68,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -520,7 +522,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:TRI (III)",
-      "source_line": 57,
+      "source_line": 69,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -549,7 +551,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:TET (IV)",
-      "source_line": 58,
+      "source_line": 70,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -578,7 +580,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:PEN (V)",
-      "source_line": 59,
+      "source_line": 71,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -607,7 +609,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:HEX (VI)",
-      "source_line": 60,
+      "source_line": 72,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -636,7 +638,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:SEP (VII)",
-      "source_line": 61,
+      "source_line": 73,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -665,7 +667,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:OCT (VIII)",
-      "source_line": 62,
+      "source_line": 74,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -694,7 +696,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:NOV (IX)",
-      "source_line": 63,
+      "source_line": 75,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -723,7 +725,7 @@
     },
     {
       "id": "weapon:awakening:Sovereign Awakening Weapon:standard:DEC (X)",
-      "source_line": 64,
+      "source_line": 76,
       "category": "weapon",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -752,7 +754,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:+0",
-      "source_line": 65,
+      "source_line": 77,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -781,7 +783,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:PRI (I)",
-      "source_line": 66,
+      "source_line": 78,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -810,7 +812,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:DUO (II)",
-      "source_line": 67,
+      "source_line": 79,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -839,7 +841,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:TRI (III)",
-      "source_line": 68,
+      "source_line": 80,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -868,7 +870,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:TET (IV)",
-      "source_line": 69,
+      "source_line": 81,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -897,7 +899,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:PEN (V)",
-      "source_line": 70,
+      "source_line": 82,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -926,7 +928,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:HEX (VI)",
-      "source_line": 71,
+      "source_line": 83,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -955,7 +957,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:SEP (VII)",
-      "source_line": 72,
+      "source_line": 84,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -984,7 +986,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:OCT (VIII)",
-      "source_line": 73,
+      "source_line": 85,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -1013,7 +1015,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:NOV (IX)",
-      "source_line": 74,
+      "source_line": 86,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -1042,7 +1044,7 @@
     },
     {
       "id": "weapon:sub_weapon:Sovereign Sub-Weapon:standard:DEC (X)",
-      "source_line": 75,
+      "source_line": 87,
       "category": "weapon",
       "slot": "sub_weapon",
       "item": "Sovereign Sub-Weapon",
@@ -1071,7 +1073,7 @@
     },
     {
       "id": "weapon_reform:main_hand:Sovereign Main Weapon:Garmoth Heart Reform:REFORM",
-      "source_line": 76,
+      "source_line": 88,
       "category": "weapon_reform",
       "slot": "main_hand",
       "item": "Sovereign Main Weapon",
@@ -1100,7 +1102,7 @@
     },
     {
       "id": "weapon_reform:awakening:Sovereign Awakening Weapon:Garmoth Heart Reform:REFORM",
-      "source_line": 77,
+      "source_line": 89,
       "category": "weapon_reform",
       "slot": "awakening",
       "item": "Sovereign Awakening Weapon",
@@ -1128,8 +1130,95 @@
       "notes": "Additional displayed AP +3 from Garmoth reform."
     },
     {
+      "id": "weapon_reform:sub_weapon:Sovereign Sub-Weapon:Garmoth Heart Reform:REFORM",
+      "source_line": 90,
+      "category": "weapon_reform",
+      "slot": "sub_weapon",
+      "item": "Sovereign Sub-Weapon",
+      "variant": "Garmoth Heart Reform",
+      "enhancement": "REFORM",
+      "ap_min": null,
+      "ap_max": null,
+      "sheet_ap": null,
+      "sheet_dp": null,
+      "accuracy": null,
+      "monster_ap": null,
+      "monster_dr": null,
+      "evasion": null,
+      "hidden_evasion": null,
+      "damage_reduction": null,
+      "hidden_damage_reduction": null,
+      "max_hp": "900",
+      "max_stamina": "100",
+      "weight_lt": null,
+      "delta_ap_min": null,
+      "delta_ap_max": null,
+      "delta_sheet_ap": null,
+      "delta_sheet_dp": null,
+      "source_id": "GARMOTH_HEART_WIKI_2026",
+      "notes": "Max HP +900 and Max Stamina +100 from Inverted Heart of Garmoth reform, per the official NA/EU wiki. The same off-hand reform effect applies to Kutum, Nouver, Blackstar and Sovereign sub-weapons; see the Blackstar Sub-Weapon row below."
+    },
+    {
+      "id": "weapon_reform:awakening:Blackstar Awakening Weapon:Garmoth Heart Reform:REFORM",
+      "source_line": 91,
+      "category": "weapon_reform",
+      "slot": "awakening",
+      "item": "Blackstar Awakening Weapon",
+      "variant": "Garmoth Heart Reform",
+      "enhancement": "REFORM",
+      "ap_min": null,
+      "ap_max": null,
+      "sheet_ap": null,
+      "sheet_dp": null,
+      "accuracy": null,
+      "monster_ap": null,
+      "monster_dr": null,
+      "evasion": null,
+      "hidden_evasion": null,
+      "damage_reduction": null,
+      "hidden_damage_reduction": null,
+      "max_hp": null,
+      "max_stamina": null,
+      "weight_lt": null,
+      "delta_ap_min": null,
+      "delta_ap_max": null,
+      "delta_sheet_ap": null,
+      "delta_sheet_dp": null,
+      "source_id": "GARMOTH_HEART_WIKI_2026",
+      "notes": "Crystal Slot +2 and Critical Hit Damage +3% from Inverted Heart of Garmoth reform, per the official NA/EU wiki (no separate columns for crystal slots). This is the same awakening reform item used for Sovereign; Blackstar and Dragon Slayer/Dandelion/Artina Sol awakening weapons are equally eligible."
+    },
+    {
+      "id": "weapon_reform:sub_weapon:Blackstar Sub-Weapon:Garmoth Heart Reform:REFORM",
+      "source_line": 92,
+      "category": "weapon_reform",
+      "slot": "sub_weapon",
+      "item": "Blackstar Sub-Weapon",
+      "variant": "Garmoth Heart Reform",
+      "enhancement": "REFORM",
+      "ap_min": null,
+      "ap_max": null,
+      "sheet_ap": null,
+      "sheet_dp": null,
+      "accuracy": null,
+      "monster_ap": null,
+      "monster_dr": null,
+      "evasion": null,
+      "hidden_evasion": null,
+      "damage_reduction": null,
+      "hidden_damage_reduction": null,
+      "max_hp": "900",
+      "max_stamina": "100",
+      "weight_lt": null,
+      "delta_ap_min": null,
+      "delta_ap_max": null,
+      "delta_sheet_ap": null,
+      "delta_sheet_dp": null,
+      "source_id": "GARMOTH_HEART_WIKI_2026",
+      "notes": "Max HP +900 and Max Stamina +100 from Inverted Heart of Garmoth reform, per the official NA/EU wiki. Blackstar main-hand has no Garmoth Heart reform; only Sovereign main-hand is eligible."
+    },
+    {
       "id": "armor:chest:Fallen God's Armor:standard:+0",
-      "source_line": 78,
+      "source_line": 93,
       "category": "armor",
       "slot": "chest",
       "item": "Fallen God's Armor",
@@ -1158,7 +1247,7 @@
     },
     {
       "id": "armor:chest:Fallen God's Armor:standard:PRI (I)",
-      "source_line": 79,
+      "source_line": 94,
       "category": "armor",
       "slot": "chest",
       "item": "Fallen God's Armor",
@@ -1187,7 +1276,7 @@
     },
     {
       "id": "armor:chest:Fallen God's Armor:standard:DUO (II)",
-      "source_line": 80,
+      "source_line": 95,
       "category": "armor",
       "slot": "chest",
       "item": "Fallen God's Armor",
@@ -1216,7 +1305,7 @@
     },
     {
       "id": "armor:chest:Fallen God's Armor:standard:TRI (III)",
-      "source_line": 81,
+      "source_line": 96,
       "category": "armor",
       "slot": "chest",
       "item": "Fallen God's Armor",
@@ -1245,7 +1334,7 @@
     },
     {
       "id": "armor:chest:Fallen God's Armor:standard:TET (IV)",
-      "source_line": 82,
+      "source_line": 97,
       "category": "armor",
       "slot": "chest",
       "item": "Fallen God's Armor",
@@ -1274,7 +1363,7 @@
     },
     {
       "id": "armor:chest:Fallen God's Armor:standard:PEN (V)",
-      "source_line": 83,
+      "source_line": 98,
       "category": "armor",
       "slot": "chest",
       "item": "Fallen God's Armor",
@@ -1303,7 +1392,7 @@
     },
     {
       "id": "armor:helmet:Labreska's Helmet:standard:+0",
-      "source_line": 84,
+      "source_line": 99,
       "category": "armor",
       "slot": "helmet",
       "item": "Labreska's Helmet",
@@ -1332,7 +1421,7 @@
     },
     {
       "id": "armor:helmet:Labreska's Helmet:standard:PRI (I)",
-      "source_line": 85,
+      "source_line": 100,
       "category": "armor",
       "slot": "helmet",
       "item": "Labreska's Helmet",
@@ -1361,7 +1450,7 @@
     },
     {
       "id": "armor:helmet:Labreska's Helmet:standard:DUO (II)",
-      "source_line": 86,
+      "source_line": 101,
       "category": "armor",
       "slot": "helmet",
       "item": "Labreska's Helmet",
@@ -1390,7 +1479,7 @@
     },
     {
       "id": "armor:helmet:Labreska's Helmet:standard:TRI (III)",
-      "source_line": 87,
+      "source_line": 102,
       "category": "armor",
       "slot": "helmet",
       "item": "Labreska's Helmet",
@@ -1419,7 +1508,7 @@
     },
     {
       "id": "armor:helmet:Labreska's Helmet:standard:TET (IV)",
-      "source_line": 88,
+      "source_line": 103,
       "category": "armor",
       "slot": "helmet",
       "item": "Labreska's Helmet",
@@ -1448,7 +1537,7 @@
     },
     {
       "id": "armor:helmet:Labreska's Helmet:standard:PEN (V)",
-      "source_line": 89,
+      "source_line": 104,
       "category": "armor",
       "slot": "helmet",
       "item": "Labreska's Helmet",
@@ -1477,7 +1566,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:DR:+0",
-      "source_line": 90,
+      "source_line": 105,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1506,7 +1595,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:DR:PRI (I)",
-      "source_line": 91,
+      "source_line": 106,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1535,7 +1624,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:DR:DUO (II)",
-      "source_line": 92,
+      "source_line": 107,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1564,7 +1653,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:DR:TRI (III)",
-      "source_line": 93,
+      "source_line": 108,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1593,7 +1682,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:DR:TET (IV)",
-      "source_line": 94,
+      "source_line": 109,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1622,7 +1711,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:DR:PEN (V)",
-      "source_line": 95,
+      "source_line": 110,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1651,7 +1740,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:Evasion:+0",
-      "source_line": 96,
+      "source_line": 111,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1680,7 +1769,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:Evasion:PRI (I)",
-      "source_line": 97,
+      "source_line": 112,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1709,7 +1798,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:Evasion:DUO (II)",
-      "source_line": 98,
+      "source_line": 113,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1738,7 +1827,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:Evasion:TRI (III)",
-      "source_line": 99,
+      "source_line": 114,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1767,7 +1856,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:Evasion:TET (IV)",
-      "source_line": 100,
+      "source_line": 115,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1796,7 +1885,7 @@
     },
     {
       "id": "armor:gloves:Dahn's Gloves:Evasion:PEN (V)",
-      "source_line": 101,
+      "source_line": 116,
       "category": "armor",
       "slot": "gloves",
       "item": "Dahn's Gloves",
@@ -1825,7 +1914,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:Evasion:+0",
-      "source_line": 102,
+      "source_line": 117,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -1854,7 +1943,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:Evasion:PRI (I)",
-      "source_line": 103,
+      "source_line": 118,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -1883,7 +1972,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:Evasion:DUO (II)",
-      "source_line": 104,
+      "source_line": 119,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -1912,7 +2001,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:Evasion:TRI (III)",
-      "source_line": 105,
+      "source_line": 120,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -1941,7 +2030,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:Evasion:TET (IV)",
-      "source_line": 106,
+      "source_line": 121,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -1970,7 +2059,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:Evasion:PEN (V)",
-      "source_line": 107,
+      "source_line": 122,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -1999,7 +2088,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:DR:+0",
-      "source_line": 108,
+      "source_line": 123,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -2028,7 +2117,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:DR:PRI (I)",
-      "source_line": 109,
+      "source_line": 124,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -2057,7 +2146,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:DR:DUO (II)",
-      "source_line": 110,
+      "source_line": 125,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -2086,7 +2175,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:DR:TRI (III)",
-      "source_line": 111,
+      "source_line": 126,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -2115,7 +2204,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:DR:TET (IV)",
-      "source_line": 112,
+      "source_line": 127,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -2144,7 +2233,7 @@
     },
     {
       "id": "armor:shoes:Ator's Shoes:DR:PEN (V)",
-      "source_line": 113,
+      "source_line": 128,
       "category": "armor",
       "slot": "shoes",
       "item": "Ator's Shoes",
@@ -2173,7 +2262,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:+0",
-      "source_line": 114,
+      "source_line": 129,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2202,7 +2291,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:PRI (I)",
-      "source_line": 115,
+      "source_line": 130,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2231,7 +2320,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:DUO (II)",
-      "source_line": 116,
+      "source_line": 131,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2260,7 +2349,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:TRI (III)",
-      "source_line": 117,
+      "source_line": 132,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2289,7 +2378,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:TET (IV)",
-      "source_line": 118,
+      "source_line": 133,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2318,7 +2407,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:PEN (V)",
-      "source_line": 119,
+      "source_line": 134,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2347,7 +2436,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:HEX (VI)",
-      "source_line": 120,
+      "source_line": 135,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2376,7 +2465,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:SEP (VII)",
-      "source_line": 121,
+      "source_line": 136,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2405,7 +2494,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:OCT (VIII)",
-      "source_line": 122,
+      "source_line": 137,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2434,7 +2523,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:NOV (IX)",
-      "source_line": 123,
+      "source_line": 138,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2463,7 +2552,7 @@
     },
     {
       "id": "armor:helmet:Edana - Heavensmite:standard:DEC (X)",
-      "source_line": 124,
+      "source_line": 139,
       "category": "armor",
       "slot": "helmet",
       "item": "Edana - Heavensmite",
@@ -2492,7 +2581,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:+0",
-      "source_line": 125,
+      "source_line": 140,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2521,7 +2610,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:PRI (I)",
-      "source_line": 126,
+      "source_line": 141,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2550,7 +2639,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:DUO (II)",
-      "source_line": 127,
+      "source_line": 142,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2579,7 +2668,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:TRI (III)",
-      "source_line": 128,
+      "source_line": 143,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2608,7 +2697,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:TET (IV)",
-      "source_line": 129,
+      "source_line": 144,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2637,7 +2726,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:PEN (V)",
-      "source_line": 130,
+      "source_line": 145,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2666,7 +2755,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:HEX (VI)",
-      "source_line": 131,
+      "source_line": 146,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2695,7 +2784,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:SEP (VII)",
-      "source_line": 132,
+      "source_line": 147,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2724,7 +2813,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:OCT (VIII)",
-      "source_line": 133,
+      "source_line": 148,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2753,7 +2842,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:NOV (IX)",
-      "source_line": 134,
+      "source_line": 149,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2782,7 +2871,7 @@
     },
     {
       "id": "armor:chest:Edana - Abyssveil:standard:DEC (X)",
-      "source_line": 135,
+      "source_line": 150,
       "category": "armor",
       "slot": "chest",
       "item": "Edana - Abyssveil",
@@ -2811,7 +2900,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:+0",
-      "source_line": 136,
+      "source_line": 151,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -2840,7 +2929,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:PRI (I)",
-      "source_line": 137,
+      "source_line": 152,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -2869,7 +2958,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:DUO (II)",
-      "source_line": 138,
+      "source_line": 153,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -2898,7 +2987,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:TRI (III)",
-      "source_line": 139,
+      "source_line": 154,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -2927,7 +3016,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:TET (IV)",
-      "source_line": 140,
+      "source_line": 155,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -2956,7 +3045,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:PEN (V)",
-      "source_line": 141,
+      "source_line": 156,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -2985,7 +3074,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:HEX (VI)",
-      "source_line": 142,
+      "source_line": 157,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -3014,7 +3103,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:SEP (VII)",
-      "source_line": 143,
+      "source_line": 158,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -3043,7 +3132,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:OCT (VIII)",
-      "source_line": 144,
+      "source_line": 159,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -3072,7 +3161,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:NOV (IX)",
-      "source_line": 145,
+      "source_line": 160,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -3101,7 +3190,7 @@
     },
     {
       "id": "armor:gloves:Edana - Oathgrip:standard:DEC (X)",
-      "source_line": 146,
+      "source_line": 161,
       "category": "armor",
       "slot": "gloves",
       "item": "Edana - Oathgrip",
@@ -3130,7 +3219,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:+0",
-      "source_line": 147,
+      "source_line": 162,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3159,7 +3248,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:PRI (I)",
-      "source_line": 148,
+      "source_line": 163,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3188,7 +3277,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:DUO (II)",
-      "source_line": 149,
+      "source_line": 164,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3217,7 +3306,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:TRI (III)",
-      "source_line": 150,
+      "source_line": 165,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3246,7 +3335,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:TET (IV)",
-      "source_line": 151,
+      "source_line": 166,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3275,7 +3364,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:PEN (V)",
-      "source_line": 152,
+      "source_line": 167,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3304,7 +3393,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:HEX (VI)",
-      "source_line": 153,
+      "source_line": 168,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3333,7 +3422,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:SEP (VII)",
-      "source_line": 154,
+      "source_line": 169,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3362,7 +3451,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:OCT (VIII)",
-      "source_line": 155,
+      "source_line": 170,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3391,7 +3480,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:NOV (IX)",
-      "source_line": 156,
+      "source_line": 171,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3420,7 +3509,7 @@
     },
     {
       "id": "armor:shoes:Edana - Furystride:standard:DEC (X)",
-      "source_line": 157,
+      "source_line": 172,
       "category": "armor",
       "slot": "shoes",
       "item": "Edana - Furystride",
@@ -3449,7 +3538,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:+0",
-      "source_line": 158,
+      "source_line": 173,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3478,7 +3567,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:PRI (I)",
-      "source_line": 159,
+      "source_line": 174,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3507,7 +3596,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:DUO (II)",
-      "source_line": 160,
+      "source_line": 175,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3536,7 +3625,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:TRI (III)",
-      "source_line": 161,
+      "source_line": 176,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3565,7 +3654,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:TET (IV)",
-      "source_line": 162,
+      "source_line": 177,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3594,7 +3683,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:PEN (V)",
-      "source_line": 163,
+      "source_line": 178,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3623,7 +3712,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:HEX (VI)",
-      "source_line": 164,
+      "source_line": 179,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3652,7 +3741,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:SEP (VII)",
-      "source_line": 165,
+      "source_line": 180,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3681,7 +3770,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:OCT (VIII)",
-      "source_line": 166,
+      "source_line": 181,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3710,7 +3799,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:NOV (IX)",
-      "source_line": 167,
+      "source_line": 182,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3739,7 +3828,7 @@
     },
     {
       "id": "accessory:necklace:Kharazad Necklace:standard:DEC (X)",
-      "source_line": 168,
+      "source_line": 183,
       "category": "accessory",
       "slot": "necklace",
       "item": "Kharazad Necklace",
@@ -3768,7 +3857,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:+0",
-      "source_line": 169,
+      "source_line": 184,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -3797,7 +3886,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:PRI (I)",
-      "source_line": 170,
+      "source_line": 185,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -3826,7 +3915,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:DUO (II)",
-      "source_line": 171,
+      "source_line": 186,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -3855,7 +3944,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:TRI (III)",
-      "source_line": 172,
+      "source_line": 187,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -3884,7 +3973,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:TET (IV)",
-      "source_line": 173,
+      "source_line": 188,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -3913,7 +4002,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:PEN (V)",
-      "source_line": 174,
+      "source_line": 189,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -3942,7 +4031,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:HEX (VI)",
-      "source_line": 175,
+      "source_line": 190,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -3971,7 +4060,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:SEP (VII)",
-      "source_line": 176,
+      "source_line": 191,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -4000,7 +4089,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:OCT (VIII)",
-      "source_line": 177,
+      "source_line": 192,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -4029,7 +4118,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:NOV (IX)",
-      "source_line": 178,
+      "source_line": 193,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -4058,7 +4147,7 @@
     },
     {
       "id": "accessory:belt:Kharazad Belt:standard:DEC (X)",
-      "source_line": 179,
+      "source_line": 194,
       "category": "accessory",
       "slot": "belt",
       "item": "Kharazad Belt",
@@ -4087,7 +4176,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:+0",
-      "source_line": 180,
+      "source_line": 195,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4116,7 +4205,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:PRI (I)",
-      "source_line": 181,
+      "source_line": 196,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4145,7 +4234,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:DUO (II)",
-      "source_line": 182,
+      "source_line": 197,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4174,7 +4263,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:TRI (III)",
-      "source_line": 183,
+      "source_line": 198,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4203,7 +4292,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:TET (IV)",
-      "source_line": 184,
+      "source_line": 199,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4232,7 +4321,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:PEN (V)",
-      "source_line": 185,
+      "source_line": 200,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4261,7 +4350,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:HEX (VI)",
-      "source_line": 186,
+      "source_line": 201,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4290,7 +4379,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:SEP (VII)",
-      "source_line": 187,
+      "source_line": 202,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4319,7 +4408,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:OCT (VIII)",
-      "source_line": 188,
+      "source_line": 203,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4348,7 +4437,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:NOV (IX)",
-      "source_line": 189,
+      "source_line": 204,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4377,7 +4466,7 @@
     },
     {
       "id": "accessory:ring:Kharazad Ring:standard:DEC (X)",
-      "source_line": 190,
+      "source_line": 205,
       "category": "accessory",
       "slot": "ring",
       "item": "Kharazad Ring",
@@ -4406,7 +4495,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:+0",
-      "source_line": 191,
+      "source_line": 206,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4435,7 +4524,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:PRI (I)",
-      "source_line": 192,
+      "source_line": 207,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4464,7 +4553,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:DUO (II)",
-      "source_line": 193,
+      "source_line": 208,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4493,7 +4582,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:TRI (III)",
-      "source_line": 194,
+      "source_line": 209,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4522,7 +4611,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:TET (IV)",
-      "source_line": 195,
+      "source_line": 210,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4551,7 +4640,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:PEN (V)",
-      "source_line": 196,
+      "source_line": 211,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4580,7 +4669,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:HEX (VI)",
-      "source_line": 197,
+      "source_line": 212,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4609,7 +4698,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:SEP (VII)",
-      "source_line": 198,
+      "source_line": 213,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4638,7 +4727,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:OCT (VIII)",
-      "source_line": 199,
+      "source_line": 214,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4667,7 +4756,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:NOV (IX)",
-      "source_line": 200,
+      "source_line": 215,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4696,7 +4785,7 @@
     },
     {
       "id": "accessory:earring:Kharazad Earring:standard:DEC (X)",
-      "source_line": 201,
+      "source_line": 216,
       "category": "accessory",
       "slot": "earring",
       "item": "Kharazad Earring",
@@ -4725,7 +4814,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:+0",
-      "source_line": 202,
+      "source_line": 217,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4754,7 +4843,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:PRI (I)",
-      "source_line": 203,
+      "source_line": 218,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4783,7 +4872,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:DUO (II)",
-      "source_line": 204,
+      "source_line": 219,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4812,7 +4901,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:TRI (III)",
-      "source_line": 205,
+      "source_line": 220,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4841,7 +4930,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:TET (IV)",
-      "source_line": 206,
+      "source_line": 221,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4870,7 +4959,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:PEN (V)",
-      "source_line": 207,
+      "source_line": 222,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4899,7 +4988,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:HEX (VI)",
-      "source_line": 208,
+      "source_line": 223,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4928,7 +5017,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:SEP (VII)",
-      "source_line": 209,
+      "source_line": 224,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4957,7 +5046,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:OCT (VIII)",
-      "source_line": 210,
+      "source_line": 225,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -4986,7 +5075,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:NOV (IX)",
-      "source_line": 211,
+      "source_line": 226,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -5015,7 +5104,7 @@
     },
     {
       "id": "accessory:necklace:Ekleta Necklace:standard:DEC (X)",
-      "source_line": 212,
+      "source_line": 227,
       "category": "accessory",
       "slot": "necklace",
       "item": "Ekleta Necklace",
@@ -5044,7 +5133,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:+0",
-      "source_line": 213,
+      "source_line": 228,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5073,7 +5162,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:PRI (I)",
-      "source_line": 214,
+      "source_line": 229,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5102,7 +5191,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:DUO (II)",
-      "source_line": 215,
+      "source_line": 230,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5131,7 +5220,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:TRI (III)",
-      "source_line": 216,
+      "source_line": 231,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5160,7 +5249,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:TET (IV)",
-      "source_line": 217,
+      "source_line": 232,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5189,7 +5278,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:PEN (V)",
-      "source_line": 218,
+      "source_line": 233,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5218,7 +5307,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:HEX (VI)",
-      "source_line": 219,
+      "source_line": 234,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5247,7 +5336,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:SEP (VII)",
-      "source_line": 220,
+      "source_line": 235,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5276,7 +5365,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:OCT (VIII)",
-      "source_line": 221,
+      "source_line": 236,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5305,7 +5394,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:NOV (IX)",
-      "source_line": 222,
+      "source_line": 237,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5334,7 +5423,7 @@
     },
     {
       "id": "accessory:ring:Ekleta Ring:standard:DEC (X)",
-      "source_line": 223,
+      "source_line": 238,
       "category": "accessory",
       "slot": "ring",
       "item": "Ekleta Ring",
@@ -5363,7 +5452,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:+0",
-      "source_line": 224,
+      "source_line": 239,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5392,7 +5481,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:PRI (I)",
-      "source_line": 225,
+      "source_line": 240,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5421,7 +5510,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:DUO (II)",
-      "source_line": 226,
+      "source_line": 241,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5450,7 +5539,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:TRI (III)",
-      "source_line": 227,
+      "source_line": 242,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5479,7 +5568,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:TET (IV)",
-      "source_line": 228,
+      "source_line": 243,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5508,7 +5597,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:PEN (V)",
-      "source_line": 229,
+      "source_line": 244,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5537,7 +5626,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:HEX (VI)",
-      "source_line": 230,
+      "source_line": 245,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5566,7 +5655,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:SEP (VII)",
-      "source_line": 231,
+      "source_line": 246,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5595,7 +5684,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:OCT (VIII)",
-      "source_line": 232,
+      "source_line": 247,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5624,7 +5713,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:NOV (IX)",
-      "source_line": 233,
+      "source_line": 248,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5653,7 +5742,7 @@
     },
     {
       "id": "accessory:earring:Ekleta Earring:standard:DEC (X)",
-      "source_line": 234,
+      "source_line": 249,
       "category": "accessory",
       "slot": "earring",
       "item": "Ekleta Earring",
@@ -5682,7 +5771,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:+0",
-      "source_line": 235,
+      "source_line": 250,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5711,7 +5800,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:PRI (I)",
-      "source_line": 236,
+      "source_line": 251,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5740,7 +5829,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:DUO (II)",
-      "source_line": 237,
+      "source_line": 252,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5769,7 +5858,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:TRI (III)",
-      "source_line": 238,
+      "source_line": 253,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5798,7 +5887,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:TET (IV)",
-      "source_line": 239,
+      "source_line": 254,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5827,7 +5916,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:PEN (V)",
-      "source_line": 240,
+      "source_line": 255,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5856,7 +5945,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:HEX (VI)",
-      "source_line": 241,
+      "source_line": 256,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5885,7 +5974,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:SEP (VII)",
-      "source_line": 242,
+      "source_line": 257,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5914,7 +6003,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:OCT (VIII)",
-      "source_line": 243,
+      "source_line": 258,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5943,7 +6032,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:NOV (IX)",
-      "source_line": 244,
+      "source_line": 259,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -5972,7 +6061,7 @@
     },
     {
       "id": "accessory:belt:Ekleta Belt:standard:DEC (X)",
-      "source_line": 245,
+      "source_line": 260,
       "category": "accessory",
       "slot": "belt",
       "item": "Ekleta Belt",
@@ -6001,7 +6090,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:+0",
-      "source_line": 246,
+      "source_line": 261,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6030,7 +6119,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:PRI (I)",
-      "source_line": 247,
+      "source_line": 262,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6059,7 +6148,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:DUO (II)",
-      "source_line": 248,
+      "source_line": 263,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6088,7 +6177,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:TRI (III)",
-      "source_line": 249,
+      "source_line": 264,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6117,7 +6206,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:TET (IV)",
-      "source_line": 250,
+      "source_line": 265,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6146,7 +6235,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:PEN (V)",
-      "source_line": 251,
+      "source_line": 266,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6175,7 +6264,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:HEX (VI)",
-      "source_line": 252,
+      "source_line": 267,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6204,7 +6293,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:SEP (VII)",
-      "source_line": 253,
+      "source_line": 268,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6233,7 +6322,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:OCT (VIII)",
-      "source_line": 254,
+      "source_line": 269,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6262,7 +6351,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:NOV (IX)",
-      "source_line": 255,
+      "source_line": 270,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6291,7 +6380,7 @@
     },
     {
       "id": "accessory:necklace:Apeiron Necklace:standard:DEC (X)",
-      "source_line": 256,
+      "source_line": 271,
       "category": "accessory",
       "slot": "necklace",
       "item": "Apeiron Necklace",
@@ -6320,7 +6409,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:+0",
-      "source_line": 257,
+      "source_line": 272,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6349,7 +6438,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:PRI (I)",
-      "source_line": 258,
+      "source_line": 273,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6378,7 +6467,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:DUO (II)",
-      "source_line": 259,
+      "source_line": 274,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6407,7 +6496,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:TRI (III)",
-      "source_line": 260,
+      "source_line": 275,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6436,7 +6525,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:TET (IV)",
-      "source_line": 261,
+      "source_line": 276,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6465,7 +6554,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:PEN (V)",
-      "source_line": 262,
+      "source_line": 277,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6494,7 +6583,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:HEX (VI)",
-      "source_line": 263,
+      "source_line": 278,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6523,7 +6612,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:SEP (VII)",
-      "source_line": 264,
+      "source_line": 279,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6552,7 +6641,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:OCT (VIII)",
-      "source_line": 265,
+      "source_line": 280,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6581,7 +6670,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:NOV (IX)",
-      "source_line": 266,
+      "source_line": 281,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6610,7 +6699,7 @@
     },
     {
       "id": "accessory:earring:Apeiron Earring:standard:DEC (X)",
-      "source_line": 267,
+      "source_line": 282,
       "category": "accessory",
       "slot": "earring",
       "item": "Apeiron Earring",
@@ -6639,7 +6728,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:+0",
-      "source_line": 268,
+      "source_line": 283,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6668,7 +6757,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:PRI (I)",
-      "source_line": 269,
+      "source_line": 284,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6697,7 +6786,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:DUO (II)",
-      "source_line": 270,
+      "source_line": 285,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6726,7 +6815,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:TRI (III)",
-      "source_line": 271,
+      "source_line": 286,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6755,7 +6844,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:TET (IV)",
-      "source_line": 272,
+      "source_line": 287,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6784,7 +6873,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:PEN (V)",
-      "source_line": 273,
+      "source_line": 288,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6813,7 +6902,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:HEX (VI)",
-      "source_line": 274,
+      "source_line": 289,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6842,7 +6931,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:SEP (VII)",
-      "source_line": 275,
+      "source_line": 290,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6871,7 +6960,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:OCT (VIII)",
-      "source_line": 276,
+      "source_line": 291,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6900,7 +6989,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:NOV (IX)",
-      "source_line": 277,
+      "source_line": 292,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6929,7 +7018,7 @@
     },
     {
       "id": "accessory:ring:Apeiron Ring:standard:DEC (X)",
-      "source_line": 278,
+      "source_line": 293,
       "category": "accessory",
       "slot": "ring",
       "item": "Apeiron Ring",
@@ -6958,7 +7047,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:+0",
-      "source_line": 279,
+      "source_line": 294,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -6987,7 +7076,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:PRI (I)",
-      "source_line": 280,
+      "source_line": 295,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7016,7 +7105,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:DUO (II)",
-      "source_line": 281,
+      "source_line": 296,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7045,7 +7134,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:TRI (III)",
-      "source_line": 282,
+      "source_line": 297,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7074,7 +7163,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:TET (IV)",
-      "source_line": 283,
+      "source_line": 298,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7103,7 +7192,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:PEN (V)",
-      "source_line": 284,
+      "source_line": 299,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7132,7 +7221,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:HEX (VI)",
-      "source_line": 285,
+      "source_line": 300,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7161,7 +7250,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:SEP (VII)",
-      "source_line": 286,
+      "source_line": 301,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7190,7 +7279,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:OCT (VIII)",
-      "source_line": 287,
+      "source_line": 302,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7219,7 +7308,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:NOV (IX)",
-      "source_line": 288,
+      "source_line": 303,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7248,7 +7337,7 @@
     },
     {
       "id": "accessory:belt:Apeiron Belt:standard:DEC (X)",
-      "source_line": 289,
+      "source_line": 304,
       "category": "accessory",
       "slot": "belt",
       "item": "Apeiron Belt",
@@ -7276,8 +7365,124 @@
       "notes": null
     },
     {
+      "id": "accessory_reform:necklace:Kharazad / Ekleta / Apeiron Necklace:Cup of Destined Dawn:REFORM",
+      "source_line": 305,
+      "category": "accessory_reform",
+      "slot": "necklace",
+      "item": "Kharazad / Ekleta / Apeiron Necklace",
+      "variant": "Cup of Destined Dawn",
+      "enhancement": "REFORM",
+      "ap_min": null,
+      "ap_max": null,
+      "sheet_ap": null,
+      "sheet_dp": null,
+      "accuracy": null,
+      "monster_ap": null,
+      "monster_dr": null,
+      "evasion": null,
+      "hidden_evasion": null,
+      "damage_reduction": null,
+      "hidden_damage_reduction": null,
+      "max_hp": "300",
+      "max_stamina": null,
+      "weight_lt": null,
+      "delta_ap_min": null,
+      "delta_ap_max": null,
+      "delta_sheet_ap": null,
+      "delta_sheet_dp": null,
+      "source_id": "CUP_GUIDE_BDF_2026",
+      "notes": "Exclusive reformed cup for Kharazad, Ekleta and Apeiron necklaces: Max HP +300. Reformed from Cup of Arid Moonlight plus Essence of Dawn x20 via Processing (L) - Heating."
+    },
+    {
+      "id": "accessory_reform:ring:Kharazad / Ekleta / Apeiron Ring:Cup of Callous Sun:REFORM",
+      "source_line": 306,
+      "category": "accessory_reform",
+      "slot": "ring",
+      "item": "Kharazad / Ekleta / Apeiron Ring",
+      "variant": "Cup of Callous Sun",
+      "enhancement": "REFORM",
+      "ap_min": null,
+      "ap_max": null,
+      "sheet_ap": null,
+      "sheet_dp": null,
+      "accuracy": null,
+      "monster_ap": null,
+      "monster_dr": null,
+      "evasion": null,
+      "hidden_evasion": null,
+      "damage_reduction": null,
+      "hidden_damage_reduction": null,
+      "max_hp": "125",
+      "max_stamina": null,
+      "weight_lt": null,
+      "delta_ap_min": null,
+      "delta_ap_max": null,
+      "delta_sheet_ap": null,
+      "delta_sheet_dp": null,
+      "source_id": "CUP_GUIDE_BDF_2026",
+      "notes": "Exclusive reformed cup for Kharazad, Ekleta and Apeiron rings: Max HP +125, Critical Hit Damage +3% (no dedicated column for crit damage). Reformed from either base ring cup plus Essence of Dawn x20."
+    },
+    {
+      "id": "accessory_reform:belt:Kharazad / Ekleta / Apeiron Belt:Cup of Burgeoning Dusk:REFORM",
+      "source_line": 307,
+      "category": "accessory_reform",
+      "slot": "belt",
+      "item": "Kharazad / Ekleta / Apeiron Belt",
+      "variant": "Cup of Burgeoning Dusk",
+      "enhancement": "REFORM",
+      "ap_min": null,
+      "ap_max": null,
+      "sheet_ap": "3",
+      "sheet_dp": null,
+      "accuracy": null,
+      "monster_ap": null,
+      "monster_dr": null,
+      "evasion": null,
+      "hidden_evasion": null,
+      "damage_reduction": null,
+      "hidden_damage_reduction": null,
+      "max_hp": null,
+      "max_stamina": null,
+      "weight_lt": null,
+      "delta_ap_min": null,
+      "delta_ap_max": null,
+      "delta_sheet_ap": null,
+      "delta_sheet_dp": null,
+      "source_id": "CUP_GUIDE_BDF_2026",
+      "notes": "Exclusive reformed cup for Kharazad, Ekleta and Apeiron belts: All AP +3, All Damage Reduction +6 (no dedicated column for the account-wide DR stat). Reformed from either base belt cup plus Essence of Dawn x20."
+    },
+    {
+      "id": "accessory_reform:earring:Kharazad / Ekleta / Apeiron Earring:Cup of Reticent Moonbeams:REFORM",
+      "source_line": 308,
+      "category": "accessory_reform",
+      "slot": "earring",
+      "item": "Kharazad / Ekleta / Apeiron Earring",
+      "variant": "Cup of Reticent Moonbeams",
+      "enhancement": "REFORM",
+      "ap_min": null,
+      "ap_max": null,
+      "sheet_ap": "3",
+      "sheet_dp": null,
+      "accuracy": null,
+      "monster_ap": null,
+      "monster_dr": null,
+      "evasion": null,
+      "hidden_evasion": null,
+      "damage_reduction": null,
+      "hidden_damage_reduction": null,
+      "max_hp": null,
+      "max_stamina": "100",
+      "weight_lt": null,
+      "delta_ap_min": null,
+      "delta_ap_max": null,
+      "delta_sheet_ap": null,
+      "delta_sheet_dp": null,
+      "source_id": "CUP_GUIDE_BDF_2026",
+      "notes": "Exclusive reformed cup for Kharazad, Ekleta and Apeiron earrings: All AP +3, Max Stamina +100. Reformed from Cup of Earth's Sorrows plus Essence of Dawn x20."
+    },
+    {
       "id": "artifact:artifact:Marsh's Artifact - Extra AP Against Monsters:standard:BASE",
-      "source_line": 290,
+      "source_line": 309,
       "category": "artifact",
       "slot": "artifact",
       "item": "Marsh's Artifact - Extra AP Against Monsters",
@@ -7306,7 +7511,7 @@
     },
     {
       "id": "artifact:artifact:Kabua's Artifact:standard:BASE",
-      "source_line": 291,
+      "source_line": 310,
       "category": "artifact",
       "slot": "artifact",
       "item": "Kabua's Artifact",
@@ -7335,7 +7540,7 @@
     },
     {
       "id": "artifact:artifact:Kabua's Heralding Artifact:standard:REFORMED",
-      "source_line": 292,
+      "source_line": 311,
       "category": "artifact",
       "slot": "artifact",
       "item": "Kabua's Heralding Artifact",

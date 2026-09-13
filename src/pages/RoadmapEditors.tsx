@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {enhancementLabel,slots,type Goal,type Step} from '../domain/types';
+import {enhancementLabel,slots,stepCategories,stepCategoryOrder,type Goal,type Step} from '../domain/types';
 import {useApp} from '../lib/AppContext';
 import {Button,Field,Modal,SubmitForm,str,Tag} from '../components/ui';
 import {fmt,stepReadiness} from '../domain/roadmap';
@@ -15,8 +15,9 @@ export function GoalEditor({goal,onClose}:{goal?:Goal;onClose:()=>void}){
 }
 export function StepEditor({goal,step,onClose}:{goal:Goal;step?:Step;onClose:()=>void}){
   const a=useApp(),s=a.snapshot!,resources=s.resources.filter(r=>r.game_profile_id===goal.game_profile_id),[selected,setSelected]=useState<string[]>(step?.requirements.map(r=>r.resource_id)??[]);
-  return <Modal title={step?'Edit step':'Add a roadmap step'} onClose={onClose}><SubmitForm onSubmit={async d=>{const requirements=selected.map(id=>({resource_id:id,quantity:str(d,'quantity-'+id)}));if(await a.save('step_save',{id:step?.id,goal_id:goal.id,title:str(d,'title'),description:str(d,'description'),dependencies:d.getAll('dependency'),requirements}))onClose();}}>
+  return <Modal title={step?'Edit step':'Add a roadmap step'} onClose={onClose}><SubmitForm onSubmit={async d=>{const requirements=selected.map(id=>({resource_id:id,quantity:str(d,'quantity-'+id)}));if(await a.save('step_save',{id:step?.id,goal_id:goal.id,title:str(d,'title'),description:str(d,'description'),category:str(d,'category'),dependencies:d.getAll('dependency'),requirements}))onClose();}}>
     <Field label="Step title"><input name="title" defaultValue={step?.title} required maxLength={160}/></Field><Field label="Instructions or notes"><textarea name="description" maxLength={3000} defaultValue={step?.description}/></Field>
+    <Field label="Gear piece" hint="Groups this milestone into a roadmap section."><select name="category" defaultValue={step?.category??''}><option value="">Ungrouped</option>{stepCategoryOrder.map(c=><option value={c} key={c}>{stepCategories[c]}</option>)}</select></Field>
     <fieldset><legend>Prerequisite steps</legend>{s.steps.filter(x=>x.goal_id===goal.id&&x.id!==step?.id).map(x=><label className="check-row" key={x.id}><input type="checkbox" name="dependency" value={x.id} defaultChecked={step?.dependencies.includes(x.id)}/><span>{x.title}</span></label>)}</fieldset>
     <fieldset><legend>Material requirements</legend>{resources.length?resources.map(r=><div className="requirement-edit" key={r.id}><label className="check-row"><input type="checkbox" checked={selected.includes(r.id)} onChange={e=>setSelected(old=>e.target.checked?[...old,r.id]:old.filter(id=>id!==r.id))}/><span>{r.name}</span></label>{selected.includes(r.id)&&<input aria-label={'Required '+r.name} name={'quantity-'+r.id} inputMode="numeric" pattern="[0-9]+" required defaultValue={step?.requirements.find(x=>x.resource_id===r.id)?.quantity??'1'}/>}</div>):<p className="muted">Add materials on the Resources screen first.</p>}</fieldset>
     <Button type="submit" loading={a.pending} disabled={a.offline}>Save step</Button></SubmitForm></Modal>;
