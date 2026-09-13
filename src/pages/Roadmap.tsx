@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {Plus,Check,LockKeyhole,ArrowUp,ArrowDown,Pencil,Route,ChevronRight,RotateCcw,BookOpen,Package} from 'lucide-react';
 import {useApp} from '../lib/AppContext';
 import {stepCategories,type Goal,type Step,type StepCategory} from '../domain/types';
-import {fmt,goalMissing,migrationPreview,orderedSteps,reserved,stepReadiness} from '../domain/roadmap';
+import {fmt,goalMissing,migrationPreview,orderedSteps,reorderSafe,reserved,stepReadiness} from '../domain/roadmap';
 import {Button,Empty,External,Field,Modal,PageTitle,Panel,SubmitForm,Tag,str} from '../components/ui';
 import {CompletionDialog,GoalEditor,StepEditor} from './RoadmapEditors';
 import {Onboarding} from '../components/Onboarding';
@@ -32,7 +32,7 @@ export function Roadmap(){
   const sections=[...new Set(steps.map(bucket))]
     .map(cat=>({cat,label:stepCategories[cat],items:steps.filter(st=>bucket(st)===cat)}))
     .sort((a,b)=>steps.indexOf(a.items[0])-steps.indexOf(b.items[0]));
-  async function move(step:Step,neighbor:Step|undefined){if(!goal||!neighbor)return;const ids=steps.map(x=>x.id),i=ids.indexOf(step.id),j=ids.indexOf(neighbor.id);[ids[i],ids[j]]=[ids[j],ids[i]];await a.save('step_reorder',{goal_id:goal.id,order:ids});}
+  async function move(step:Step,neighbor:Step|undefined){if(!goal||!neighbor||!reorderSafe(steps,step.id,neighbor.id))return;const ids=steps.map(x=>x.id),i=ids.indexOf(step.id),j=ids.indexOf(neighbor.id);[ids[i],ids[j]]=[ids[j],ids[i]];await a.save('step_reorder',{goal_id:goal.id,order:ids});}
   return <><PageTitle eyebrow="PROGRESSION, WITH PURPOSE" title="Your next chapter." description="Turn big ambitions into a journey you can follow." action={<Button onClick={()=>setGoalEdit(true)} disabled={a.offline}><Plus size={16}/>New roadmap</Button>}/>
     <div className="filter-row"><div className="tabs" aria-label="Roadmaps">{goals.map(g=><button key={g.id} onClick={()=>setActive(g.id)} className={goal?.id===g.id?'active':''}>{g.title}{g.status==='completed'&&<Check size={14}/>}</button>)}</div><label className="check-row compact"><input type="checkbox" checked={showArchived} onChange={e=>setArchived(e.target.checked)}/>Show archived</label></div>
     {!goal?<Panel><Empty title="Every adventure needs a direction" action={<Button onClick={()=>setGoalEdit(true)} disabled={a.offline}>Create your first roadmap<ChevronRight size={16}/></Button>}>Start with the reviewed Kharazad guide or build a plan around your own goals.</Empty></Panel>:<>
@@ -50,7 +50,7 @@ export function Roadmap(){
             {!!r.materials.length&&<div className="material-chips">{r.materials.map(m=><span className={m.missing&&!finished?'missing':''} key={m.resource_id}><Package size={12}/>{fmt(m.quantity)} {m.name}{!finished&&<small>{m.missing?fmt(m.missing)+' missing':'Available'}</small>}</span>)}</div>}
             <div className="milestone-actions">{finished?<button className="text-link muted" disabled={a.offline||a.pending} onClick={()=>setReopen(step)}><RotateCcw size={13}/>Reopen step</button>:<Button className={r.ready?'small':'secondary small'} disabled={!canEdit||prereq} onClick={()=>setComplete(step)}>{r.ready?'Review & complete':'Record completion'}<ChevronRight size={14}/></Button>}
               <div className="actions">{!catalog&&!finished&&<button className="icon-button" aria-label={'Edit '+step.title} disabled={!canEdit} onClick={()=>setStepEdit(step)}><Pencil size={14}/></button>}
-                <button className="icon-button" aria-label={'Move up '+step.title} disabled={!canEdit||!prev||step.dependencies.includes(prev.id)} onClick={()=>void move(step,prev)}><ArrowUp size={14}/></button><button className="icon-button" aria-label={'Move down '+step.title} disabled={!canEdit||!next||next.dependencies.includes(step.id)} onClick={()=>void move(step,next)}><ArrowDown size={14}/></button>
+                <button className="icon-button" aria-label={'Move up '+step.title} disabled={!canEdit||!prev||!reorderSafe(steps,step.id,prev.id)} onClick={()=>void move(step,prev)}><ArrowUp size={14}/></button><button className="icon-button" aria-label={'Move down '+step.title} disabled={!canEdit||!next||!reorderSafe(steps,step.id,next.id)} onClick={()=>void move(step,next)}><ArrowDown size={14}/></button>
               </div></div>
           </div></article>;})}
         </section>)}

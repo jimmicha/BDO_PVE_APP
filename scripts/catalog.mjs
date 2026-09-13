@@ -29,7 +29,7 @@ export const catalog = {
         ['earring_1','Kharazad Earring I','kharazad_earring'],
         ['earring_2','Kharazad Earring II','kharazad_earring']
       ].map(([key,title,item])=>({
-        key, title:'Claim PEN (V) '+title,
+        key, category:'accessory', title:'Claim PEN (V) '+title,
         description:"Visit Alustin in Velia with the materials in your regular inventory. Enable all quest types if the support quest is hidden. Record only after completing the exchange in-game. This reward is available once per family.",
         dependencies:['olvia_enrollment'],requirements:[{resource_key:'essence_of_dawn',quantity:'10'},{resource_key:'sharp_black_crystal_shard',quantity:'50'}],
         claim_key:'alustin_support_'+key,reward:{item_key:item,enhancement:20}

@@ -8,6 +8,20 @@ export function orderedSteps(steps:Step[]):Step[] {
   function visit(s:Step){if(visiting.has(s.id))throw Error('Dependency cycle');if(done.has(s.id))return;visiting.add(s.id);for(const id of s.dependencies){const dep=map.get(id);if(!dep)throw Error('Missing prerequisite');visit(dep);}visiting.delete(s.id);done.add(s.id);result.push(s);}
   [...steps].sort((a,b)=>a.position-b.position||a.id.localeCompare(b.id)).forEach(visit);return result;
 }
+// Section views (Roadmap.tsx) show a step's neighbor within its own gear
+// category, which is not necessarily its neighbor in the global dependency
+// order other categories are interleaved into. Swapping two steps that are
+// section-adjacent but not globally adjacent can strand a dependency on the
+// wrong side of its dependent, which the server then rejects wholesale
+// (DEPENDENCY_ORDER). Mirror that same all-pairs check on the client so the
+// move controls only ever offer swaps the server will accept.
+export function reorderSafe(steps:Step[],idA:string,idB:string):boolean{
+  const ids=steps.map(x=>x.id),i=ids.indexOf(idA),j=ids.indexOf(idB);
+  if(i<0||j<0)return false;
+  [ids[i],ids[j]]=[ids[j],ids[i]];
+  const position=new Map(ids.map((id,idx)=>[id,idx]));
+  return steps.every(st=>st.dependencies.every(dep=>{const depPos=position.get(dep);return depPos===undefined||depPos<position.get(st.id)!;}));
+}
 export function conversionSourceOptions(s:Snapshot,step:Step):Equipment[]{
   const src=step.reward?.source; if(!src) return [];
   const goal=s.goals.find(g=>g.id===step.goal_id);
