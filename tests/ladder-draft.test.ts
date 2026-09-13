@@ -94,6 +94,13 @@ it('saves the 76-step ladder as an unreviewed draft without exposing it to playe
       expect(found.requirements,'missing silver requirement on '+key).toEqual([{resource_key:'silver',quantity}]);
     }
     expect(saved.content.resources.some((r:any)=>r.key==='silver')).toBe(true);
+
+    expect(byKey('s2_blackstar_main').category).toBe('weapon');
+    expect(byKey('s3_fallen_god_armor_tri').category).toBe('armor');
+    expect(byKey('necklace').category).toBe('accessory');
+    expect(byKey('s3_kabua_artifacts').category).toBe('artifact');
+    expect(byKey('ap_vells_heart').category).toBe('alchemy_stone');
+    expect(byKey('s1_season_graduation').category).toBeUndefined();
   }finally{await db.close();}
 });
 
@@ -129,6 +136,8 @@ it('a real chain (Blackstar -> Sovereign -> TET) converts in place with no dupli
     await send('goal_create',{game_profile_id:family,catalog_version_id:draft.id});
     const goal=s.goals.find((g:any)=>g.catalog_version_id===draft.id).id;
     const step=(key:string)=>s.steps.find((x:any)=>x.goal_id===goal&&x.template_key===key);
+    expect(step('s2_blackstar_main').category).toBe('weapon');
+    expect(step('olvia_enrollment').category).toBeNull();
     await send('step_complete',{id:step('olvia_enrollment').id,mode:'spend'});
     const before=new Set(s.equipment.map((e:any)=>e.id));
     await send('step_complete',{id:step('s2_blackstar_main').id,mode:'spend'});

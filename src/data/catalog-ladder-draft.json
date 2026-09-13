@@ -491,7 +491,8 @@
         "reward": {
           "item_key": "kharazad_necklace",
           "enhancement": 20
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "belt",
@@ -514,7 +515,8 @@
         "reward": {
           "item_key": "kharazad_belt",
           "enhancement": 20
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "ring_1",
@@ -537,7 +539,8 @@
         "reward": {
           "item_key": "kharazad_ring",
           "enhancement": 20
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "ring_2",
@@ -560,7 +563,8 @@
         "reward": {
           "item_key": "kharazad_ring",
           "enhancement": 20
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "earring_1",
@@ -583,7 +587,8 @@
         "reward": {
           "item_key": "kharazad_earring",
           "enhancement": 20
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "earring_2",
@@ -606,7 +611,8 @@
         "reward": {
           "item_key": "kharazad_earring",
           "enhancement": 20
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s2_blackstar_main",
@@ -619,7 +625,8 @@
         "reward": {
           "item_key": "blackstar_main",
           "enhancement": 20
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s2_blackstar_awakening",
@@ -632,7 +639,8 @@
         "reward": {
           "item_key": "blackstar_awakening",
           "enhancement": 20
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s2_blackstar_sub",
@@ -645,7 +653,8 @@
         "reward": {
           "item_key": "blackstar_sub",
           "enhancement": 20
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s2_slumbering_base",
@@ -654,7 +663,8 @@
         "dependencies": [
           "olvia_enrollment"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "armor"
       },
       {
         "key": "s3_sovereign_main_base",
@@ -673,7 +683,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s3_sovereign_awakening_base",
@@ -692,7 +703,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s3_sovereign_sub_base",
@@ -711,7 +723,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s3_garmoth_main",
@@ -720,7 +733,8 @@
         "dependencies": [
           "s3_sovereign_main_base"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "weapon"
       },
       {
         "key": "s3_garmoth_awakening",
@@ -729,14 +743,16 @@
         "dependencies": [
           "s3_sovereign_awakening_base"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "weapon"
       },
       {
         "key": "s3_marsh_artifact",
         "title": "Equip Marsh's Artifact",
         "description": "Cheap monster-AP starter artifact: +6 AP against monsters per the supplied tables. Unreviewed. Materials, silver cost and exact quantities for this step are NOT reviewed. Confirm in game before spending.",
         "dependencies": [],
-        "requirements": []
+        "requirements": [],
+        "category": "artifact"
       },
       {
         "key": "s3_kabua_artifacts",
@@ -745,7 +761,8 @@
         "dependencies": [
           "s3_marsh_artifact"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "artifact"
       },
       {
         "key": "s3_crystal_presets",
@@ -761,7 +778,8 @@
         "dependencies": [
           "s2_slumbering_base"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "armor"
       },
       {
         "key": "s3_labreska_helmet_tri",
@@ -779,7 +797,8 @@
         "reward": {
           "item_key": "labreska_helmet",
           "enhancement": 18
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s3_fallen_god_armor_tri",
@@ -797,7 +816,8 @@
         "reward": {
           "item_key": "fallen_god_armor",
           "enhancement": 18
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s3_dahn_gloves_tri",
@@ -815,7 +835,8 @@
         "reward": {
           "item_key": "dahn_gloves",
           "enhancement": 18
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s3_ator_shoes_tri",
@@ -833,7 +854,8 @@
         "reward": {
           "item_key": "ator_shoes",
           "enhancement": 18
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s3_sovereign_main_tet",
@@ -857,7 +879,8 @@
             "max_enhancement": 0,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s3_sovereign_awakening_tet",
@@ -881,7 +904,8 @@
             "max_enhancement": 0,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s3_sovereign_sub_tet",
@@ -905,7 +929,8 @@
             "max_enhancement": 0,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s3_kharazad_necklace_sep",
@@ -929,7 +954,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s3_kharazad_belt_sep",
@@ -953,7 +979,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s3_kharazad_ring_sep",
@@ -977,7 +1004,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s3_kharazad_ring_2_sep",
@@ -1001,7 +1029,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s3_kharazad_earring_sep",
@@ -1025,7 +1054,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s3_kharazad_earring_2_sep",
@@ -1049,7 +1079,8 @@
             "max_enhancement": 20,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s4_sovereign_primary_pen",
@@ -1064,7 +1095,8 @@
             "resource_key": "silver",
             "quantity": "33602984986"
           }
-        ]
+        ],
+        "category": "weapon"
       },
       {
         "key": "s4_labreska_helmet_tet",
@@ -1088,7 +1120,8 @@
             "max_enhancement": 18,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s4_fallen_god_armor_tet",
@@ -1112,7 +1145,8 @@
             "max_enhancement": 18,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s4_dahn_gloves_tet",
@@ -1136,7 +1170,8 @@
             "max_enhancement": 18,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s4_ator_shoes_tet",
@@ -1160,7 +1195,8 @@
             "max_enhancement": 18,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s4_edana_heavensmite_base",
@@ -1179,7 +1215,8 @@
             "max_enhancement": 19,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s4_edana_abyssveil_base",
@@ -1198,7 +1235,8 @@
             "max_enhancement": 19,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s4_edana_oathgrip_base",
@@ -1217,7 +1255,8 @@
             "max_enhancement": 19,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s4_edana_furystride_base",
@@ -1236,7 +1275,8 @@
             "max_enhancement": 19,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s4_dawn_all_ap",
@@ -1245,7 +1285,8 @@
         "dependencies": [
           "s3_kharazad_necklace_sep"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "accessory"
       },
       {
         "key": "s4_accessory_cups",
@@ -1255,7 +1296,8 @@
           "s3_kharazad_necklace_sep",
           "s3_kharazad_belt_sep"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "accessory"
       },
       {
         "key": "s4_kabua_heralding",
@@ -1264,7 +1306,8 @@
         "dependencies": [
           "s3_kabua_artifacts"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "artifact"
       },
       {
         "key": "s4_kharazad_necklace_nov",
@@ -1288,7 +1331,8 @@
             "max_enhancement": 22,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s4_kharazad_belt_nov",
@@ -1312,7 +1356,8 @@
             "max_enhancement": 22,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s4_kharazad_ring_nov",
@@ -1336,7 +1381,8 @@
             "max_enhancement": 22,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s4_kharazad_ring_2_nov",
@@ -1360,7 +1406,8 @@
             "max_enhancement": 22,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s4_kharazad_earring_nov",
@@ -1384,7 +1431,8 @@
             "max_enhancement": 22,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s4_kharazad_earring_2_nov",
@@ -1408,7 +1456,8 @@
             "max_enhancement": 22,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s5_amplified_lightstones",
@@ -1417,7 +1466,8 @@
         "dependencies": [
           "s4_kabua_heralding"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "artifact"
       },
       {
         "key": "s5_edana_heavensmite_tri",
@@ -1441,7 +1491,8 @@
             "max_enhancement": 0,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s5_edana_abyssveil_tri",
@@ -1465,7 +1516,8 @@
             "max_enhancement": 0,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s5_edana_oathgrip_tri",
@@ -1489,7 +1541,8 @@
             "max_enhancement": 0,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s5_edana_furystride_tri",
@@ -1513,7 +1566,8 @@
             "max_enhancement": 0,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s5_sovereign_hex",
@@ -1537,7 +1591,8 @@
             "max_enhancement": 19,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s5_ekleta_necklace_base",
@@ -1556,7 +1611,8 @@
             "max_enhancement": 24,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s5_ekleta_belt_base",
@@ -1575,7 +1631,8 @@
             "max_enhancement": 24,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s5_ekleta_ring_base",
@@ -1594,7 +1651,8 @@
             "max_enhancement": 24,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s5_ekleta_ring_2_base",
@@ -1613,7 +1671,8 @@
             "max_enhancement": 24,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s5_ekleta_earring_base",
@@ -1632,7 +1691,8 @@
             "max_enhancement": 24,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s5_ekleta_earring_2_base",
@@ -1651,7 +1711,8 @@
             "max_enhancement": 24,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "s6_han_reforge",
@@ -1660,7 +1721,8 @@
         "dependencies": [
           "s5_sovereign_hex"
         ],
-        "requirements": []
+        "requirements": [],
+        "category": "weapon"
       },
       {
         "key": "s6_sovereign_dec",
@@ -1684,7 +1746,8 @@
             "max_enhancement": 21,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "weapon"
       },
       {
         "key": "s6_edana_dec",
@@ -1708,7 +1771,8 @@
             "max_enhancement": 18,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "armor"
       },
       {
         "key": "s6_ekleta_dec",
@@ -1732,14 +1796,16 @@
             "max_enhancement": 0,
             "keep_assignment": true
           }
-        }
+        },
+        "category": "accessory"
       },
       {
         "key": "ap_vells_heart",
         "title": "Combine Vell's Heart with a high-tier Destruction stone",
         "description": "Keeps Vell's displayed AP while gaining the Destruction effects. Growth uses visible success rates with Ancient Anvil protection; failure no longer destroys the stone, though EXP is lost. Unreviewed. Not reviewed as an automated mechanic.",
         "dependencies": [],
-        "requirements": []
+        "requirements": [],
+        "category": "alchemy_stone"
       },
       {
         "key": "ap_journals",

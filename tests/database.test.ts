@@ -101,6 +101,15 @@ describe('production SQL through authenticated RPCs',()=>{
     await expect(send('step_reorder',{goal_id:goal.id,order:[second.id,first.id]})).rejects.toThrow('DEPENDENCY_ORDER');
     await expect(send('step_save',{goal_id:goal.id,title:'Steal',requirements:[{resource_id:b.resources[0].id,quantity:'1'}]})).rejects.toThrow('NOT_FOUND');
   });
+  it('tags a custom step with its gear-piece category so the roadmap can group it into a section',async()=>{
+    const goal=a.goals.find((x:any)=>!x.catalog_version_id), step=a.steps.find((x:any)=>x.goal_id===goal.id&&x.title==='Second');
+    expect(step.category).toBeNull();
+    await send('step_save',{id:step.id,goal_id:goal.id,title:'Second',category:'weapon'});
+    expect(a.steps.find((x:any)=>x.id===step.id).category).toBe('weapon');
+    await send('step_save',{id:step.id,goal_id:goal.id,title:'Second',category:''});
+    expect(a.steps.find((x:any)=>x.id===step.id).category).toBeNull();
+    await expect(send('step_save',{id:step.id,goal_id:goal.id,title:'Second',category:'not-a-category'})).rejects.toThrow('VALIDATION');
+  });
   it('exports complete owned records and enforces admin authorization',async()=>{
     const exported=await rpc(db,ALICE,'companion_export');
     expect(exported.characters[0].name).toBe('Aster');

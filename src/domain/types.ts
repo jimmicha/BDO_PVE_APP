@@ -9,14 +9,17 @@ export interface Goal { id:Id; game_profile_id:Id; character_id:Id|null; title:s
 export interface Requirement { resource_id:Id; quantity:Quantity }
 export interface ConversionSource { item_key:string; min_enhancement?:number; max_enhancement?:number; keep_assignment?:boolean }
 export interface Reward { item_key:string; enhancement:number; source?:ConversionSource }
-export interface Step { id:Id; goal_id:Id; title:string; description:string; position:number; status:'pending'|'completed'; dependencies:Id[]; requirements:Requirement[]; template_key:string|null; claim_key:string|null; reward:Reward|null }
+export type StepCategory='weapon'|'armor'|'accessory'|'alchemy_stone'|'artifact'|'lifeskill'|'other';
+export interface Step { id:Id; goal_id:Id; title:string; description:string; position:number; status:'pending'|'completed'; dependencies:Id[]; requirements:Requirement[]; template_key:string|null; claim_key:string|null; reward:Reward|null; category:StepCategory|null }
 export interface Allocation { id:Id; goal_id:Id; resource_id:Id; quantity:Quantity }
 export interface Claim { game_profile_id:Id; claim_key:string }
 export interface ProgressEvent { id:Id; game_profile_id:Id|null; kind:string; description:string; before_state:Record<string,unknown>|null; after_state:Record<string,unknown>|null; created_at:string; request_id:Id }
 export interface CatalogItem { key:string; name:string; slots:string[]; enhancements:number[] }
-export interface TemplateStep {key:string;title:string;description:string;dependencies:string[];requirements:{resource_key:string;quantity:Quantity}[];claim_key?:string;reward?:Reward}
+export interface TemplateStep {key:string;title:string;description:string;dependencies:string[];requirements:{resource_key:string;quantity:Quantity}[];claim_key?:string;reward?:Reward;category?:StepCategory}
 export interface Catalog { id:Id; version:number; title:string; status:'draft'|'review'|'published'|'retired'; checked_at:string|null; valid_until:string|null; effective_patch:string; sources:{name:string;url:string;checked_at:string;scope?:string}[];content:{platforms:string[];regions:string[];items:CatalogItem[];resources:{key:string;name:string}[];steps:TemplateStep[]} }
 export interface Snapshot {capabilities?:string[];profile:Profile;is_admin:boolean;game_profiles:Family[];characters:Character[];equipment:Equipment[];resources:Resource[];goals:Goal[];steps:Step[];allocations:Allocation[];claims:Claim[];events:ProgressEvent[];catalogs:Catalog[]}
 export interface Command {kind:string;data:Record<string,unknown>;expected_revision:number;request_id:string}
 export const slots = {main_hand:'Main weapon',awakening:'Awakening',off_hand:'Sub-weapon',helmet:'Helmet',armor:'Armor',gloves:'Gloves',shoes:'Shoes',necklace:'Necklace',belt:'Belt',ring_1:'Ring I',ring_2:'Ring II',earring_1:'Earring I',earring_2:'Earring II',alchemy_stone:'Alchemy stone'};
+export const stepCategories:Record<StepCategory,string> = {weapon:'Weapon progression',armor:'Armor progression',accessory:'Accessory progression',alchemy_stone:'Alchemy stone progression',artifact:'Artifact & lightstone progression',lifeskill:'Lifeskill & utility',other:'Other milestones'};
+export const stepCategoryOrder:StepCategory[] = ['weapon','armor','accessory','alchemy_stone','artifact','lifeskill','other'];
 export const enhancementLabel=(n:number)=>n===0?'Base':n<=15?'+'+n:['PRI (I)','DUO (II)','TRI (III)','TET (IV)','PEN (V)','HEX (VI)','SEP (VII)','OCT (VIII)','NOV (IX)','DEC (X)'][n-16]??'Unknown';
