@@ -2,7 +2,7 @@ export type Id = string;
 export type Quantity = string;
 export interface Profile { id:Id; display_name:string; locale:string; timezone:string; revision:number; preferences:Record<string,unknown>; created_at:string }
 export interface Family { id:Id; owner_id:Id; family_name:string; platform:'PC'; region:'NA'|'EU' }
-export interface Character { id:Id; game_profile_id:Id; name:string; class_name:string; level:number; playstyle:string; notes:string }
+export interface Character { id:Id; game_profile_id:Id; name:string; class_name:string; level:number; playstyle:string; notes:string; sheet_ap:number|null; sheet_dp:number|null }
 export interface Equipment { id:Id; game_profile_id:Id; character_id:Id|null; slot:string|null; name:string; catalog_version_id:Id|null; item_key:string|null; enhancement:number; reform:number; caphras:number; notes:string }
 export interface Resource { id:Id; game_profile_id:Id; name:string; quantity:Quantity; item_key:string|null; unit:'items'|'silver' }
 export interface Goal { id:Id; game_profile_id:Id; character_id:Id|null; title:string; description:string; priority:number; status:'active'|'paused'|'completed'|'archived'; catalog_version_id:Id|null; created_at:string }

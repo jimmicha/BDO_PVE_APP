@@ -22,6 +22,13 @@ describe('production SQL through authenticated RPCs',()=>{
     await expect(send('character_save',{id:a.characters[0].id,name:'Intruder',class_name:'Ranger',level:60},b,BOB)).rejects.toThrow('NOT_FOUND');
     await expect(send('resource_save',{game_profile_id:a.game_profiles[0].id,name:'Stolen',quantity:'12'},b,BOB)).rejects.toThrow('NOT_FOUND');
   });
+  it('records optional self-reported sheet AP/DP on a character',async()=>{
+    expect(a.characters[0].sheet_ap).toBeNull();expect(a.characters[0].sheet_dp).toBeNull();
+    await send('character_save',{id:a.characters[0].id,name:'Aster',class_name:'Scholar',level:61,sheet_ap:'320',sheet_dp:'420'});
+    expect(a.characters[0].sheet_ap).toBe(320);expect(a.characters[0].sheet_dp).toBe(420);
+    await send('character_save',{id:a.characters[0].id,name:'Aster',class_name:'Scholar',level:61,sheet_ap:'',sheet_dp:''});
+    expect(a.characters[0].sheet_ap).toBeNull();expect(a.characters[0].sheet_dp).toBeNull();
+  });
   it('blocks raw table access, anonymous sessions and uninvited accounts',async()=>{
     await expect(db.transaction(async(tx:any)=>{await tx.exec('set local role authenticated');return tx.query('select * from app_private.characters');})).rejects.toThrow(/permission denied/);
     await expect(rpc(db,null,'companion_snapshot')).rejects.toThrow('AUTH_REQUIRED');
