@@ -33,11 +33,11 @@ export function Auth(){
   }
   return <main className="auth-layout">
     <section className="auth-story"><Link to="/" className="brand"><img src="/icon.svg" alt=""/><span>BDO <b>COMPANION</b></span></Link>
-      <div className="story-copy"><p className="eyebrow">FOR YOUR NEXT CHAPTER</p><h1>Your journey.<br/><em>Remembered.</em></h1><p>From your first season to your next great upgrade. Keep your characters, materials, and ambitions in one place.</p>
-      <div className="story-features"><span><Layers size={18}/> Every character, one home</span><span><Compass size={18}/> A clear path forward</span><span><Cloud size={18}/> Pick up where you left off</span></div></div>
-      <p className="auth-foot">An independent companion for Black Desert Online · PC NA/EU</p><div className="astrolabe" aria-hidden="true"><i/><i/><i/><span>✧</span></div>
+      <div className="story-copy"><p className="eyebrow">THE FREE PVE COMPANION FOR BLACK DESERT ONLINE</p><h1>Stop guessing.<br/><em>Start progressing.</em></h1><p>Know exactly what to grind for next. Track every character, every material, and your next best upgrade — all in one place, always in sync.</p>
+      <div className="story-features"><span><Compass size={18}/> Always know your next best upgrade</span><span><Layers size={18}/> Every character, one command center</span><span><Cloud size={18}/> Free — synced across web & Android</span></div></div>
+      <p className="auth-foot">An independent companion for Black Desert Online · PC NA/EU</p><div className="astrolabe" aria-hidden="true"/>
     </section>
-    <section className="auth-form"><div className="auth-card"><Tagline/><h2>{mode==='signin'?'Welcome, adventurer.':mode==='signup'?'Begin your journey.':'Find your way back.'}</h2><p className="muted">{mode==='signin'?'Sign in to continue your story.':mode==='signup'?'Create your private companion account.':'We’ll send a link to reset your password.'}</p>
+    <section className="auth-form"><div className="auth-card"><Tagline/><h2>{mode==='signin'?'Welcome back, adventurer.':mode==='signup'?'Start your free companion.':'Find your way back.'}</h2><p className="muted">{mode==='signin'?'Sign in to continue your story.':mode==='signup'?'Free forever. Takes less than a minute to set up.':'We’ll send a link to reset your password.'}</p>
       {!configured?<div className="notice">The beta is being configured. Sign-in becomes available once the account service is connected.</div>:<>
       {mode!=='recover'&&<><Button className="secondary full" onClick={google} loading={busy}><span className="google-letter">G</span>Continue with Google</Button><Button className="secondary full" onClick={discord} loading={busy}><span className="discord-letter">D</span>Continue with Discord</Button><div className="divider"><span>or continue with email</span></div></>}
       <SubmitForm onSubmit={submit}><Field label="Email address"><input name="email" type="email" autoComplete="email" placeholder={isLocal?'explorer@local.test':'you@example.com'} required maxLength={254}/></Field>
