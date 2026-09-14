@@ -80,7 +80,7 @@ test('stale sessions show a conflict, offline mode is read-only, sign-out clears
   await page.getByRole('button',{name:'Close dialog'}).click();await expect(page.locator('.silver-panel')).toContainText('200');await other.close();
   await page.context().setOffline(true);await expect(page.getByRole('button',{name:'Add resource',exact:true})).toBeDisabled();
   await expect(page.locator('.silver-panel')).toContainText('200');await navigate(page,'More');await page.getByRole('button',{name:'Settings',exact:true}).click();await page.getByRole('button',{name:'Sign out of this device'}).click();
-  await expect(page.getByRole('heading',{name:'Welcome, adventurer.'})).toBeVisible();
+  await expect(page.getByRole('heading',{name:'Welcome back, adventurer.'})).toBeVisible();
   expect(await page.evaluate(()=>Object.keys(localStorage).filter(x=>x.startsWith('bdo-cache-v1:')))).toEqual([]);
   await page.context().setOffline(false);
 });
