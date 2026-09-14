@@ -21,3 +21,14 @@ it('reviews and publishes a version, preserves pinned goals, migrates pending st
     await send('catalog_transition',{id:original.id,status:'published'});expect(s.catalogs.find((x:any)=>x.status==='published').id).toBe(original.id);expect(s.goals[0].catalog_version_id).toBe(draft.id);
   }finally{await db.close();}
 });
+it('deletes an unused draft but refuses to delete a non-draft version',async()=>{
+  const db=await openDatabase();try{await seedUsers(db);let s=await rpc(db,ALICE,'companion_snapshot');
+    const send=async(kind:string,data:unknown)=>{s=await rpc(db,ALICE,kind.startsWith('catalog_')?'companion_catalog':kind==='goal_migrate'?'companion_migrate_goal':'companion_command',{kind,data,expected_revision:s.profile.revision,request_id:randomUUID()});};
+    const original=s.catalogs[0];const before=s.catalogs.length;
+    await send('catalog_create',{id:original.id});const draft=s.catalogs.find((c:any)=>c.status==='draft');
+    expect(s.catalogs.length).toBe(before+1);
+    await expect(send('catalog_delete',{id:original.id})).rejects.toThrow('Only draft versions can be deleted');
+    await send('catalog_delete',{id:draft.id});
+    expect(s.catalogs.length).toBe(before);expect(s.catalogs.some((c:any)=>c.id===draft.id)).toBe(false);
+  }finally{await db.close();}
+});
