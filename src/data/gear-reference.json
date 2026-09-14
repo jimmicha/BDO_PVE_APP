@@ -2,6 +2,7 @@
   "version": "user-reference-2026-09-08",
   "region": "PC NA/EU",
   "imported_at": "2026-09-08",
+  "guide_updated_at": "2026-09-14",
   "review_status": "unreviewed",
   "source_sha256": "f51fc10eeec800ea6db70060d30a21434e3dcf94e4f1cc21ee72b63e8a0dbbba",
   "sources": {
@@ -7586,11 +7587,11 @@
               "Main Goal"
             ],
             [
-              "1 - Season",
+              "1 - Season (usually automatic)",
               "PEN Tuvala",
               "PEN Tuvala",
               "PEN Tuvala",
-              "Build the base character and unlock account progression."
+              "Build the base character. In 2026 most accounts clear this through Season and Olvia Academy rewards rather than manual grinding."
             ],
             [
               "2 - Hyperboost",
@@ -7631,6 +7632,43 @@
           "type": "table"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "",
+              "2026 shortcut: Check your available Hyperboost and Olvia Academy rewards before buying intermediate gear. Current catch-up paths can accelerate Blackstar, Sovereign and Slumbering Origin acquisition, so most active PvE accounts now start their real planning at the Hyperboost / midgame stage rather than a manual Tuvala grind."
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "PRI I",
+              "DUO II",
+              "TRI III",
+              "TET IV",
+              "PEN V"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "HEX VI",
+              "SEP VII",
+              "OCT VIII",
+              "NOV IX",
+              "DEC X"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "C10 / C20 means Caphras level 10 / 20. Base means unenhanced within that gear family."
+        },
+        {
           "text": "One-line progression",
           "type": "paragraph"
         },
@@ -7657,6 +7695,10 @@
         {
           "text": "PEN Tuvala combat gear was improved, making the old TET-boss transition far less important for a modern progression route.",
           "type": "paragraph"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hyperboost and Olvia Academy rewards commonly hand new and returning 2026 accounts Blackstar, Slumbering Origin and PEN Kharazad support directly, so this guide treats Season / PEN Tuvala as a quick automatic on-ramp rather than the main event."
         },
         {
           "text": "Sovereign now covers main hand, awakening and sub-weapon.",
@@ -7772,6 +7814,59 @@
           "type": "paragraph"
         },
         {
+          "type": "paragraph",
+          "text": "Tuvala is replaced by Blackstar through acquisition or rewards, not by ordinary Tuvala enhancement; most 2026 accounts receive Blackstar directly from Hyperboost rather than grinding PEN Tuvala first. Kzarka / Offin and Dandelion remain optional boss-weapon bridges for players who skip Blackstar rewards."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sovereign crafting recipes"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Sovereign slot",
+              "Choose one crafting recipe"
+            ],
+            [
+              "Main-hand or awakening",
+              "1. Two PEN Blackstars"
+            ],
+            [
+              "",
+              "2. PEN Blackstar + Flame of the Primordial"
+            ],
+            [
+              "",
+              "3. PEN Blackstar + PEN boss weapon C20 + Gem of Twilight"
+            ],
+            [
+              "Sub-weapon",
+              "1. Two PEN Blackstars + Gem of Twilight"
+            ],
+            [
+              "",
+              "2. PEN Blackstar + Flame of the Primordial + Gem of Twilight"
+            ],
+            [
+              "",
+              "3. PEN Blackstar + Gem of the Primordial + Gem of Twilight"
+            ],
+            [
+              "",
+              "4. PEN Blackstar + PEN Kutum C20 + PEN Nouver C20"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Match the equipment slot for all weapon ingredients. Main-hand and awakening recipes cannot be mixed. Craft at the Bonghwang / Phoenix Statue on Mount Ahshi, and remove applicable heart reforms first."
+        },
+        {
+          "type": "paragraph",
+          "text": "Shai's awakening uses the Artina Sol path instead of a normal Sovereign awakening weapon."
+        },
+        {
           "text": "Garmoth reform",
           "type": "paragraph"
         },
@@ -7825,31 +7920,69 @@
           "rows": [
             [
               "Slot",
+              "Boss options at PEN C10",
               "Slumbering Origin",
               "Edana successor"
             ],
             [
               "Helmet",
+              "Giath / Griffon",
               "Labreska's Helmet",
               "Edana - Heavensmite"
             ],
             [
               "Chest",
+              "Red Nose / Dim Tree Spirit",
               "Fallen God's Armor",
               "Edana - Abyssveil"
             ],
             [
               "Gloves",
+              "Bheg / Leebur",
               "Dahn's Gloves",
               "Edana - Oathgrip"
             ],
             [
               "Shoes",
+              "Urugon / Muskan",
               "Ator's Shoes",
               "Edana - Furystride"
             ]
           ],
           "type": "table"
+        },
+        {
+          "type": "paragraph",
+          "text": "PEN Tuvala can enter Jetina's reformable TET boss-gear route, then progress to PEN boss gear, which is the standard crafting input for Slumbering Origin at C10. Many 2026 accounts skip this manual grind because Hyperboost rewards hand out boss armor or Slumbering Origin pieces directly."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Crafting result",
+              "Additional key material"
+            ],
+            [
+              "Fallen God's Armor",
+              "Flame of Despair"
+            ],
+            [
+              "Labreska's Helmet",
+              "Flame of Frost"
+            ],
+            [
+              "Dahn's Gloves",
+              "Flame of Hongik"
+            ],
+            [
+              "Ator's Shoes",
+              "Flame of Resonance"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "PEN Blackstar armor is an alternative crafting input where supported. Keep the damage-reduction or evasion variant appropriate to your build for gloves and shoes."
         },
         {
           "text": "Normal route",
@@ -7889,6 +8022,10 @@
             ]
           ],
           "type": "table"
+        },
+        {
+          "type": "paragraph",
+          "text": "Complete the Edana crafting prerequisite questline. The crafting quest is weekly: one type per week, resetting Thursday at 00:00 UTC (BDO's daily-reset time zone for PC NA/EU, not your local clock). TET Slumbering Origin is a valid entry point; a PEN Slumbering Origin conversion is an alternative, not a prerequisite."
         },
         {
           "text": "How to progress Edana armor",
@@ -7994,6 +8131,43 @@
           "type": "paragraph"
         },
         {
+          "type": "paragraph",
+          "text": "Existing Capotia or other suitable AP accessories can also bridge the gap toward Kharazad; a full enhanced Deboreka set is not mandatory before converting."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Starting item",
+              "Conversion / next step"
+            ],
+            [
+              "Base Deboreka, matching slot",
+              "Manufacture with 50 Essence of Dawn + 300 Magical Shards -> base Kharazad"
+            ],
+            [
+              "TET Deboreka",
+              "Exchange -> PEN Kharazad of the same slot"
+            ],
+            [
+              "PEN Deboreka",
+              "Exchange -> NOV Kharazad of the same slot"
+            ],
+            [
+              "NOV Kharazad",
+              "Exchange -> base Ekleta of the same slot"
+            ],
+            [
+              "DEC Kharazad",
+              "Exchange -> TET Ekleta of the same slot"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Deboreka exchanges are handled through Clorince in Velia; remove accessory reforms before handing over the Deboreka. Kharazad itself uses Essence of Dawn through NOV and Dawn Black Stones for DEC, and its enhancement does not require duplicate accessories."
+        },
+        {
           "text": "Recommended AP-focused order",
           "type": "paragraph"
         },
@@ -8062,6 +8236,10 @@
         {
           "text": "Ekleta and Apeiron converge to the same final stats at DEC, but their acquisition and enhancement paths are radically different.",
           "type": "paragraph"
+        },
+        {
+          "type": "paragraph",
+          "text": "Apeiron entry: acquire it directly or craft it from Inner Edania materials. Ekleta entry: convert NOV or DEC Kharazad. Compare converting your current Kharazad against buying or building Apeiron before committing; they are alternatives, and Ekleta does not need to be replaced by Apeiron."
         },
         {
           "rows": [
@@ -8335,6 +8513,31 @@
             ]
           ],
           "type": "table"
+        },
+        {
+          "type": "paragraph",
+          "text": "Starter artifacts are replaced by Kabua's; they are not ingredients that enhance into it. Kabua's then uses a reform item to become the Heralding version."
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "Make the reform item",
+              "Apply it"
+            ],
+            [
+              "Heating: 100 Herald's Crystals + 100 Sharp Black Crystal Shards + 100 Magical Shards + 200 Magical Lightstone Crystals",
+              "Creates a Flawless Herald's Crystal. Reform one Kabua's Artifact with it."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Added per reformed Kabua: +3 Extra AP Against Monsters, +5 Monster Damage Reduction and +250 Max HP, on top of the original artifact's effects. For two reforms, double the listed materials and added effects."
+        },
+        {
+          "type": "paragraph",
+          "text": "Defensive branch: Dehkia's Artifact - All Damage Reduction / All Evasion converts to a matching Dehkia's Heralding Artifact. These are alternatives for a defensive build, not the mandatory next step after Kabua's."
         },
         {
           "text": "Lightstone progression",
@@ -8932,6 +9135,10 @@
         {
           "text": "BDO changes frequently. Re-check patch notes after major balance, Edania, Hyperboost, accessory, crystal or gearing updates before spending very large amounts of silver or Cron Stones.",
           "type": "paragraph"
+        },
+        {
+          "type": "paragraph",
+          "text": "Refinement pass, 14 September 2026: cross-checked against a PC NA/EU PvE gear-progression overview dated 14 September 2026 covering weapons, armor, accessories, alchemy stones and artifacts. Added Sovereign crafting recipes, boss-armor acquisition options, the weekly Edana crafting questline reset, Deboreka bridge/exchange mechanics and the Kabua reform-material recipe, and reframed Season / PEN Tuvala as a fast automatic on-ramp rather than a mandatory manual grind, since most active accounts now start real planning at the Hyperboost / midgame stage."
         }
       ]
     }
