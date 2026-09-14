@@ -18,6 +18,6 @@ const blocks=JSON.parse(await readFile('data/reference/progression-blocks.json',
 const headings=JSON.parse(await readFile('data/reference/progression-paragraphs.json','utf8')).filter(p=>/^\d+\. [A-Z]/.test(p));
 const sections=[];for(const block of blocks){const text=block.type==='paragraph'?block.text:block.rows?.length===1&&block.rows[0].length===1?block.rows[0][0]:'';const heading=headings.find(h=>text?.startsWith(h));if(heading){sections.push({title:heading,blocks:[]});const subtitle=text.slice(heading.length).trim();if(subtitle)sections.at(-1).blocks.push({type:'paragraph',text:subtitle});}else if(sections.length)sections.at(-1).blocks.push(block);}
 if(sections.length!==12)throw Error('Expected 12 guide sections; found '+sections.length);
-const result={version:'user-reference-2026-09-08',region:'PC NA/EU',imported_at:'2026-09-08',review_status:'unreviewed',source_sha256:createHash('sha256').update(raw).digest('hex'),sources,columns,issues,rows,sections};
+const result={version:'user-reference-2026-09-08',region:'PC NA/EU',imported_at:'2026-09-08',guide_updated_at:'2026-09-14',review_status:'unreviewed',source_sha256:createHash('sha256').update(raw).digest('hex'),sources,columns,issues,rows,sections};
 await writeFile('src/data/gear-reference.json',JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({rows:rows.length,sections:sections.length,issues:issues.length}));

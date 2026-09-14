@@ -2,8 +2,9 @@
   "version": "user-reference-2026-09-08",
   "region": "PC NA/EU",
   "imported_at": "2026-09-08",
+  "guide_updated_at": "2026-09-14",
   "review_status": "unreviewed",
-  "source_sha256": "3a5fa26a0d1e2403a391c08f39794a8bcde504ed4884a40c183c2ecd0a549187",
+  "source_sha256": "f51fc10eeec800ea6db70060d30a21434e3dcf94e4f1cc21ee72b63e8a0dbbba",
   "sources": {
     "SOV_BDF_2026": "https://www.blackdesertfoundry.com/sovereign-weapons-guide/",
     "PA_PATCH_2025_07_10": "https://www.naeu.playblackdesert.com/News/Notice/Detail?groupContentNo=8804",
