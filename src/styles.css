@@ -28,7 +28,6 @@
 /* Imagery & flourishes */
 .button:not(.text-button){position:relative;overflow:hidden}.button:not(.text-button):before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 35%,#ffffff6b 50%,transparent 65%);transform:translateX(-130%);transition:transform .6s ease}.button:not(.text-button):hover:enabled:before,a.button:not(.text-button):hover:before{transform:translateX(130%)}
 .silver-mark{background-image:url(/art/sigil.svg);background-size:160%;background-position:center;background-repeat:no-repeat}
-.laurel{width:118px;height:64px;margin:0 auto 12px;background:url(/art/laurel.svg) center/contain no-repeat;opacity:.9}
 .milestone.completed .milestone-marker{box-shadow:0 0 0 3px #29422233,0 0 16px #4d783e55}
 .hero-content .tag,.roadmap-heading .tag.gold{position:relative}
 .slot-art.icon-weapon svg,.item-icon.icon-weapon svg{color:#e2a86b}.slot-art.icon-armor svg,.item-icon.icon-armor svg{color:#93b7cc}.slot-art.icon-accessory svg,.item-icon.icon-accessory svg{color:#c79bdc}.slot-art.icon-stone svg,.item-icon.icon-stone svg{color:#e0a25a}
