@@ -7,7 +7,15 @@
 -- catalog (or an equipment row's own prior value, which was published when
 -- set), so the delete needs no cascade or reference check beyond the status
 -- guard.
-create or replace function public.companion_catalog(command jsonb) returns jsonb language plpgsql security definer
+--
+-- The privileged implementation was relocated to app_private.companion_catalog
+-- by 20260907203729_harden_api_and_deletion.sql, with public.companion_catalog
+-- left as a thin `security invoker` wrapper that just calls it — replace the
+-- app_private implementation here, not the public wrapper. It also now raises
+-- PT409 (not 40001) on a revision conflict, per 20260908073140_http_conflicts.sql
+-- (PostgREST can retry 40001; PT409 returns a stable HTTP 409 immediately, and
+-- scripts/test-hosted.mjs asserts on it) — preserve that.
+create or replace function app_private.companion_catalog(command jsonb) returns jsonb language plpgsql security definer
 set search_path=pg_catalog,app_private as $$
 declare u uuid:=app_private.actor(); c catalog_versions%rowtype; d jsonb:=command->'data'; op text:=command->>'kind'; next_status text; current_rev integer; req uuid:=(command->>'request_id')::uuid; old_hash text;
 begin
@@ -20,7 +28,7 @@ begin
     if old_hash<>md5(command::text) then raise exception 'IDEMPOTENCY_REUSED'; end if;
     return public.companion_snapshot();
   end if;
-  if (command->>'expected_revision')::integer is distinct from current_rev then raise exception 'CONFLICT: Reload before changing the catalog.' using errcode='40001'; end if;
+  if (command->>'expected_revision')::integer is distinct from current_rev then raise exception 'CONFLICT: Reload before changing the catalog.' using errcode='PT409'; end if;
   if op='catalog_create' then
     select * into c from catalog_versions where id=(d->>'id')::uuid;
     if c.id is null then raise exception 'NOT_FOUND: Catalog not found.'; end if;
