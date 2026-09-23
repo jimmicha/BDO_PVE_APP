@@ -432,7 +432,7 @@
           </div>
           <div style="flex:none; display:flex; flex-wrap:wrap; gap:9px">
             <button type="button" onClick="{{ onDiscardDraft }}" style="min-height:44px; padding:0 16px; border:1px solid #3a4531; border-radius:6px; background:transparent; color:#9b9e96; font-size:12.5px; cursor:pointer">Discard draft</button>
-            <button type="button" onClick="{{ onPublish }}" disabled="{{ adminPublishDisabled }}" style="min-height:44px; padding:0 18px; border:1px solid {{ adminPublishBorder }}; border-radius:6px; background:{{ adminPublishBg }}; color:{{ adminPublishColor }}; font-size:12.5px; font-weight:600; cursor:{{ adminPublishCursor }}">Publish as catalog v3</button>
+            <button type="button" onClick="{{ onPublish }}" disabled="{{ adminPublishDisabled }}" style="min-height:44px; padding:0 18px; border:1px solid {{ adminPublishBorder }}; border-radius:6px; background:{{ adminPublishBg }}; color:{{ adminPublishColor }}; font-size:12.5px; font-weight:600; cursor:{{ adminPublishCursor }}">{{ adminPublishLabel }}</button>
           </div>
         </section>
 
@@ -1221,6 +1221,9 @@ class Component extends DCLogic {
     adminGroup: "Sovereign Weapons",
     costEdits: {},
     flagEdits: {},
+    publishedCosts: {},
+    publishedFlags: {},
+    catalogVersion: 2,
     published: false,
     planned: {},
     skipped: {},
@@ -1316,7 +1319,7 @@ class Component extends DCLogic {
 
       // Cost — from the reconciled silver table. Blank stays blank.
       // Tier of the rung being bought, never its ladder position.
-      const cost = Number.isFinite(next.tier) ? costFor(nextFam, next.tier, s.costEdits) : null;
+      const cost = Number.isFinite(next.tier) ? costFor(nextFam, next.tier, Object.assign({}, s.publishedCosts, s.costEdits)) : null;
       const statPoints = offensive + defensive + unlock + (bracket || 0);
       let affordability = null;
       if (cost && Number.isFinite(silver)) {
@@ -1415,6 +1418,8 @@ class Component extends DCLogic {
   renderVals() {
     const s = this.state;
     const offline = s.offline;
+    const draftSize = Object.keys(s.costEdits).length + Object.keys(s.flagEdits).length;
+    const publishBlocked = draftSize === 0 || offline;
     const cursor = offline ? "not-allowed" : "pointer";
     const head = HEADERS[s.screen] || HEADERS.roadmap;
 
@@ -1749,6 +1754,7 @@ class Component extends DCLogic {
       grindFilterRows: [
         { id: "all", label: "All zones" },
         { id: "ready", label: "Meets requirement" },
+        { id: "unchecked", label: "AP met · DP unchecked" },
         { id: "close", label: "Within 20 AP or DP" },
         { id: "locked", label: "Out of reach" }
       ].map(f => {
@@ -1786,8 +1792,8 @@ class Component extends DCLogic {
         if (apGap == null) { state = "Needs your sheet AP"; tone = FAR; bucket = "all"; }
         else if (apGap > 0) { state = apGap + " AP short"; tone = apGap <= 20 ? NEAR : FAR; bucket = short <= 20 ? "close" : "locked"; }
         else if (dpGap != null && dpGap > 0) { state = dpGap + " DP short"; tone = dpGap <= 20 ? NEAR : FAR; bucket = short <= 20 ? "close" : "locked"; }
-        else if (!dpKnown) { state = "AP met · DP unverified"; tone = NEAR; bucket = "ready"; }
-        else if (dpGap == null) { state = "AP met · enter your DP"; tone = NEAR; bucket = "ready"; }
+        else if (!dpKnown) { state = "AP met · DP unverified"; tone = NEAR; bucket = "unchecked"; }
+        else if (dpGap == null) { state = "AP met · enter your DP"; tone = NEAR; bucket = "unchecked"; }
         else { state = "Ready"; tone = READY; bucket = "ready"; }
 
         return {
@@ -1825,29 +1831,31 @@ class Component extends DCLogic {
       })(),
       adminRows: COST_TABLE[s.adminGroup].values.map((v, i) => {
         const key = s.adminGroup + "|" + i;
+        const base = Number.isFinite(s.publishedCosts[key]) ? s.publishedCosts[key] : v;
         const edited = Number.isFinite(s.costEdits[key]);
-        const value = edited ? s.costEdits[key] : v;
+        const value = edited ? s.costEdits[key] : base;
         const crons = COST_TABLE[s.adminGroup].crons[i];
         const flagBase = REVIEW_FLAGS[key] || null;
-        const flagOn = s.flagEdits[key] != null ? s.flagEdits[key] : !!flagBase;
+        const flagPub = s.publishedFlags[key] != null ? s.publishedFlags[key] : !!flagBase;
+        const flagOn = s.flagEdits[key] != null ? s.flagEdits[key] : flagPub;
         return {
           step: (i === 0 ? "+0" : TIERS[i]) + " \u2192 " + TIERS[i + 1],
           field: String(Math.round(value / 1e6)),
           display: silverShort(value) + " silver",
           cronNote: crons > 0 ? crons + " Crons \u00B7 " + silverShort(crons * CRON_VENDOR_SILVER) + " at vendor price" : "No Crons on this step",
           edited: edited,
-          editedLabel: edited ? "Edited \u00B7 was " + silverShort(v) : "",
+          editedLabel: edited ? "Edited \u00B7 was " + silverShort(base) : "",
           rowBorder: edited ? "#6b6a42" : LINE,
           rowBg: edited ? "#22281b" : "#111810",
           flagOn: flagOn,
           flagLabel: flagOn ? "Flagged for review" : "Flag for review",
           flagColor: flagOn ? GOLD : MUTED,
           flagBorder: flagOn ? "#6b6a42" : LINE,
-          flagNote: flagOn ? (flagBase || "Flagged by you in this draft.") : null,
+          flagNote: flagOn ? (flagBase || (s.flagEdits[key] != null ? "Flagged by you in this draft." : "Flagged by you in a published catalog.")) : null,
           onEdit: e => {
             const n = numOrNull(e.target.value);
             const next = Object.assign({}, this.state.costEdits);
-            if (n == null || Math.round(n * 1e6) === v) delete next[key]; else next[key] = Math.round(n * 1e6);
+            if (n == null || Math.round(n * 1e6) === base) delete next[key]; else next[key] = Math.round(n * 1e6);
             this.setState({ costEdits: next, published: false });
           },
           onRevert: () => {
@@ -1857,32 +1865,44 @@ class Component extends DCLogic {
           },
           onFlag: () => {
             const next = Object.assign({}, this.state.flagEdits);
-            next[key] = !flagOn;
+            if (!flagOn === flagPub) delete next[key]; else next[key] = !flagOn;
             this.setState({ flagEdits: next, published: false });
           }
         };
       }),
       adminDraftCount: (() => {
-        const n = Object.keys(s.costEdits).length + Object.keys(s.flagEdits).filter(k => s.flagEdits[k] !== !!REVIEW_FLAGS[k]).length;
+        const n = draftSize;
         return n === 0 ? "No staged changes" : n + (n === 1 ? " staged change" : " staged changes");
       })(),
-      adminDraftNote: s.published
-        ? "Published as catalog v3. Players on v2 keep their pinned version until they migrate; completed steps keep their history."
-        : Object.keys(s.costEdits).length + Object.keys(s.flagEdits).length === 0
-          ? "The live catalog is v2, verified 2026-09-07. Edit a cost below and the Priority engine picks it up immediately in your own view, before you publish."
-          : "Your Priority engine is already using these values. Nobody else sees them until you publish a new catalog version.",
-      adminPublishDisabled: Object.keys(s.costEdits).length + Object.keys(s.flagEdits).length === 0,
-      adminPublishBorder: Object.keys(s.costEdits).length + Object.keys(s.flagEdits).length === 0 ? LINE : "#6b6a42",
-      adminPublishBg: Object.keys(s.costEdits).length + Object.keys(s.flagEdits).length === 0 ? "transparent" : "#3a4029",
-      adminPublishColor: Object.keys(s.costEdits).length + Object.keys(s.flagEdits).length === 0 ? MUTED : "#e7d9b0",
-      adminPublishCursor: Object.keys(s.costEdits).length + Object.keys(s.flagEdits).length === 0 ? "default" : "pointer",
+      adminDraftNote: draftSize > 0 && offline
+        ? "Offline \u00B7 publishing needs server acknowledgment. Your draft stays staged until you reconnect."
+        : draftSize > 0
+          ? "Your Priority engine is already using these values. Nobody else sees them until you publish a new catalog version."
+          : s.published
+            ? "Published as catalog v" + s.catalogVersion + ". Players on v" + (s.catalogVersion - 1) + " keep their pinned version until they migrate; completed steps keep their history."
+            : "The live catalog is v" + s.catalogVersion + ", verified 2026-09-07. Edit a cost below and the Priority engine picks it up immediately in your own view, before you publish.",
+      adminPublishLabel: "Publish as catalog v" + (s.catalogVersion + 1),
+      adminPublishDisabled: publishBlocked,
+      adminPublishBorder: publishBlocked ? LINE : "#6b6a42",
+      adminPublishBg: publishBlocked ? "transparent" : "#3a4029",
+      adminPublishColor: publishBlocked ? MUTED : "#e7d9b0",
+      adminPublishCursor: publishBlocked ? "not-allowed" : "pointer",
       onPublish: () => {
-        if (Object.keys(this.state.costEdits).length + Object.keys(this.state.flagEdits).length === 0) return;
-        this.setState({ published: true });
-        this.flash("Draft published as catalog v3 \u2014 players migrate at their own pace.");
+        const cur = this.state;
+        if (cur.offline || Object.keys(cur.costEdits).length + Object.keys(cur.flagEdits).length === 0) return;
+        // Fold the draft into the published baseline so a later discard
+        // returns to these values rather than the original v2 table.
+        const version = cur.catalogVersion + 1;
+        this.setState({
+          publishedCosts: Object.assign({}, cur.publishedCosts, cur.costEdits),
+          publishedFlags: Object.assign({}, cur.publishedFlags, cur.flagEdits),
+          costEdits: {}, flagEdits: {},
+          catalogVersion: version, published: true
+        });
+        this.flash("Draft published as catalog v" + version + " \u2014 players migrate at their own pace.");
       },
       onDiscardDraft: () => {
-        this.setState({ costEdits: {}, flagEdits: {}, published: false });
+        this.setState({ costEdits: {}, flagEdits: {} });
         this.flash("Draft discarded. The catalog is back to the published values.");
       },
 
@@ -2081,9 +2101,23 @@ class Component extends DCLogic {
         }
         if (modal.kind === "reopen") {
           const next = Object.assign({}, s.stepState);
+          const steps = STAGES.reduce((all, stage) => all.concat(stage.steps), []);
+          const open = [modal.payload.key];
+          let cascaded = 0;
           next[modal.payload.key] = "pending";
+          while (open.length) {
+            const k = open.pop();
+            steps.forEach(st => {
+              if (st.deps.indexOf(k) < 0 || (next[st.key] || st.status) !== "completed") return;
+              next[st.key] = "pending";
+              cascaded++;
+              open.push(st.key);
+            });
+          }
           this.setState({ stepState: next, modal: null });
-          this.flash("Reopened without a refund.");
+          this.flash(cascaded
+            ? "Reopened with " + cascaded + (cascaded === 1 ? " dependent step" : " dependent steps") + ", without a refund."
+            : "Reopened without a refund.");
           return;
         }
         this.setState({ modal: null });
