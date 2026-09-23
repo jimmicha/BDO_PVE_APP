@@ -754,7 +754,7 @@
   </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;screen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;overview&quot;,&quot;roadmap&quot;,&quot;gear&quot;,&quot;reference&quot;,&quot;states&quot;],&quot;default&quot;:&quot;overview&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;View&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;screen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;overview&quot;,&quot;roadmap&quot;,&quot;priority&quot;,&quot;grind&quot;,&quot;gear&quot;,&quot;reference&quot;,&quot;states&quot;,&quot;admin&quot;],&quot;default&quot;:&quot;overview&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;View&quot;}}">
 const GOLD = "#d4b87b", GOLD_D = "#b18c48", MUTED = "#9b9e96", LINE = "#2a2e29", PANEL = "#191c19", GREEN = "#99bba0", DANGER = "#e49a94", INK = "#e7e5df", DISPLAY = "#ece8dc";
 
 const NAV = [
@@ -1208,6 +1208,8 @@ class Component extends DCLogic {
     gear: Object.assign({}, START_GEAR),
     variant: Object.assign({}, START_VARIANT),
     stepState: {},
+    spent: {},
+    claimsSpent: {},
     search: "",
     refItem: "sovereign_main",
     refCompare: "TET",
@@ -1388,9 +1390,16 @@ class Component extends DCLogic {
     return override || st.status;
   }
 
+  owned(k) {
+    return RESOURCES[k].owned - (this.state.spent[k] || 0);
+  }
+
   available(k) {
-    const r = RESOURCES[k];
-    return r.owned - r.reserved;
+    return this.owned(k) - RESOURCES[k].reserved;
+  }
+
+  claimSpent(st) {
+    return !!st.claimed || (!!st.claim && !!this.state.claimsSpent[st.claim]);
   }
 
   readiness(st) {
@@ -1407,9 +1416,9 @@ class Component extends DCLogic {
     return {
       status: status,
       prereq: missingPrereqs.length > 0,
-      claimed: !!st.claimed,
+      claimed: this.claimSpent(st),
       materials: materials,
-      ready: status === "pending" && !missingPrereqs.length && !st.claimed && materials.every(m => m.missing === 0)
+      ready: status === "pending" && !missingPrereqs.length && !this.claimSpent(st) && materials.every(m => m.missing === 0)
     };
   }
 
@@ -1501,7 +1510,7 @@ class Component extends DCLogic {
       const missing = required > avail ? required - avail : 0;
       return {
         name: res.name,
-        detail: avail + " available of " + res.owned + " owned · " + required + " needed" + (res.reserved ? " · " + res.reserved + " reserved elsewhere" : ""),
+        detail: avail + " available of " + this.owned(k) + " owned · " + required + " needed" + (res.reserved ? " · " + res.reserved + " reserved elsewhere" : ""),
         tag: missing ? missing + " left" : "Ready",
         tagBorder: missing ? "#6b6a42" : "#3f5842",
         tagColor: missing ? GOLD : GREEN,
@@ -2093,10 +2102,21 @@ class Component extends DCLogic {
       onConfirmModal: () => {
         if (!modal) return;
         if (modal.kind === "complete") {
-          const next = Object.assign({}, s.stepState);
-          next[modal.payload.key] = "completed";
-          this.setState({ stepState: next, modal: null });
-          this.flash("Saved to your account · " + modal.payload.title);
+          const p = modal.payload;
+          const cur = this.state;
+          const next = Object.assign({}, cur.stepState);
+          next[p.key] = "completed";
+          // Only a ready step spends; a short step records progress and leaves inventory untouched.
+          if (this.readiness(p).ready) {
+            const spent = Object.assign({}, cur.spent);
+            p.reqs.forEach(r => { spent[r.k] = (spent[r.k] || 0) + r.q; });
+            const claimsSpent = p.claim ? Object.assign({}, cur.claimsSpent, { [p.claim]: true }) : cur.claimsSpent;
+            this.setState({ stepState: next, spent: spent, claimsSpent: claimsSpent, modal: null });
+            this.flash("Saved to your account · " + p.title + (p.reqs.length ? " · materials deducted" : ""));
+          } else {
+            this.setState({ stepState: next, modal: null });
+            this.flash("Progress recorded · " + p.title + " · inventory untouched");
+          }
           return;
         }
         if (modal.kind === "reopen") {
